@@ -18,7 +18,19 @@ function onHttpStart(){
 
 
 app.get("/",function(req,res) {
-    res.render("Home.ejs");
+    res.render("Home.html");
+})
+
+app.get("/Portfolio", function(req,res){
+    res.render("Portfolio.html");
+})
+
+app.get("/Work-Experience", function(req,res){
+    res.render("WorkExperience.html");
+})
+
+app.get("/WaveGAN", function(req,res){
+    res.render("WaveGAN.html");
 })
 
 app.listen(HTTP_PORT,onHttpStart);
