@@ -18,7 +18,7 @@ function onHttpStart(){
 
 
 app.get("/",function(req,res) {
-    res.render("Home.html");
+    res.render("Home.ejs");
 })
 
 app.listen(HTTP_PORT,onHttpStart);
