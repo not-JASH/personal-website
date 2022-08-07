@@ -2,3 +2,6 @@
 /* CSS Document */
 
 body { font-family: Helvetica,Arial;}
+
+a:link {text-decoration: none;color: black}
+a:hover {text-decoration: none;color:black;font-weight: bold}
