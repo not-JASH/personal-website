@@ -18,5 +18,5 @@ function onHttpStart(){
 
 
 app.get("/",function(req,res) {
-    res.render("Home.html")
+    res.render("Home");
 })
