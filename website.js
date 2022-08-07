@@ -20,3 +20,5 @@ function onHttpStart(){
 app.get("/",function(req,res) {
     res.render("Home.html");
 })
+
+app.listen(HTTP_PORT,onHttpStart);
