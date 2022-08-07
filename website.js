@@ -14,8 +14,8 @@ app.set("view engine","ejs");
 
 const Home = new a.controller("Home.html");
 const Portfolio = new a.controller("Portfolio.html");
-const WorkExperience = new a.WorkExperience("workExperience.html");
-const WaveGAN = new a.WaveGAN("WaveGAN.html");
+const WorkExperience = new a.controller("workExperience.html");
+const WaveGAN = new a.controller("WaveGAN.html");
 
 
 
