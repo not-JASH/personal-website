@@ -1,9 +1,7 @@
-const url = require("url");
-
 class controller {
     constructor(file) {        
         this.view = file;
-        console.log(this.view);
+        //console.log(this.view);
     }
 
     display(req,res) {
