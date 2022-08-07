@@ -20,7 +20,12 @@ function onHttpStart(){
     console.log("Server started, listening on " + HTTP_PORT); 
 }
 
-app.get("/",Home.display(req,res))
+app.get("/", function(req,res) {
+    Home.display(req,res);
+})
+
+
+
 app.get("/Portfolio", Portfolio.display(req,res))
 app.get("/Work-Experience", WorkExperience.display(req,res))
 app.get("/WaveGAN", WaveGAN.display(req,res))
