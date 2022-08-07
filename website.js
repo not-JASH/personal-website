@@ -1,6 +1,6 @@
 const express = require("express");
 const path = require("path");
-const a = require('./assets/js/Controllers');
+//const a = require('./assets/js/Controllers');
 
 
 
@@ -12,10 +12,6 @@ app.engine('html',require('ejs').renderFile);
 app.set("view engine","ejs");
 
 
-const Home = new a.controller("Home.html");
-const Portfolio = new a.controller("Portfolio.html");
-const WorkExperience = new a.controller("workExperience.html");
-const WaveGAN = new a.controller("WaveGAN.html");
 
 
 
@@ -23,12 +19,20 @@ function onHttpStart(){
     console.log("Server started, listening on " + HTTP_PORT); 
 }
 
-app.get("/",Home.display(req,res))
+app.get("/",function(req,res) {
+    res.render("Home.html");
+})
 
-app.get("/Portfolio", Portfolio.display(req,res))
+app.get("/Portfolio", function(req,res){
+    res.render("Portfolio.html");
+})
 
-app.get("/Work-Experience", WorkExperience.display(req,res))
+app.get("/Work-Experience", function(req,res){
+    res.render("WorkExperience.html");
+})
 
-app.get("/WaveGAN", WaveGAN.display(req,res))
+app.get("/WaveGAN", function(req,res){
+    res.render("WaveGAN.html");
+})
 
 app.listen(HTTP_PORT,onHttpStart);
