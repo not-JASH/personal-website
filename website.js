@@ -4,7 +4,7 @@ const path = require("path");
 
 
 const app = express();
-const HTTP_PORT = process.env.PORT || 8080;
+const HTTP_PORT = process.env.PORT || 3000;
 app.use(express.static(__dirname+'/assets'));
 app.set("views",path.join(__dirname,"views"));
 app.engine('html',require('ejs').renderFile);
