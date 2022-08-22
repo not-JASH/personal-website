@@ -1,66 +1,144 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>Work Experience</title>
-<link href="../assets/css/style.css" rel="stylesheet" type="text/css">
-<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<title>Work Experience</title>
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+
+
+
+	<style>	
+		p {
+			width:600px;
+			padding:0px 0px 30px 0px;
+		}
+		
+		
+		h3 { 
+			font-size:16px;	
+			height:8px;
+			padding: 0px 0px 0px 0px;
+		}
+		
+		h4 {
+			font-size:12px;
+			height: 14px;
+			padding: 0px 0px 0px 0px;			
+		}
+		
+		.collapsible {
+			background-color: white;
+			color: black;
+			cursor: pointer;
+			padding: 5px;
+			width: 100%;
+			height:5px;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 24px;
+		}
+
+		.active, .collapsible:hover {
+			background-color: white;
+			font-weight: bold;
+			color: black;
+		}
+
+		.content {
+			padding: 0 8px;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+			background-color: white;
+			color: black;
+		}
+	</style>
+
+	<!meta name="viewport" content="width50%, initial-scale=1">
 </head>
 
-<body style="font-family: Helvetica,Arial;">
-	<div>
-		<a href="/">Home</a>
-	</div>
-	
-	<header><h1>
+<body style="font-family: Helvetica,Arial;">	
+	<header><h1 style="font-size:50px">
 		Work Experience
 	</h1>
 	
 	</header>
 
-	<p>
-		<h2>Architectural Field Student</h2>
-		<h3>Ottawa Community Housing</h3>
-		<h4>May 2018 - August 2018</h4>
-		
-		Worked in a team to update Ottawa Community Housing’s (OCH) fire life safety plan. 
-		Created documents detailing the locations of fire protection and life safety systems, 
-		and their serviceability states for over a hundred of OCH’s properties. Creating 
-		these documents entailed site visits, consulting or creating floor plans, and 
-		meetings with relevant and concerned parties. 	
-	</p>
 	
-	<p>
-		<h2>Heritage Research Assistant</h2>
+	<button class="collapsible" style="font-size:24px">Architectural Field Student</button>
+	<div class="content">
+		<h3>Ottawa Community Housing</h3>
+		<h4 >May 2018 - August 2018</h4>
+		<p align="justify">	
+			Worked in a team to update Ottawa Community Housing’s (OCH) fire life safety plan. 
+			Created documents detailing the locations of fire protection and life safety systems, 
+			and their serviceability states for over a hundred of OCH’s properties. Creating 
+			these documents entailed site visits, consulting or creating floor plans, and 
+			meetings with relevant and concerned parties. 	
+		</p>
+	</div>
+	
+	<button class="collapsible" style="font-size:24px">Heritage Research Assistant</button>
+	<div class="content">
 		<h3>Architectural Conservancy of Ontario</h3>
 		<h4>June 2017 - August 2017</h4>
-		
-		Researched how Toronto’s sociopolitical landscape reflects in the architecture of 
-		Toronto’s public schools; particularly the impact of changes in Toronto District School 
-		Board administration and changing theories concerning educational practice. Sourced 
-		information from a combination of archival data, expert interviews, and site visits. 
-	</p>
-	
+		<p align="justify">
+			Researched how Toronto’s sociopolitical landscape reflects in the architecture of 
+			Toronto’s public schools; particularly the impact of changes in Toronto District School 
+			Board administration and changing theories concerning educational practice. Sourced 
+			information from a combination of archival data, expert interviews, and site visits. 
+		</p>
+	</div>
 
-	<p>
-		<h2>Student Construction Inspector</h2>
+	<button class="collapsible" style="font-size:24px">Student Construction Inspector</button>
+	<div class="content">
 		<h3>MMM Group (Now WSP)</h3>
 		<h4>January 2018 - April 2016</h4>
-	
-		Inspected work on several plant expansion and maintenance jobs at TTC (Toronto Transit 
-		Commission). Reported to project managers and senior construction inspectors. Read plans 
-		to verify work and ensured sites were up to safety code. Maintained a detailed record of 
-		site activities and catalogued this in TTC’s database. Also established and maintained 
-		correspondence with parties relevant to project contracts. 
-	</p>
+		<p align="justify">
+			Inspected work on several plant expansion and maintenance jobs at TTC (Toronto Transit 
+			Commission). Reported to project managers and senior construction inspectors. Read plans 
+			to verify work and ensured sites were up to safety code. Maintained a detailed record of 
+			site activities and catalogued this in TTC’s database. Also established and maintained 
+			correspondence with parties relevant to project contracts. 
+		</p>
+	</div>
 
-	<p>
-		<h2>Academic Tutor</h2>
+	<button class="collapsible" style="font-size:24px">Academic Tutor</button>
+	<div class="content">
 		<h3>UOttawa Student's Union</h3>
 		<h4>September 2015 - April 2019</h4>
+		<p align="justify">
+			Tutored first, second, and third-year students in Linear Algebra, Calculus, Engineering 
+			Materials, Statics, Dynamics, C Programming for Engineers, and Physics for Engineers. 
+		</p>
+	</div>
 	
-		Tutored first, second, and third-year students in Linear Algebra, Calculus, Engineering 
-		Materials, Statics, Dynamics, C Programming for Engineers, and Physics for Engineers. 
-	</p>
+	<br>
+	<hr>
+	<div>
+		<a href="/">Home</a>
+	</div>
+	
+	
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight){
+			  content.style.maxHeight = null;
+			} else {
+			  content.style.maxHeight = content.scrollHeight + "px";
+			} 
+		  });
+		}
+	</script>	
+
+
 </body>
 </html>
