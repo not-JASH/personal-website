@@ -7,8 +7,38 @@
 	<link href="/css/style.css" rel="stylesheet" type="text/css">
 
 	<style>
+		
+		
 		a:hover {
 			font-weight: bold;
+		}	
+		
+		.collapsible {
+			background-color: white;
+			color: black;
+			cursor: pointer;
+			padding: 5px 18px;
+			width:716px;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 24px;
+		}
+
+		.active, .collapsible:hover {
+			background-color: black;
+			font-weight: bold;
+			color: white;
+		}
+
+		.content {
+			padding: 0 18px;
+			max-height: 0;
+			width:680px;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+			background-color: black;
+			color: white;
 		}	
 	</style>
 
@@ -68,6 +98,7 @@
 	</div>
 		
 	<br>
+	<hr>
 	<nav>
 		<a href="/" style="font-size:110%">Home</a>
 	</nav>
