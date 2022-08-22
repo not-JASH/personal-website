@@ -1,0 +1,94 @@
+<!doctype html>
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Education</title>
+	<link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
+
+	<style>
+		body {
+			margin: auto;
+		}
+		
+		a {
+			font-size:18px;
+			color:white;
+		}
+		
+		a:hover {
+			font-weight: bold;
+		}	
+		
+		.collapsible {
+			background-color: white;
+			color: black;
+			cursor: pointer;
+			padding: 5px 18px;
+			width:756px;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 24px;
+		}
+
+		.active, .collapsible:hover {
+			background-color: black;
+			font-weight: bold;
+			color: white;
+		}
+
+		.content {
+			padding: 0 18px;
+			max-height: 0;
+			width:720px;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+			background-color: black;
+			color: white;
+		}	
+	</style>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<header><h1>Education</h1></header>
+	
+	<button class="collapsible">Bachelor of Applied Science in Civil Engineering</button>
+	<div class="content">
+
+	</div>
+		
+	<button class="collapsible">Computer Programming Diploma</button>
+	<div class="content">
+
+	</div>
+				
+	<br>
+	<hr>
+	<nav>
+		<a href="/" style="color:black;">Home</a>
+	</nav>
+	
+	
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight){
+			  content.style.maxHeight = null;
+			} else {
+			  content.style.maxHeight = content.scrollHeight + "px";
+			} 
+		  });
+		}
+	</script>	
+	
+</body>
+</html>

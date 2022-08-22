@@ -31,6 +31,10 @@ app.get("/Work-Experience", function(req,res){
     res.render("WorkExperience.html");
 })
 
+app.get("/Education", function(req,res) {
+    res.render("Education.html");
+})
+
 // Portfolio Pages
 
 //misc sketches
@@ -97,6 +101,8 @@ app.get("/Skyrim-TNE", function(req,res){
 app.get("/AI-Art", function(req,res){
     res.render("AIArt.html");
 })
+
+
 
 
 
