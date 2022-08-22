@@ -5,24 +5,134 @@
 <title>Portfolio</title>
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
 <link href="/css/style.css" rel="stylesheet" type="text/css">
+
+<style>
+	a:hover {
+		font-weight: bold;
+	}	
+</style>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body style="font-family: Helvetica,Arial;">
-	<div>
-		<a href="/">Home</a>
-	</div>
-	<header><h1>Portfolio</h1></header>
+	<header><h1 style="font-size:50px">Portfolio</h1></header>
 	
+	<button class="collapsible">2015</button>
+	<div class="content">
+		<br>
+	  	<nav>
+			<a href="/Misc-Sketches" style="font-size:16px;color:white">
+				Miscellaneous Sketches.</a>
+		</nav>
+		<br>
+	</div>
+	
+	<button class="collapsible">2016</button>
+	<div class="content">
+		<br>
+	  	<nav>
+			<a href="/" style="font-size:16px;color:white">
+				umm.</a>
+		</nav>
+		<br>
+	</div>
+	
+	<button class="collapsible">2017</button>
+	<div class="content">
+		<br>
+	  	<nav>
+			<a href="/TDSB-Architecture" style="font-size:16px;color:white">
+				An investigation into the architecure of Toronto's public schools.</a>
+			<a href="/CHARS-Feasibility" style="font-size:16px;color:white">
+				Feasibility study for an expansion at the Canadian High Arctic Research Station.</a>
+			
+		</nav>
+		<br>
+	</div>
+	
+	<button class="collapsible">2018</button>
+	<div class="content">
+		<br>
+	  	<nav>
+			<a href="/Shallow-Foundation-231-Cobourg" style="font-size:16px;color:white">
+				Shallow foundation design for a building at 231 Cobourg Ave, Ottawa.</a>
+			<a href="/CHARS-Design-Report" style="font-size:16px;color:white">
+				Designed a power plant to be integrated at the Canadian High Arctic Research Station.</a>
+			<a href="/Foundation-for-Tenth-Line" style="font-size:16px;color:white">
+				Foundation design for new commercial building at Tenth Line, Ottawa.</a>
+		</nav>
+		<br>
+	</div>
+	
+	<button class="collapsible">2019</button>
+	<div class="content">
+		<br>
+	  	<nav>
+			<a href="/" style="font-size:16px;color:white">umm.</a>
+		</nav>
+		<br>
+	</div>
+	
+	<button class="collapsible">2020</button>
+	<div class="content">
+		<br>
+	  	<nav>
+			<a href="/Computer-Generated-Training-Data" style="font-size:110%;color:white">
+				Computer generated training data.</a>
+			<a href="/Wavelets-and-Extended-Fourier" style="font-size:110%;color:white">
+				Some notes on wavelets and the extended fourier transform.</a>
+			<a href="/Parametric-Space" style="font-size:16px;color:white">
+				Parametric Space.</a>
+		</nav>
+		<br>
+	</div>
+	
+	<button class="collapsible">2021</button>
+	<div class="content">
+		<br>
+	  	<nav>
+			<a href="/WaveGAN" style="font-size:16px;color:white">WaveGAN.</a>
+		</nav>
+		<br>
+	</div>
+	
+	<button class="collapsible">2022</button>
+	<div class="content">
+		<br>
+	  	<nav>
+			<a href="/Cryptocurrency-AI" style="font-size:110%;color:white">
+				Proposals for a cryptocurrency trading AI.</a>
+			<a href="/Skyrim-TNE" style="font-size:16px;color:white">
+				Elder Scrolls V Skyrim - True Nord Edition.</a>
+			<a href="/AI-Art" style="font-size:16px;color:white">
+				Selected images created with AI.</a>
+		</nav>
+		<br>
+	</div>	
+	
+	<br>
+	<nav>
+		<a href="/" style="font-size:110%">Home</a>
+	</nav>
+	
+	
+	<script>
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
 
-	
-	<h2>Look on my works, ye mighty, and despair</h2>
-	
-	<div> 
-		<a href="/WaveGAN">WaveGAN</a> 
-	
-	
-	
-	</div>
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var content = this.nextElementSibling;
+			if (content.style.maxHeight){
+			  content.style.maxHeight = null;
+			} else {
+			  content.style.maxHeight = content.scrollHeight + "px";
+			} 
+		  });
+		}
+	</script>	
 	
 </body>
 </html>

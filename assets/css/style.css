@@ -21,3 +21,31 @@ nav {
 	display: grid;
 	row-gap:2px
 }
+
+
+.collapsible {
+  	background-color: white;
+  	color: black;
+  	cursor: pointer;
+  	padding: 5px;
+  	width: 100%;
+  	border: none;
+  	text-align: left;
+  	outline: none;
+  	font-size: 24px;
+}
+
+.active, .collapsible:hover {
+  	background-color: black;
+  	font-weight: bold;
+	color: white;
+}
+
+.content {
+  	padding: 0 18px;
+  	max-height: 0;
+  	overflow: hidden;
+  	transition: max-height 0.2s ease-out;
+  	background-color: black;
+	color: white;
+}
