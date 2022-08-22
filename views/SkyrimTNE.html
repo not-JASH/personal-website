@@ -6,20 +6,13 @@
 	
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
 <link href="../assets/css/Sliders.css" rel=stylesheet type="text/css">
-<script src="../assets/js/Sliders.js"></script>
+
 	
 	
 <link href="/css/style.css" rel="stylesheet" type="text/css">
 <link href="/css/Sliders.css" rel="stylesheet" type="text/css">
-<script href="/js/Sliders.js"></script>
-	
-<script type="text/javascript">
-	const images = require("images/skyrim_images.json");
-	function AddImages() {
-		popSlides(images);
-	}
-</script>
-	
+
+		
 <style>
 	body {
 		color:white;
@@ -49,12 +42,12 @@
 </style>	
 </head>
 	
-<body onLoad="addImages()">
+<body>
 	<h1>Elder Scrolls V Skyrim True Nord Edition</h1>
 	<h2>A rework and expansion of Bethesda's Elder Scrolls V Skyrim, with a focus on relationships.</h2>
 	<br>
 
-	<div class="togetherness-slidewhow"></div>	
+	<div id="ts" class="slideshow-container"></div>	
 	<br>
 	<h2> Skyrim is a beautiful, cold, and dangerous place where people must come together if they are to survive. </h3>
 	<p style="font-size:20px"> 
@@ -65,7 +58,7 @@
 	</p>
 	<br>
 	
-	<div class="livingbreathing-slideshow"></div>
+	<div id="lbs" class="slideshow-container"></div>
 	<br>
 	<h2>A living, breathing world where the player’s actions have an impact. </h3>
 	<p style="font-size:20px"> 
@@ -76,7 +69,7 @@
 	</p>. 
 	<br>
 		
-	<div class="darkbeautiful-slideshow"></div>	
+	<div id="dbs" class="slideshow-container"></div>	
 	<br>
 	<h2>Skyrim is truly beautiful, cold, dark, and dangerous.</h3>
 	<p style="font-size:20px"> 
@@ -94,5 +87,8 @@
 	
 	<p>
 	</p>
+	
+	<script href="/js/Sliders.js"></script>
+	<script src="../assets/js/Sliders.js"></script>
 </body>
 </html>
