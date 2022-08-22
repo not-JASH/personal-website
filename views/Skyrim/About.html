@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Skyrim True Nord Edition</title>
+<title>About TNE</title>
 	
-<link href="../assets/css/style.css" rel="stylesheet" type="text/css">
-<link href="../assets/css/Sliders.css" rel=stylesheet type="text/css">
+<link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/Sliders.css" rel=stylesheet type="text/css">
 
 	
 	
@@ -20,7 +20,12 @@
 	}
 	
 	a {
+		font-size:20px;
 		color:white;
+	}
+	
+	a:hover {
+		text-shadow: 0 0 0.1px white;
 	}
 	
 	p,h2,h1 {
@@ -36,21 +41,57 @@
 	
 	img {
 		width:100%;
+		align-content: center;
 		max-width:2000px;
+	}
+	
+	p {
+		font-size: 20px;
+		padding: 0px 0px 100px 0px;
+	}
+	
+	.description {
+		padding: 100px 0px 25px 0px;
+	}
+	
+	.grid-container{
+		display:grid;
+		gap: 10px;
+		grid-template-columns: auto auto auto auto;
+		padding: 10px;
+		width:80%;
+		max-width: 800px;
+		margin:auto;
+	}
+	
+	.grid-item{
+		text-align: center;
+		padding: 20px;
+		font-size:24px;
 	}
 </style>	
 </head>
 	
 <body onLoad="LoadImages();">
-	<h1>Elder Scrolls V Skyrim True Nord Edition</h1>
-	<h2>A rework and expansion of Bethesda's Elder Scrolls V Skyrim, with a focus on relationships.</h2>
-	<br>
-
+	<div class="grid-container" style="padding:50px 0px 30px 0px;">
+		<div class="grid-item">
+			<a href="/Skyrim-TNE">Overview</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Skyrim-TNE/Images">Images</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Skyrim-TNE/BeforeAndAfter">Before &amp After</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Skyrim-TNE/Images">Videos</a>
+		</div>
+	</div>
 	<img id="ts" src="https://chi01pap001files.storage.live.com/y4m6mSiTOL_hx5gXE_vi1RmsW-Fub_9tihTG_iG1PWbHoUqqFA0YMSvhPFQbfPLU5Q9zIzVZM-dr5o25rzoI0gnfXAZ8eyGs8JkMnzVZ08vaH2aKIqVhCjvpkFJ5oKr0P8G_LEmE95nhzydXgueZmMQyrJBtQe0uPaJpAYc-yF-RD9V8yWnkzv2_sGCP0kiReOr?width=3840&height=1974&cropmode=none">
 
 	<br>
-	<h2> Skyrim is a beautiful, cold, and dangerous place where people must come together if they are to survive. </h3>
-	<p style="font-size:20px"> 
+	<h2 class="description"> Skyrim is a beautiful, cold, and dangerous place where people must come together to survive. </h3>
+	<p> 
 		To focus gameplay on relationships, the difficulty of all enemies was increased such that venturing into Skyrim’s 
 		wilderness alone almost certainly spells death for all but the highest-level adventurers; and a system was added 
 		by which players can develop relationships with friendly NPCs, who might then choose to join the player in their 
@@ -61,8 +102,8 @@
 	<img id="lbs" src="https://chi01pap001files.storage.live.com/y4mc5HRS9s-ads0zs9lyEyp1at2-nxrndr8z9vFHjWTkbjJ35GklClxAQ8fJs7Cb_QDo4hR4b0soB5Uq0_HV2rT-nRCRpRqHhFPq1a8ZDTfJlMvNH-mtO-UdMHR7IHY3Z_W9QHCXM2XGTypmfqP7SnktTdpjawm3WtR-_nMT5soX_aYdd_ujccB209GlrSL9SAz?width=2560&height=1326&cropmode=none">
 
 	<br>
-	<h2>A living, breathing world where the player’s actions have an impact. </h3>
-	<p style="font-size:20px"> 
+	<h2 class="description">A living, breathing world where the player’s actions have an impact. </h3>
+	<p> 
 		Each NPC is made unique via random stat and model assignments, and can be leveled up and equipped with weapons, 
 		spells, and armor. Added new quests, many of which are focused on developing personal, and sometimes romantic, 
 		relationships with the locals. NPCs fulfilling new societal roles and an interactive economy which responds to 
@@ -73,13 +114,15 @@
 	<img id="dbs" src="https://chi01pap001files.storage.live.com/y4mXMWhWv8UGMM6MPe-Hik4IbHB08XlcafM6CLMX__dc8ZyeUm_Cq2RXFBnYqjalXI4g4IUVYdbx5VP0AMwISmakAGis0SO14hSeLL3n2KG6wAkLg26XA525srVXQTr9hglK4Issm7pjX-gRpGl_mZrgxIssl81HAyD3hqUlPHLr-hIvJRajB1u7XmHwkbrd8Kv?width=3840&height=2001&cropmode=none">
 
 	<br>
-	<h2>Skyrim is truly beautiful, cold, dark, and dangerous.</h3>
-	<p style="font-size:20px"> 
+	<h2 class="description">Skyrim is truly beautiful, cold, dark, and dangerous.</h3>
+	<p> 
 		To bring Skyrim up to today’s standards, it was populated with thousands of new objects – like trees, shrubs, 
 		underbrush, weapons, clothes, villages, cities, dungeons - and its lighting was completely reworked to make 
 		the world truly look and feel alive. 
-	</p>. 
-	<br>
+	</p> 
+	
+
+
 	
 	<hr>
 	<nav>
