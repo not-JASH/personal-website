@@ -3,9 +3,27 @@
 
 body { 
 	font-family: Helvetica,Arial;
+	max-width: 1500px;
 	}
 
+h1 {
+	font-size:50px;	
+}
+
+h2 {
+	font-size:24px;
+}
+
+h3 {
+	font-size:16px;
+}
+
+h4 {
+	font-size:12px;
+}
+
 a { 
+	font-size:16px;
 	text-decoration: none;
 	color: #000;
 	}

@@ -17,13 +17,11 @@
 		
 		
 		h3 { 
-			font-size:16px;	
 			height:8px;
 			padding: 0px 0px 0px 0px;
 		}
 		
 		h4 {
-			font-size:12px;
 			height: 14px;
 			padding: 0px 0px 0px 0px;			
 		}
@@ -60,8 +58,8 @@
 	<!meta name="viewport" content="width50%, initial-scale=1">
 </head>
 
-<body style="font-family: Helvetica,Arial;">	
-	<header><h1 style="font-size:50px">
+<body>	
+	<header><h1>
 		Work Experience
 	</h1>
 	
@@ -124,18 +122,41 @@
 	
 	
 	<script>
+		
+		function expandcollapse(element){
+			var content = element.nextElementSibling;
+			if (content.style.maxHeight){
+				content.style.maxHeight = null;
+			} else {
+				content.style.maxHeight = content.scrollHeight + "px";
+			} 	
+		};
+		
+		
 		var coll = document.getElementsByClassName("collapsible");
 		var i;
-
+		
 		for (i = 0; i < coll.length; i++) {
 		  coll[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-			var content = this.nextElementSibling;
-			if (content.style.maxHeight){
-			  content.style.maxHeight = null;
-			} else {
-			  content.style.maxHeight = content.scrollHeight + "px";
-			} 
+			this.classList.toggle("clicked");
+		  });
+		}
+		
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("mouseover", function() {
+			  if (!this.classList.contains("clicked")){
+				this.classList.toggle("active");
+	  			expandcollapse(this);
+			  }	  
+		  });
+		}
+		
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("mouseout", function() {
+			if (!this.classList.contains("clicked")){
+				this.classList.remove("active");
+				expandcollapse(this);
+			}  			
 		  });
 		}
 	</script>	
