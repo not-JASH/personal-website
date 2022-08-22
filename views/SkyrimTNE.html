@@ -3,9 +3,23 @@
 <head>
 <meta charset="utf-8">
 <title>Skyrim True Nord Edition</title>
+	
 <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+<link href="../assets/css/Sliders.css" rel=stylesheet type="text/css">
+<script src="../assets/js/Sliders.js"></script>
+	
+	
 <link href="/css/style.css" rel="stylesheet" type="text/css">
-
+<link href="/css/Sliders.css" rel="stylesheet" type="text/css">
+<script href="/js/Sliders.js"></script>
+	
+<script type="text/javascript">
+	const images = require("../assets/images/skyrim_images.json");
+	function AddImages() {
+		popSlides(images);
+	}
+</script>
+	
 <style>
 	body {
 		color:white;
@@ -18,11 +32,14 @@
 	}
 	
 	p,h2,h1 {
-		width: 60%;
-		padding-left:20%;
-		
+		margin:auto;
+		width: 80%;	
 		text-align: justify;
 		max-width: 800px;
+	}
+	
+	h1, h2 {
+		text-align: left;
 	}
 	
 	img {
@@ -32,19 +49,12 @@
 </style>	
 </head>
 	
-<body>
+<body onLoad="popSlides(images)">
 	<h1>Elder Scrolls V Skyrim True Nord Edition</h1>
 	<h2>A rework and expansion of Bethesda's Elder Scrolls V Skyrim, with a focus on relationships.</h2>
-
 	<br>
-	
-	<! first image is t2> 
-	<div class="imgbox">
-		<img src="https://chi01pap001files.storage.live.com/y4m6mSiTOL_hx5gXE_vi1RmsW-Fub_9tihTG_iG1PWbHoUqqFA0YMSvhPFQbfPL
-				  U5Q9zIzVZM-dr5o25rzoI0gnfXAZ8eyGs8JkMnzVZ08vaH2aKIqVhCjvpkFJ5oKr0P8G_LEmE95nhzydXgueZmMQyrJBtQe0uPaJpAYc-
-				  yF-RD9V8yWnkzv2_sGCP0kiReOr?width=3840&height=1974&cropmode=none"> 
-	</div>
-	
+
+	<div class="togetherness-slidewhow"></div>	
 	<br>
 	<h2> Skyrim is a beautiful, cold, and dangerous place where people must come together if they are to survive. </h3>
 	<p style="font-size:20px"> 
@@ -55,13 +65,7 @@
 	</p>
 	<br>
 	
-	<! first image is lb2>
-	<div class="imgbox">
-		<img src="https://chi01pap001files.storage.live.com/y4mc5HRS9s-ads0zs9lyEyp1at2-nxrndr8z9vFHjWTkbjJ35GklClxAQ8fJs7Cb
-				  _QDo4hR4b0soB5Uq0_HV2rT-nRCRpRqHhFPq1a8ZDTfJlMvNH-mtO-UdMHR7IHY3Z_W9QHCXM2XGTypmfqP7SnktTdpjawm3WtR-_nMT5s
-				  oX_aYdd_ujccB209GlrSL9SAz?width=2560&height=1326&cropmode=none"> 
-	</div>
-	
+	<div class="livingbreathing-slideshow"></div>
 	<br>
 	<h2>A living, breathing world where the player’s actions have an impact. </h3>
 	<p style="font-size:20px"> 
@@ -71,14 +75,8 @@
 		the player’s actions were added. 
 	</p>. 
 	<br>
-	
-	<! first image is db11>
-	<div class="imgbox">
-		<img src="https://chi01pap001files.storage.live.com/y4mXMWhWv8UGMM6MPe-Hik4IbHB08XlcafM6CLMX__dc8ZyeUm_Cq2RXFBnYqjal
-				  XI4g4IUVYdbx5VP0AMwISmakAGis0SO14hSeLL3n2KG6wAkLg26XA525srVXQTr9hglK4Issm7pjX-gRpGl_mZrgxIssl81HAyD3hqUlPH
-				  Lr-hIvJRajB1u7XmHwkbrd8Kv?width=3840&height=2001&cropmode=none"> 
-	</div>
-	
+		
+	<div class="darkbeautiful-slideshow"></div>	
 	<br>
 	<h2>Skyrim is truly beautiful, cold, dark, and dangerous.</h3>
 	<p style="font-size:20px"> 
@@ -88,8 +86,6 @@
 	</p>. 
 	<br>
 	
-	
-	
 	<hr>
 	<nav>
 		<a href="/">Home</a>
@@ -97,7 +93,6 @@
 	</nav>
 	
 	<p>
-
 	</p>
 </body>
 </html>
