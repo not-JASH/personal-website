@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Before &amp After</title>
+	
+<link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/Sliders.css" rel=stylesheet type="text/css">
+
+	
+	
+<link href="/css/style.css" rel="stylesheet" type="text/css">
+<link href="/css/Sliders.css" rel="stylesheet" type="text/css">
+		
+<style>
+	body {
+		color:white;
+		background-color:black;
+		margin:auto;
+	}
+	
+	a {
+		font-size:20px;
+		color:white;
+	}
+	
+	a:hover {
+		text-shadow: 0 0 0.1px white;
+	}
+	
+	p,h2,h1 {
+		margin:auto;
+		width: 80%;	
+		text-align: justify;
+		max-width: 800px;
+	}
+	
+	h1, h2 {
+		text-align: left;
+	}
+	
+	img {
+		padding:25px 0px 0px 0px;
+		width:100%;
+		align-content: center;
+		max-width:2000px;
+	}
+	
+	p {
+		font-size: 20px;
+		padding: 0px 0px 100px 0px;
+	}
+	
+	.description {
+		padding: 100px 0px 25px 0px;
+	}
+		
+	.container {
+	  	display: flex;
+	  	width: 100%;
+		height: 100%;
+		max-height: 1000px;
+	  	max-width: 2000px;
+		margin:auto;
+	  	padding: 0px 0px 50px 0px;
+	  	box-sizing: border-box;
+	  	height: 100vh;
+	}
+
+	.box {
+	  	flex: 1;
+	  	overflow: hidden;
+	 	transition: .5s;
+	  	box-shadow: 0 20px 30px rgba(0,0,0,.1);
+	  	line-height: 0;
+	}
+
+	.box > img {
+		margin-left:-55%;
+		margin-top:10%;
+	  	width: 250%;
+	  	height: calc(100% - 8vh);
+	  	object-fit: cover; 
+	  	transition: .5s;
+		object-fit: cover;
+		background-position: center center;
+	}
+
+	.box > span {
+		font-size: 24px;
+		display: block;
+		text-align: center;
+		height: 10vh;
+		line-height: 2.6;
+	}
+
+	.box:hover { flex: 1 1 50%; }
+	.box:hover > img {
+		margin-left:0%;
+		margin-top:0%;
+		width: 100%;
+		height: 100%;
+		justify-content: center;
+	}
+ 
+</style>	
+</head>
+	
+<body onLoad="LoadImages();">
+	<div class="grid-container" style="padding:50px 0px 50px 0px;">
+		<div class="grid-item">
+			<a href="/Skyrim-TNE/About">About</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Skyrim-TNE">Images</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Skyrim-TNE/BeforeAndAfter">Overview</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Skyrim-TNE/Videos">Videos</a>
+		</div>
+	</div>
+	
+	<div class="container">		
+		<div class="box">
+			<img src="https://chi01pap001files.storage.live.com/y4mef26caSoR6wkp9ShTALL-GHgDozruCjtu5vdzcA1KaFbaGp-kuibjZ2K4v4fx2f8UhD3b8DijQIXUal_c0n-9aUks7qki5vLjV_lJEeL35byFbQfMuY7L7Fa_cG1eerU40MxnKUOEXYSV9EinMPbxm2NRggkM6XlwzNl0YSx4AKGMdg528nYzAyaiKQ8Sc_b?width=3840&height=1974&cropmode=none">
+			<span>Before</span>
+		</div>
+		
+		<div class="box">
+			<img src="https://chi01pap001files.storage.live.com/y4mTKROuHYzK6NjEVWgF5iM7JJe0t4dtMbAJyL1przodqrnTedv4KsBfy-enpOzsQe09nZwiIeTkthdZKnShLH-baww_7VKgN4PSMohbiWX8t23OlAFqIN_rQQSvBFalugHNTmlmGePYW7a3RCchyin0CV000qp_Pt0bayqLQkaXmTTWZZsAEVhk4mLxg4K6JzT?width=3264&height=1684&cropmode=none">
+			<span>After</span>
+		</div>
+	</div>
+	
+	<h2 class="description" style="padding-top: 0px;">Skyrim is truly beautiful, cold, dark, and dangerous.</h3>
+	<p> 
+		To bring Skyrim up to today’s standards, it was populated with thousands of new objects – like trees, shrubs, 
+		underbrush, weapons, clothes, villages, cities, dungeons - and its lighting was completely reworked to make 
+		the world truly look and feel alive. 
+	</p> 
+	
+	
+	<hr>
+	<div class="grid-container" style="padding:10px 0px 20px 0px;">
+		<div class="grid-item">
+			<a href="/">Home</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Portfolio">Portfolio</a>
+		</div>
+		<div class="grid-item">
+			<a href="/WorkExperience">Work Experience</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Skyrim-TNE/Videos">Education</a>
+		</div>
+	</div>	
+</html>

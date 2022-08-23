@@ -40,4 +40,22 @@ nav {
 	row-gap:2px
 }
 
+hr {
+	max-width: 1000px;
+}
 
+.grid-container{
+	display:grid;
+	gap: 0px;
+	grid-template-columns: auto auto auto auto;
+	padding: 0px;
+	width:80%;
+	max-width: 800px;
+	margin:auto;
+}
+
+.grid-item{
+	text-align: center;
+	padding: 0px;
+	font-size:20px;
+}
