@@ -37,11 +37,7 @@ a:active {
 
 nav {
 	display: grid;
-	row-gap:2px
-}
-
-hr {
-	max-width: 1000px;
+	row-gap:auto;
 }
 
 .grid-container{

@@ -9,7 +9,33 @@
 
 
 	<style>	
+		
+		body {
+			margin: auto;
+			width:80%;
+			max-width: 500px;
+			padding: 0px 20%;
+		}
+				
+		a {
+			font-size:24px;
+		}	
+		
 		p {
+			
+			text-align: justify;
+		}
+		
+		nav {
+			padding:50px 0%;
+		}
+		
+		nav h1 {
+			paddng:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+		}
+		p {
+			font-size:14px;
 			width:420px;
 			padding:0px 0px 30px 0px;
 			text-align: justify;
@@ -59,11 +85,12 @@
 </head>
 
 <body>	
-	<header><h1>
-		Work Experience
-	</h1>
-	
-	</header>
+	<nav>
+		<a href="/">Jashua Luna</a>
+		<a href="/Portfolio">Portfolio</a>
+		<h1>Work Experience</h1>
+		<a href="/Education">Education</a>
+	</nav>
 
 	
 	<button class="collapsible" style="font-size:24px">Architectural Field Student</button>
@@ -108,19 +135,12 @@
 	<div class="content">
 		<h3>UOttawa Student's Union</h3>
 		<h4>September 2015 - April 2019</h4>
-		<p>
+		<p style="text-align: left;">
 			Tutored first, second, and third-year students in Linear Algebra, Calculus, Engineering 
 			Materials, Statics, Dynamics, C Programming for Engineers, and Physics for Engineers. 
 		</p>
 	</div>
-	
-	<br>
-	<hr>
-	<div>
-		<a href="/">Home</a>
-	</div>
-	
-	
+		
 	<script>
 		
 		function expandcollapse(element){
