@@ -3,21 +3,678 @@
 <head>
 	<meta charset="utf-8">
 	<title>Tenth Line Foundation</title>
-<link href="../assets/css/style.css" rel="stylesheet" type="text/css">
-<link href="/css/style.css" rel="stylesheet" type="text/css">
-</head>
-	
-<body>
-	<header><h1>Foundation Design for Proposed Tenth Line Development</h1></header>
-	
-	<hr>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/Portfolio">Portfolio</a>
-	</nav>
-	
-	<p>
+	<link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/css/style.css" rel="stylesheet" type="text/css">
 
-	</p>
+	<style>			
+		body {
+			margin: auto;
+			width:80%;
+			max-width: 500px;
+			padding: 0px 20%;
+		}
+				
+		a {
+			font-size:24px;
+		}	
+		
+		p {
+			
+			text-align: justify;
+		}
+		
+		li {
+			font-size: 14px;
+		}
+		
+		nav {
+			padding:50px 0%;
+		}
+		
+		nav h1 {
+			paddng:0px 0px 0px 0px;
+			margin:0px 0px 0px 0px;
+		}
+		p {
+			font-size:14px;
+			width:100%;
+			padding:0px 0px 20px 0px;
+			text-align: justify;
+		}
+		
+		
+		h3 { 
+			height:8px;
+			padding: 0px 0px 0px 0px;
+		}
+		
+		h4 {
+			height: 14px;
+			padding: 0px 0px 0px 0px;			
+		}
+		
+		table, th, td {
+			text-align: center;
+			font-size:12px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		
+		
+		
+		.collapsible {
+			background-color: white;
+			color: black;
+			cursor: pointer;
+			padding: 5px;
+			width: 100%;
+			height:5px;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 24px;
+		}
+
+		.active, .collapsible:hover {
+			background-color: white;
+			font-weight: bold;
+			color: black;
+		}
+
+		.content {
+			padding: 0 8px;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+			background-color: white;
+			color: black;
+		}
+		
+		.grid-container {
+			width: 100%;
+			padding:0px 0px 0px 0px;
+			margin: 0px 0px 0px 0px;
+		}
+
+		.grid-item a {
+			font-size: 14px;
+		}
+		
+		.content p {
+			padding: 0px 0px 0px 0px;
+			width: 100%;
+		}
+		
+		.null:hover {
+			text-shadow: 0 0 0 black;
+		}		
+		
+		.b {
+			font-weight: bold;
+		}
+	</style>
+
+	<!meta name="viewport" content="width50%, initial-scale=1">
+</head>
+
+<body>		
+	<h1>Proposed Foundation Design for Tenth Line Development</h1>
+	
+	<button class="collapsible">Introduction</button>
+	<div class="content">
+		<p>	
+			The purpose of this report is to design a foundation for a development proposed at Tenth Line road in Orleans, Ottawa. 
+			The foundation should be able to transfer the load of four different columns to a capable sol layer beneath the foundation 
+			as well as limit settlement and differential settlement to 25mm and 19mm respectively. A deep foundation is necessary for 
+			the development and therefore the piles were designed to transfer the load as well as limit the settlement.
+		</p>
+		<p>
+			As a result of the ranging column loads, different amount of piles were required per column for economical and practical 
+			reasons instead of varying the pile length and diameter for each column loading case.
+		</p>
+		<p>
+			The columns were arranged from the lowest load C1 to the highest load C3 in the order C1, C2, E4, C3, The columns required 
+			1, 2, 3, and 4 piles in the same order as the column arrangement. Following the design of the foundation, the design was 
+			able to transfer all loads to a capable soil layer and also limit the settlement well below 25mm and the differential 
+			settlement below 19mm.
+		</p>
+	</div>
+	
+	<button class="collapsible" >Scope of Work</button>
+	<div class="content">
+		<p>
+			The objective of this project is to design foundations for a proposed commercial development located on Tenth Line in 
+			Orleans. The foundations are required to support the load of the 50 x 60 m building area. The dominant soil in the region of 
+			Orleans is the clay-type of soil, therefore we will be working with fine-grained soils and we have to take into consideration 
+			the cohesion of the soil and the angle of friction as main soil parameters. The provided geotechnical report will allow us to 
+			conduct an analysis to ensure that the foundations stresses will not overburden the soil and cause excessive settlement of the 
+			building or failure of the soil. The proposed construction of the building will start with an excavation of the construction 
+			site, since we are including a basement level for this development. The soils will be excavated and there we will be placing 
+			the foundations.
+		</p>
+		<p>
+			Using the provided information obtained from the Paterson Group geotechnical report, we will be determining if the soil 
+			parameters and conditions in order to design the foundations for the columns C1, C2, C3 and E4. The design of the foundations 
+			will depends on the soil parameters of the silty clay underneath the surface. Our choice for this development is a shallow 
+			foundation, we will be designing the foundation in for the short-term and long-term life of the building according to the 
+			ultimate limit state and the serviceability limit state.
+		</p>
+		<h3>Proposed Development</h3>
+		<p>
+			The new project is located near Tenth Line road in Orleans Ottawa. It’s a commercial building in a residential area. The 
+			proposed development measured 100 m of length and 100 m of width. The property of the project should be located inside of the 
+			limits and 100 m away from Tenth line road and 7m away from the local street. Building footing placement may be measured 60 m 
+			in parallel at local street and 50 m in parallel of tenth line road. 
+		</p>
+	</div>
+
+	<button class="collapsible" >Method of Investigation</button>
+	<div class="content">
+		<h3>Site Conditions</h3>
+		<p>
+			A geological survey of the proposed site was conducted by the Geotechnical Division at Patterson Group. Subsurface conditions 
+			were determined with a combination of in-situ and laboratory tests involving augers, Shelby tubes, split spoon samplers, and 
+			standpipes. Dynamic cone and standard penetration tests were also performed on-site. Information obtained by Patterson 
+			Geotechnical is summarized in Appendix A. A Field survey of the site was conducted by Patterson Group and Santec Corporation. 
+			The locations and ground surface elevations at each borehole are presented in Appendix A.
+		</p>
+		
+		<h3>Design Parameters</h3>
+		<p>
+			As per recommendations made in the geotechnical report, and the client’s requests, several factors must be considered when 
+			designing the building’s foundation.	
+		</p>
+		
+		<ul>
+			<li>Foundation depth must be sufficient to accommodate one underground level.</li>
+			<li>Site is 100m x 100m and the building is 50m x 60m. Building can be located anywhere on site.</li>
+			<li>Ultimate and Serviceability limit states must be satisfied.</li>
+			<li>Some parameters.<br>
+				<ul>
+					<li>Maximum total settlement: 25mm</li>
+					<li>Maximum differential settlement: 19mm</li>
+					<li>Maximum lateral deflection: 20mm</li>
+					<li>Minimum foundation depth: 3m (below grade)</li>
+					<li>Maximum grade raise: 0.3m</li>				
+				</ul>
+			</li>
+			<li>G.F.L 0.00 is at E.L.V. +88.53</li>
+			<li>Loading conditions (Column Loads):
+				<div style="padding: 10px 0px 0px 0px;">
+					<table class="tg" style="undefined;table-layout: fixed; width: 100%;">
+						<colgroup>
+							<col style="width: 80px">
+							<col style="width: 164px">
+							<col style="width: 169px">
+						</colgroup>
+						<thead>
+						  <tr>
+							<th class="tg-0lax"></th>
+							<th class="tg-0lax">Axial Compression</th>
+							<th class="tg-0lax">Lateral Load</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td class="tg-0lax">C1</td>
+							<td class="tg-0lax">235 kN</td>
+							<td class="tg-0lax">1.5 kN</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0lax">C2</td>
+							<td class="tg-0lax">475 kN</td>
+							<td class="tg-0lax">2.5 kN</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0lax">C3</td>
+							<td class="tg-0lax">900 kN</td>
+							<td class="tg-0lax">5.0 kN</td>
+						  </tr>
+						  <tr>
+							<td class="tg-0lax">E4</td>
+							<td class="tg-0lax">700 kN</td>
+							<td class="tg-0lax">4.0 kN</td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>			
+			</li>	
+		</ul>		
+	</div>
+
+	<button class="collapsible" >Subsurface Conditions</button>
+	<div class="content">
+		<p>
+			This section entails the subsurface conditions based upon the drilled boreholes at the proposed site location. These soil conditions 
+			consist of topsoil overlying silty clay, there is also a layer of glacial till overlying bedrock. The silty clay is inferred from the 
+			cone probes and extended up to depths of 20-26m while the bedrock surface had a depth range of 26.67 to 21.79m as it tends to slope 
+			upwards from the North to the south. For this project, the main boreholes used in determining the subsurface conditions were Borehole 1 
+			and Borehole 2 which were provided by the Paterson group and were at a distance less than 100m from the chosen site. These boreholes 
+			were selected to be representative of the soil beneath the foundation based on the proximity of the selected site. Hence, there was no 
+			other reason for looking into other boreholes especially borehole 3, which seemed the most relevant but provided little variation in 
+			terms of soil layering when compared to borehole 1 and borehole 2. Shear strength v depth graphs are in appendix
+		</p>
+		
+		<h3>Top Soil</h3>
+		<p>
+			The topsoil encountered at the ground surface at all the borehole test holeshad thickness varying 80mm to 280m. Therefore, it is assumed 
+			that the original thickness of the topsoil was 280mm while the rest was naturally stripped away. From the geotechnical report, the 
+			recommendation for the poposed site is was to stripp a total of 300mm to completely remove the topsoil and ensure a flat surface.		
+		</p>
+		
+		<h3>Silty Clay</h3>
+		<p>
+			Silty clay is the dominant soil type within the proposed location and is located beneath the topsoil at all the test hole locations. 
+			The top most layer of the silty clay has been weathered to a to a dark brown dessicated ‘crust leading to a loss of moisture and a depth 
+			extension of 2.6m below the original ground surface which was 2.3m below the finished grade. According to the Dynamic Cone Penetration Test 
+			DCPT, the silty clay layer has been inferred to extend to depths of between 20m and 27m. This depth extends down to the bedrock within the 
+			subject development area. In situ shear vane field tests were carried out within the dessicated layer and relatively high undrained shear 
+			strength values were obtained. The silty clay found beneath the dessicated layer appeared to be grey and brown in colour and had depths 
+			ranging from 5m to 5.8m below original ground surface and 4.7m and 5.5m below finished grade elevation respectively.
+		</p>
+		
+		<p>
+			The silty clay yielded peak undrained shear strength values between 20 kpa and 50 kpa indicating a soft consistency. A firm layer of clay 
+			was also found under the soft grey and brown clay. A shear profile provided by paterson group was used to read the undrained shear strength 
+			values which was determined to be 25 kpa at the top of the firm layer and increasing with depth to values approaching 130 kpa.	
+		</p>
+		
+		<h3>Glacial Till</h3>
+		<p>
+			The glacial till layer was inferred beneath the silty clay layer near several boreholes and close to the site of Borehole 1. Glacial till 
+			typically consists of a fine soil matrix which is mixed with gravel, cobble, and boulders. It is very important to note that the glacial 
+			till will have little impact in this design and the settlement within this thin layer can be considered negligible.
+		</p>
+		
+		<h3>Ground Water</h3>
+		<p>
+			Groundwater table is the top level of an underground surface in which the soil is permanently saturated with water. The water table separates 
+			the groundwater from the fringe, or aeration zone, located above it. The water table fluctuates with the seasons and with the year and is 
+			affected by climatic variations and the amount of precipitation used by the vegetation. It is also affected by the withdrawal of excessive 
+			amounts of water or by artificial recharge. In our project, the Groundwater table is located at the 1.2 m level. The Borehole 2 is the one 
+			with the most data available. That's why our point of reference was this one.
+		</p>
+		
+		
+		<h3>Depth of Foundation</h3>
+		<p>
+			Given that groundwater table is located at 1.35m, the boronhole depth is approximately 21.79 m at 26.67 m, taking into account boronhole 
+			BH-1 and BH-2. Foundation length is 11.5 m.
+		</p>
+		
+		<h3>Soil Parameters</h3>
+		<p>
+			The soils parameters were obtained by the information of the borehole log in the rapport statement. The soils have 3 layers is especially composed 
+			of silty clay. The groundwater table is located at 1.35m. The following figure shows the different layers and their parameters.
+		</p>
+		
+		<h4>Subsurface Profile</h4>
+		<div>	
+			<img src="https://chi01pap001files.storage.live.com/y4mNZuGtN9brPdvjDrBqmV7ICGKKtZ5DIoYvQztsnF8zGg-p4Vii7Q6-bE0_DrbB_DM5oP6q7UBgML-X1F6Jj2vvV4eFp_uYFDsFWdyzUOLdLaIjEdHCLoivLVG6uneRfIM3OyJjk4mtalJAssplOcC1VWNUMFRttn79Tb6b4HiVspj2rxTVamjDRoJyLv-_hcF?width=1275&height=640&cropmode=none"
+				 style="max-width: 100%;">
+		</div>
+	</div>
+	
+	<button class="collapsible" >Foundation Analysis and Design</button>
+	<div class="content">
+		<h3>Subsurface Profile</h3>
+		<p>
+			Prior to the foundation design, the multiple borehole logs obtained from the Paterson group were analyzed and tabulated to determine the 
+			general soil arrangement under the ground surface. As mentioned earlier, the dominating soil in our case is silty clay, a fine-grained 
+			type of soil. In the figure below, there is a representation of the general soil distribution in both X-X and Y-Y directions of the proposed 
+			development (check Appendix D). The following figures and tables will allow us to determine the profile of our soil and allow us to determine 
+			the parameters of the building:	
+		</p>
+		<h4>Y-Y Direction Borehole Readings (BH2 to BH1)</h4>
+		<table class="tg" style="undefined;table-layout: fixed; width: 100%">
+			<colgroup>
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+			</colgroup>
+			
+			<thead>
+			  <tr>
+				<th class="b" colspan="3">BH-2</th>
+			  </tr>
+			</thead>
+			
+			<tbody>
+			  <tr>
+				<td class="b">Type of Soil</td>
+				<td class="b">Elevation (m)</td>
+				<td class="b">Depth (m)</td>
+			  </tr>
+			  <tr>
+				<td>GROUND LVL</td>
+				<td>88.53</td>
+				<td>0</td>
+			  </tr>
+			  <tr>
+				<td>TOPSOIL</td>
+				<td>88.45</td>
+				<td>-0.08</td>
+			  </tr>
+			  <tr>
+				<td>SILTY CLAY</td>
+				<td>74.13</td>
+				<td>-14.32</td>
+			  </tr>
+			  <tr>
+				<td>Inferred SILTY CLAY</td>
+				<td>52.34</td>
+				<td>-21.79</td>
+			  </tr>
+			  <tr>
+				<td><br></td>
+				<td></td>
+				<td></td>
+			  </tr>
+			  <tr>
+				<td class="b" colspan="3">BH-1</td>
+			  </tr>
+			  <tr>
+				<td class="b">Type of Soil</td>
+				<td class="b">Elevation (m)</td>
+				<td class="b">Depth (m)</td>
+			  </tr>
+			  <tr>
+				<td>GROUND LVL</td>
+				<td>88.53</td>
+				<td>0</td>
+			  </tr>
+			  <tr>
+				<td>TOPSOIL</td>
+				<td>88.45</td>
+				<td>-0.08</td>
+			  </tr>
+			  <tr>
+				<td>SILTY CLAY</td>
+				<td>73.82</td>
+				<td>-14.63</td>
+			  </tr>
+			  <tr>
+				<td>Inferred SILTY CLAY</td>
+				<td>47.72</td>
+				<td>-26.1</td>
+			  </tr>
+			</tbody>
+		</table>
+		
+		<h4>Representation of Y-Y Direction Soil Profile (BH2 to BH1)</h4>
+		<div>	
+			<img src="https://chi01pap001files.storage.live.com/y4mLg7mbCd-7F521NHuNgZR-BsGkCfsp1raI0CwVR9lxxeGBUCSTlz3xQeS9sOjmJqHobOCr4Ri3tfxygv7Ux0_X6dui7vWwdPOWnVMEt2X8BVHOXDlmNTaLE-kAoj_cth8fujRznmDsfLKHR-reTKQVFZgjTcz-NNg__jG6OoXSHYrATgUaOLKJLG5cBMan--l?width=650&height=346&cropmode=none"
+				 style="max-width: 100%;">
+		</div>
+		
+		<h4>X-X Direction Borehole Readings (BH3 to BH1)</h4>
+		<table class="tg" style="undefined;table-layout: fixed; width: 100%">
+			<colgroup>
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+			</colgroup>
+			
+			<thead>
+			  <tr>
+				<th class="b" colspan="3">BH-3</th>
+			  </tr>
+			</thead>
+			
+			<tbody>
+			  <tr>
+				<td class="b">Type of Soil</td>
+				<td class="b">Elevation (m)</td>
+				<td class="b">Depth (m)</td>
+			  </tr>
+			  <tr>
+				<td>GROUND LVL</td>
+				<td>88.21</td>
+				<td>0</td>
+			  </tr>
+			  <tr>
+				<td>TOPSOIL</td>
+				<td>88.06</td>
+				<td>-0.15</td>
+			  </tr>
+			  <tr>
+				<td>SILTY CLAY</td>
+				<td>73.43</td>
+				<td>-14.63</td>
+			  </tr>
+			  <tr>
+				<td><br></td>
+				<td></td>
+				<td></td>
+			  </tr>
+			  <tr>
+				<td class="b" colspan="3">BH-1</td>
+			  </tr>
+			  <tr>
+				<td class="b">Type of Soil</td>
+				<td class="b">Elevation (m)</td>
+				<td class="b">Depth (m)</td>
+			  </tr>
+			  <tr>
+				<td>GROUND LVL</td>
+				<td>88.53</td>
+				<td>0</td>
+			  </tr>
+			  <tr>
+				<td>TOPSOIL</td>
+				<td>88.45</td>
+				<td>-0.08</td>
+			  </tr>
+			  <tr>
+				<td>SILTY CLAY</td>
+				<td>73.82</td>
+				<td>-14.63</td>
+			  </tr>
+			  <tr>
+				<td>Inferred SILTY CLAY</td>
+				<td>47.72</td>
+				<td>-26.1</td>
+			  </tr>
+			</tbody>
+		</table>
+		
+		<h4>Representation of X-X Direction Soil Profile (BH3 to BH1)</h4>
+		<div>	
+			<img src="https://chi01pap001files.storage.live.com/y4m93qbqNdM9aA1Gf5XYBfP3P4REoXhAVf66KyAQEo4bNVflRmujvRoKPUq_LVzBrXQnGDzupadDrKk2wCoRi82Xt3gEgnXFW0XEIToSidJDVFfLtxdSnL0H9LiPRWgthRPHEIRWYoQlfMVJDnpDvbv983cIL1SYwJkQNwIzWxLi_YIxHr8kJoCCqgSoBQn_FOh?width=658&height=385&cropmode=none"
+				 style="max-width: 100%;">
+		</div>
+		
+		<p>
+			In the case of this report, we will be assuming that the soil parameters are uniformly distributed under the soil between BH-2 and BH-1. The 
+			parameters are deducted using the results of the soil samples of BH-2 and we assume that those parameters are equally distributed everywhere 
+			under the building as mentioned earlier.
+		</p>
+		
+		<h3>Standard Penetration Test</h3>
+		<p>
+			Paterson conducted multiples test to allow us to mathematically determine the soil parameters. In this case, an SPT test was conducted. The 
+			corrected N value was calculated by determining the following coefficients CE, CR, CS, CB. The following table summarize the calculation of 
+			the angle of friction:
+		</p>
+		
+		<table class="tg" style="undefined;table-layout: fixed; width: 100%">
+			<colgroup>
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:17px">
+				<col style="width:21px">
+				<col style="width:">
+				<col style="width:27px">
+				<col style="width:27px">
+				<col style="width:21px">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:27px">
+				<col style="width:">
+				<col style="width:27px">
+			</colgroup>
+			<thead>
+			  <tr>
+				<th class="b">Layer</th>
+				<th class="b">z (m)</th>
+				<th class="b">z (ft)</th>
+				<th class="b">N</th>
+				<th class="b">Ce</th>
+				<th class="b">Rod Length (ft)</th>
+				<th class="b">Cr</th>
+				<th class="b">Cs</th>
+				<th class="b">Cb</th>
+				<th class="b">N(60)</th>
+				<th class="b">σ'v (kPa)</th>
+				<th class="b">Cn</th>
+				<th class="b">N1(60)</th>
+				<th class="b">φ'</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>1</td>
+				<td>2.6</td>
+				<td>8.52</td>
+				<td>12</td>
+				<td>1</td>
+				<td>15.5</td>
+				<td>0.85</td>
+				<td>1.12</td>
+				<td>1</td>
+				<td>11.4</td>
+				<td>22.87</td>
+				<td>2.1</td>
+				<td>23.9</td>
+				<td>39</td>
+			  </tr>
+			  <tr>
+				<td>2</td>
+				<td>6.4</td>
+				<td>20.9</td>
+				<td>5</td>
+				<td>1</td>
+				<td>27.9</td>
+				<td>0.95</td>
+				<td>1.1</td>
+				<td>1</td>
+				<td>5.22</td>
+				<td>36.29</td>
+				<td>1.6</td>
+				<td>8.7</td>
+				<td>32</td>
+			  </tr>
+			  <tr>
+				<td>3</td>
+				<td>14</td>
+				<td>45.9</td>
+				<td>2</td>
+				<td>1</td>
+				<td>52.9</td>
+				<td>1</td>
+				<td>1.1</td>
+				<td>1</td>
+				<td>2.2</td>
+				<td>69.1</td>
+				<td>1.2</td>
+				<td>2.6</td>
+				<td>26</td>
+			  </tr>
+			</tbody>
+		</table>
+		
+		<h3>Column Design</h3>
+		<p>
+			With parameters set, column size will be determined. One column will be designed which will have capacity for all loading conditions. The selected 
+			pile dimensions will have a FS > 2 for all conditions. Piles will be made of poured concrete with a steel coating.	
+		</p>
+		<p>
+			To accommodate one underground level (2m), foundation start depth will be set to 2.5m. The first pile considered will have a length of 11.5m and a 
+			diameter of 0.4m.
+		</p>
+		
+		
+		
+	</div>
+	
+
+	
+	
+	
+	<button class="collapsible" >Sheet Pile Design</button>
+	<div class="content">
+
+	</div>
+	
+	<button class="collapsible" >Conclusion</button>
+	<div class="content">
+
+	</div>
+	
+	
+	<button class="collapsible" >Appendix</button>
+	<div class="content">
+		<a href="https://onedrive.live.com/embed?cid=8912A15B8F0CAFF4&resid=8912A15B8F0CAFF4%212389&authkey=AKNqQbhyMKF3bvk&em=2" download style="font-size: 14px;">
+			Click here to download original report.</a>
+	</div>
+	<p></p>
+	<hr>
+	<div class="grid-container">
+		<div class="grid-item">
+			<a href="/">Home</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Portfolio">Portfolio</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Work-Experience">Work Experience</a>
+		</div>
+		<div class="grid-item">
+			<a href="/Education">Education</a>
+		</div>
+	</div>
+		
+	<script>
+		
+		function expandcollapse(element){
+			var content = element.nextElementSibling;
+			if (content.style.maxHeight){
+				content.style.maxHeight = null;
+			} else {
+				content.style.maxHeight = content.scrollHeight + "px";
+			} 	
+		};
+		
+		
+		var coll = document.getElementsByClassName("collapsible");
+		var i;
+		
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("click", function() {
+			this.classList.toggle("clicked");
+		  });
+		}
+		
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("mouseover", function() {
+			  if (!this.classList.contains("clicked")){
+				this.classList.toggle("active");
+	  			expandcollapse(this);
+			  }	  
+		  });
+		}
+		
+		for (i = 0; i < coll.length; i++) {
+		  coll[i].addEventListener("mouseout", function() {
+			if (!this.classList.contains("clicked")){
+				this.classList.remove("active");
+				expandcollapse(this);
+			}  			
+		  });
+		}
+	</script>	
+
+
 </body>
 </html>
