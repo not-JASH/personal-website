@@ -19,77 +19,80 @@ function onHttpStart(){
     console.log("Server started, listening on " + HTTP_PORT); 
 }
 
+
+// Main Pages
+
 app.get("/",function(req,res) {
-    res.render("Home.html");
+    res.render("/Main/Home.html");
 })
 
 app.get("/Portfolio", function(req,res){
-    res.render("Portfolio.html");
+    res.render("/Main/Portfolio.html");
 })
 
 app.get("/Work-Experience", function(req,res){
-    res.render("WorkExperience.html");
+    res.render("/Main/WorkExperience.html");
 })
 
 app.get("/Education", function(req,res) {
-    res.render("Education.html");
+    res.render("/Main/Education.html");
 })
 
 // Portfolio Pages
 
 //misc sketches ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/Misc-Sketches", function(req,res){
-    res.render("MiscSketches.html");
+    res.render("/Sketches/MiscSketches.html");
 })
 
 // tdsb arch ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/TDSB-Architecture", function(req,res){
-    res.render("TDSB-Architecture.html");
+    res.render("/TDSB/TDSB-Architecture.html");
 })
 
 // chars feasibility ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/CHARS-Feasibility", function(req,res){
-    res.render("CHARS-Feasibility.html");
+    res.render("/CHARS-Feas/CHARS-Feasibility.html");
 })
 
 // 231 cobourg foundation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/Shallow-Foundation-231-Cobourg", function(req,res){
-    res.render("231Cobourg.html");
+    res.render("/231Cobourg/231Cobourg.html");
 })
 
 // chars design report ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/CHARS-Design-Report", function(req,res){
-    res.render("CHARS-Design.html");
+    res.render("/CHARS-Des/CHARS-Design.html");
 })
 
 // foundation for tenth line ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/Foundation-for-Tenth-Line", function(req,res){
-    res.render("TenthLine.html");
+    res.render("/TenthLine/TenthLine.html");
 })
 
 // computer generated training data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/Computer-Generated-Training-Data", function(req,res){
-    res.render("CGTD.html");
+    res.render("/CGTD/CGTD.html");
 })
 
 // notes on wavelets and fourier transform ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/Wavelets-and-Extended-Fourier", function(req,res){
-    res.render("Wavelets-and-Fourier.html");
+    res.render("/WaveletsAndFourier/Wavelets-and-Fourier.html");
 })
 
 // parametric space ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/Parametric-Space", function(req,res){
-    res.render("ParametricSpace.html");
+    res.render("/ParametricSpace/ParametricSpace.html");
 })
 
 // wave gan ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/WaveGAN", function(req,res){
-    res.render("WaveGAN.html");
+    res.render("/WaveGAN/WaveGAN.html");
 })
 
 // cryptocurrency ai ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/Cryptocurrency-AI", function(req,res){
-    res.render("CryptoAI.html");
+    res.render("/CryptoAI/CryptoAI.html");
 })
 
 // skyrim true nord ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -115,7 +118,7 @@ app.get("/Skyrim-TNE/Videos", function(req,res){
 
 // ai art ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/AI-Art", function(req,res){
-    res.render("AIArt.html");
+    res.render("/AIArt/AIArt.html");
 })
 
 
