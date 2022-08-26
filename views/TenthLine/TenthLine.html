@@ -313,9 +313,10 @@
 			<img src="https://chi01pap001files.storage.live.com/y4mNZuGtN9brPdvjDrBqmV7ICGKKtZ5DIoYvQztsnF8zGg-p4Vii7Q6-bE0_DrbB_DM5oP6q7UBgML-X1F6Jj2vvV4eFp_uYFDsFWdyzUOLdLaIjEdHCLoivLVG6uneRfIM3OyJjk4mtalJAssplOcC1VWNUMFRttn79Tb6b4HiVspj2rxTVamjDRoJyLv-_hcF?width=1275&height=640&cropmode=none"
 				 style="max-width: 100%;">
 		</div>
+		<br>
 	</div>
 	
-	<button class="collapsible" >Foundation Analysis and Design</button>
+	<button class="collapsible" >Foundation Analysis</button>
 	<div class="content">
 		<h3>Subsurface Profile</h3>
 		<p>
@@ -497,6 +498,7 @@
 			the angle of friction:
 		</p>
 		
+		<h4>SPT Results</h4>
 		<table class="tg" style="undefined;table-layout: fixed; width: 100%">
 			<colgroup>
 				<col style="width:">
@@ -583,8 +585,13 @@
 			  </tr>
 			</tbody>
 		</table>
-		
-		<h3>Column Design</h3>
+		<br>
+	</div>
+	
+
+	<button class="collapsible" >Foundation Design</button>
+	<div class="content">
+		<h3>Columns</h3>
 		<p>
 			With parameters set, column size will be determined. One column will be designed which will have capacity for all loading conditions. The selected 
 			pile dimensions will have a FS > 2 for all conditions. Piles will be made of poured concrete with a steel coating.	
@@ -594,29 +601,254 @@
 			diameter of 0.4m.
 		</p>
 		
+		<h4> Pile Details: Iteration One</h4>
+		<table class="tg" style="undefined;table-layout: fixed; width: 100%">
+			<colgroup>
+			<col style="width: 208px">
+			<col style="width:">
+			</colgroup>
+			<thead>
+	
+			</thead>
+			<tbody>
+			  <tr>
+				<td>Start Depth [m]</td>
+				<td>2.5</td>
+			  </tr>
+			  <tr>
+				<td>Length [m]</td>
+				<td>11.5</td>
+			  </tr>
+			  <tr>
+				<td>Diameter [m] </td>
+				<td>0.4</td>
+			  </tr>
+			  <tr>
+				<td>GWT Depth [m]</td>
+				<td>1.35</td>
+			  </tr>
+			</tbody>
+		</table>
 		
+		<h4>FS for Axial Loading: Iteration One</h4>
+		<table class="tg" style="undefined;table-layout: fixed; width: 100%">
+			<colgroup>
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+			</colgroup>
+			<thead>
+			  <tr>
+				<th>Loading Condition</th>
+				<th>Axial Load [kN]</th>
+				<th>FS (TSA)</th>
+				<th>FS (ESA)</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>C1</td>
+				<td>235</td>
+				<td style="color:red;">1.59</td>
+				<td style="color:red;">1.28</td>
+			  </tr>
+			  <tr>
+				<td>C2</td>
+				<td>475</td>
+				<td style="color:red;">0.78</td>
+				<td style="color:red;">0.63</td>
+			  </tr>
+			  <tr>
+				<td>C3</td>
+				<td>900</td>
+				<td style="color:red;">0.41</td>
+				<td style="color:red;">0.33</td>
+			  </tr>
+			  <tr>
+				<td>E4</td>
+				<td>700</td>
+				<td style="color:red;">0.53</td>
+				<td style="color:red;">0.43</td>
+			  </tr>
+			</tbody>
+		</table>
+	
+		<p>
+			This proposed design is therefore inadequate.		
+		</p>
 		
+		<p>
+			Variations were made to the pile’s diameter and length until a suitable design was found.
+			To keep the depth and diameter of the piles at a reasonable size, groups of piles were 
+			considered for the larger loading conditions.
+		</p>
+		
+		<p>
+			After several iterations, an adequate system of piles was developed for the loading 
+			conditions. Results are summarized below. Summarized lateral deflection results in 
+			appendix. All designs had lateral deflections within tolerable limits (<10mm).	
+		</p>
+			
+		<h4>Selected Designs for Loading Conditions</h4>
+		<table class="tg" style="undefined;table-layout: fixed; width: 100%">
+			<colgroup>
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+				<col style="width:">
+			</colgroup>
+			<thead>
+			  <tr>
+				<th>Loading Condition</th>
+				<th># of Piles, Spacing if Applicable</th>
+				<th>Diameter [m] </th>
+				<th>Length [m]</th>
+				<th>FS (ESA)</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>C1</td>
+				<td>1</td>
+				<td>0.6</td>
+				<td>11.5</td>
+				<td>2.09</td>
+			  </tr>
+			  <tr>
+				<td>C2</td>
+				<td>1</td>
+				<td>1.0</td>
+				<td>11.5</td>
+				<td>2.02</td>
+			  </tr>
+			  <tr>
+				<td>C3</td>
+				<td>4, 0.9m</td>
+				<td>0.45</td>
+				<td>11.5</td>
+				<td>2.05</td>
+			  </tr>
+			  <tr>
+				<td>E4</td>
+				<td>3, 1.1m</td>
+				<td>0.55</td>
+				<td>11.5</td>
+				<td>2.11</td>
+			  </tr>
+			</tbody>
+		</table>
+		
+		<h4>Checking Settlement</h4>
+		<ul>
+			<li>The piles will be bored piles, reinforced with steel and made of poured concrete.</li>
+			<li>F’c = 40 MPa; Ep = 30 100 MPa</li>
+			<li>For medium stiff to stiff clay: Es = 47.85 MPa</li>
+			<li>Ep/Es = 629 > 500 ; Elastic deformation is negligible</li>
+			<li>As seen in appendix E, for all loading conditions, Rs > Qapp</li>
+			<li>Since shaft resistance mobilizes well before toe resistance, for the piles designed, under normal 
+				loading conditions: QTA = 0
+			</li>		
+		</ul>
+		
+		<p>
+			For group settlement calculations, the Neutral Plane was found to be at a depth of 10.166m. 
+			This depth corresponds to two thirds the length of the pile. The compressible layer was assumed to be 
+			the layer of stiff to firm clay which extends from the neutral plane to bedrock. Bedrock depth was 
+			assumed at 20m. From the geotechnical report, the following information was determined. Borehole two sample 
+			TW7 was selected as the reference since its sample depth is 12.6m ≈ 10.166m. Data was obtained from the 
+			void-ratio v stress graph and table two: Summary of consolidation test results Avalon West -EVC-N5. 
+			Preconsolidation Pressure σ'p = 145 kPa. Ccr = 0.026. eo = 1.45. Settlement of the group piles was 
+			determined with this information.
+		</p>
+		
+		<h4>Summary of Pile Settlement</h3>
+		<table class="tg" style="undefined;table-layout: fixed; width: 100%">
+			<colgroup>
+				<col style="width:">
+				<col style="width:">
+			</colgroup>
+			<thead>
+			  <tr>
+				<th>Loading Condition</th>
+				<th>Settlement [mm]</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td colspan="2">Single Piles</td>
+			  </tr>
+			  <tr>
+				<td>C1</td>
+				<td>7.72</td>
+			  </tr>
+			  <tr>
+				<td>C2</td>
+				<td>14.10</td>
+			  </tr>
+			  <tr>
+				<td colspan="2">Pile Groups</td>
+			  </tr>
+			  <tr>
+				<td>C3</td>
+				<td>10.27</td>
+			  </tr>
+			  <tr>
+				<td>E4</td>
+				<td>7.72</td>
+			  </tr>
+			</tbody>
+		</table>
+		
+		<p>
+			Since settlement is less than 25 mm for all piles, and ΔSmax = 6.38mm (between C2/E4 and C1) is less 
+			than 19mm, the proposed column designs meet settlement requirements.
+		</p>
+		
+		<h3>Sheet Pile Walls</h3>
+		<p>
+			From the strata of the soils parameters, we decided to use for the design sheet pile wall in the foundation. 
+			As the soil was composed of silty clay, sheet pile guaranteed to retain the earth and water. It has the function 
+			of preventing the risk of landslide during the laying of foundations. Dredge line: 3m. The anchor is placed at 
+			0,675 m below the ground surface. For design calculations see the full version of this report in Appendix. 		
+		</p>
+		
+		<h4>Soil Profile</h4>
+		<div>	
+			<img src="https://chi01pap001files.storage.live.com/y4movWNkhuemEtD7lWLV8LroNUo77sSRv8KUzgEUeMFsDLBQkTji9-z3S2c26yEhIw9fjvM3L5WdtyK9uVGUTagGZ-rgx_PBXhoSPaOILQBROujA7tDHfnApjUCQwJFOVrWiUki7D4aH37bhU-bFf6mX8uQ0-grsITiPJRieZA2cO0iwIO-OuWmvuAsUmOgywWZ?width=831&height=483&cropmode=none"
+				 style="max-width: 100%;">
+		</div>
+		<br>	
 	</div>
 	
-
 	
-	
-	
-	<button class="collapsible" >Sheet Pile Design</button>
-	<div class="content">
-
-	</div>
 	
 	<button class="collapsible" >Conclusion</button>
 	<div class="content">
-
+		<p>
+			The proposed design met all design requirements therefore we can conclude that it is the most effective design 
+			option available for the soil and load conditions provided. Our geotechnical team took into consideration the 
+			major important details when designing the foundation, column and piles and adjusted our design criteria to fit 
+			all economic and safety criteria.
+		</p>
+		
+		<p>
+			Due to the site location and proposed development, four major designs were made according to the four columns to 
+			provide a safe environment as well as transfer the loads in a safest way possible to avoid any failure mechanism.
+		</p>
+		
+		<p>
+			A future recommendation concerning the project would be to provide additional current data concerning drawings, 
+			borehole logs, soil profiles as close as possible to the proposed location.
+		</p>
 	</div>
 	
 	
 	<button class="collapsible" >Appendix</button>
 	<div class="content">
-		<a href="https://onedrive.live.com/embed?cid=8912A15B8F0CAFF4&resid=8912A15B8F0CAFF4%212389&authkey=AKNqQbhyMKF3bvk&em=2" download style="font-size: 14px;">
-			Click here to download original report.</a>
+		<a href="https://onedrive.live.com/embed?cid=8912A15B8F0CAFF4&resid=8912A15B8F0CAFF4%212396&authkey=AH0RXvFebpwHIwk&em=2" download style="font-size: 14px;">
+			Click here for original report.</a>
 	</div>
 	<p></p>
 	<hr>
