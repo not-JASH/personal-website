@@ -33,6 +33,7 @@
 			
 			.grid-container {
 				width: 100%;
+				grid-template-columns: auto auto auto auto auto;
 				padding:0px 0px 0px 0px;
 				margin: 0px 0px 0px 0px;
 			}
@@ -62,9 +63,9 @@
 			</figure>
 			<input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
 		</div>
+		<h4>This image and its segmented counterpart were procedurally generated.</h4>
 		
-		
-		<p style="padding:25px 0px 5px 0px;">
+		<p style="padding:25px 0px 25px 0px;">
 			Accurately segmented, labeled data takes a long time to produce. For certain use-cases, it may be sufficient to train the bulk 
 			of a network on computer generated images, then finish training on a smaller set of real-world images. Computer generated images 
 			can be automatically labeled and segmented so large training sets are easy to obtain. In Blender, a series of random rooms with 
@@ -79,14 +80,7 @@
 			data was converted to bounding boxes from the png silhouettes. In summary, computer-generated data seems like a viable aggregate 
 			to real-world training-data. 
 		</p>
-		<p>
-			For more information, visit the GitHub repository 
-			<a style="font-size:14px;font-weight: bold;" href="https://github.com/not-JASH/computer_generated_segmented_data">here</a>
-			.
-		</p>
 		
-		
-
 		<hr>
 		<div class="grid-container">
 			<div class="grid-item">
@@ -100,6 +94,10 @@
 			</div>
 			<div class="grid-item">
 				<a href="/Education">Education</a>
+			</div>
+			
+			<div class="grid-item">
+				<a href="https://github.com/not-JASH/computer_generated_segmented_data">GitHub</a>
 			</div>
 		</div>
 

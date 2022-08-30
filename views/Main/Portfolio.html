@@ -4,74 +4,22 @@
 	<meta charset="utf-8">
 	<title>Portfolio</title>
 	<link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
+	<link href="../../assets/css/collapsible.css" rel="stylesheet" type="text/css">
+	
 	<link href="/css/style.css" rel="stylesheet" type="text/css">
+	<link href="/css/collapsible.css" rel="stylesheet" type="text/css">
 
 	<style>
-		body {
-			margin: auto;
-			width:80%;
-			max-width: 500px;
-			padding: 0px 20%;
+		p {
+			width: 100%;
+			
 		}
 				
-		a {
-			font-size:24px;
-		}	
-		
-		p {
-			font-size:18px;
-			text-align: justify;
-			padding:25px;
-		}
-		
-		nav {
-			padding:5px 0% 15px;
-		}
-		
-		nav h1 {
-			paddng:0px 0px 0px 0px;
-			margin:0px 0px 0px 0px;
-		}
-		
-		.content a {
-			color:white;
-			font-size:16px;
-		}
-		
-		a:hover {
-			font-weight: bold;
-		}	
-		
-		.collapsible {
-			background-color: white;
-			color: black;
-			cursor: pointer;
-			padding: 5px 18px;
-			width:756px;
-			border: none;
-			text-align: left;
-			outline: none;
-			font-size: 24px;
-		}
-
-		.active, .collapsible:hover {
-			background-color: black;
-			font-weight: bold;
-			color: white;
-		}
-
-		.content {
-			padding: 0 18px;
-			max-height: 0;
-			width:720px;
-			overflow: hidden;
-			transition: max-height 0.2s ease-out;
-			background-color: black;
-			color: white;
-		}	
+		dd p {
+			padding:0px 0px 0px 0px;
+			font-size:14px;
+		}		
 	</style>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
@@ -82,55 +30,140 @@
 		<a href="/Education">Education</a>
 	</nav>
 	
-	<button class="collapsible">2015 - 2018</button>
-	<div class="content">
-		<br>
-	  	<nav>
-			<a href="/Misc-Sketches">
-				Miscellaneous Sketches.</a>
-			<a href="/TDSB-Architecture">
-				An investigation into the architecure of Toronto's public schools.</a>
-			<a href="/CHARS-Feasibility">
-				Feasibility study for an expansion at the Canadian High Arctic Research Station.</a>
-			<a href="/Shallow-Foundation-231-Cobourg">
-				Shallow foundation design for a building at 231 Cobourg Ave, Ottawa.</a>
-			<a href="/CHARS-Design-Report">
-				Designed a power plant for the Canadian High Arctic Research Station.</a>
-			<a href="/Foundation-for-Tenth-Line">
-				Foundation design for new commercial building at Tenth Line, Ottawa.</a>
-		</nav>
-		<br>
-	</div>
+	<h2 style="font-size:34px;padding: 0px 0px 0px 0px;">
+		Look on my works, ye Mighty, and <span style="color: orange;">[enjoy]</span></h2>
+	<h2 style="padding: 0px 0px 25px 0px;">
+		Be sure to click items you find interesting.
+	</h2>
+	
+	<hr>
+	
+	<dl>
+		<!--
+		<dt class="collapsible"><a href="/CHARS-Feasibility">Miscellaneous Sketches.</a></dt>
+		<dd class="content">
+			<h4>2010 - 2016</h4>
+			<p>
+				An informal selection of sketches; most of these were drawn in notebooks inbetween lectures and meetings.
+			</p>
+		</dd>
+		--> 
 		
-	<button class="collapsible">2019 - 2020</button>
-	<div class="content">
-		<br>
-	  	<nav>
-			<a href="/Computer-Generated-Training-Data">
-				Computer generated training data.</a>
-			<a href="/Wavelets-and-Extended-Fourier">
-				Some notes on wavelets and the extended fourier transform.</a>
-			<a href="/Parametric-Space">
-				Parametric Space.</a>
-		</nav>
-		<br>
-	</div>
 		
-	<button class="collapsible">2021 - 2022</button>
-	<div class="content">
-		<br>
-	  	<nav>
-			<a href="/WaveGAN">WaveGAN.</a>			
-			<a href="/Cryptocurrency-AI" style="font-size:110%;color:white">
-				Proposals for a cryptocurrency trading AI.</a>
-			<a href="/Skyrim-TNE">
-				Elder Scrolls V Skyrim - True Nord Edition.</a>
-			<a href="/AI-Art">
-				Selected images created with AI.</a>
-		</nav>
-		<br>
-	</div>
+		<!--
+		<dt class="collapsible"><a href="/TDSB-Architecture">An Investigation into the Architecure of Toronto's Public Schools.</a></dt>
+		<dd class="content">
+			<h4>Summer 2017</h4>	
+			<p>
+				A study of Toronto's sociopolitical landscape leading to the current architecture of the Toronto District School Board's (TDSB) schools.
+				This study was primarily focused on how major changes in TDSB administration , and changing ideologies concerning education, are reflected
+				in the architecture of Toronto's public schools.
+			</p>
+		</dd>
+		-->
+		
+		<dt class="collapsible"><a href="/CHARS-Feasibility">Feasibility Study for an Expansion at the Canadian High Arctic Research Station.</a></dt>
+		<dd class="content">
+			<h4>Autumn 2017</h4>
+			<p>
+				A study of renewable energy production technologies and arctic building techniques to determine the viability of building a power-generating
+				expansion to POLAR Knowledge Canada's High Arctic Research Station in Cambridge Bay, Nunavut. This was in collaboration with, and presented 
+				to, representatives from POLAR Knowledge Canada and the University of Ottawa's Civil Engineering Department. 
+			</p>
+		</dd>
+		
+		<dt class="collapsible"><a href="/Shallow-Foundation-231-Cobourg">Shallow Foundation Design for a Condominium at 231 Cobourg Ave.</a></dt>
+		<dd class="content">
+			<h4>December 2017</h4>
+			<p>
+				A shallow raft-foundation design for a proposed eight-story condomium at 231 Coburg Ave, Ottawa, Ontario. The site at Cobourg Avenue is unique
+				in that beneath a thin layer of sand rests a deep layer of Leda Clay close to the water-table. Leda Clay is known to liquify under pressure when 
+				saturated, so increased safety measures were considered in the design. 
+			</p>
+		</dd>
+		
+		<dt class="collapsible"><a href="/CHARS-Design-Report">Waste-to-Energy Plant Design to Service Canadian High Arctic Research Station.</a></dt>
+		<dd class="content">
+			<h4>Winter 2018</h4>
+			<p>
+				A design for a waste-to-energy plant to be built in the High Arctic. This building was designed to reduce Cambridge Bay's ecological footprint 
+				while meeting its growing energy needs. With the knowledge gained from the earlier conducted feasibility study, a light-weight building was 
+				designed which would sit a few feet above the permafrost on socketed piles. This building also featured sate of the art insulation materials.
+				This report was presented to professors in the University of Ottawa's Civil Engineering Department.
+			</p>
+		</dd>
+		
+		<dt class="collapsible"><a href="/Foundation-for-Tenth-Line">Foundation Design for a New Commercial Building at Tenth Line.</a></dt>
+		<dd class="content">
+			<h4>March 2018</h4>
+			<p>	
+				A pile foundation design for a proposed development at Tenth Line, Ottawa, Ontario. Iterative design was used to develop a suitable foundation 
+				in primarily sand. Site data was determined from borehole logs taken on site. 
+			</p>
+		</dd>
+		
+		<dt class="collapsible"><a href="/Wavelets-and-Extended-Fourier">Notes on Wavelets and the Extended Fourier Transform.</a></dt>
+		<dd class="content">
+			<h4>Spring 2020</h4>
+			<p>
 			
+			</p>
+		</dd>
+		
+		<dt class="collapsible"><a href="/Computer-Generated-Training-Data">Computer generated training data.</a></dt>
+		<dd class="content">
+			<h4>Autumn 2020</h4>
+			<p>
+				A pipeline to create segmented data in several prominent segmented image formats: YOLO and COCO for example. Virtual rooms were procedurally 
+				generated in blender and sequences of images, with corresponding segments for objects and walls, were generated. Three dimensional vertices 
+				defining objects in-frame were projected onto the image plane and reduced to only those necessary to express the object's silhouette. Then
+				the segmented data is converted to the desired format. The aim was to determine if a neural network could learn from computer generated graphics. 			
+			</p>
+		</dd>
+		
+		<dt class="collapsible"><a href="/Parametric-Space">Parametric Space.</a></dt>
+		<dd class="content">
+			<h4>Autumn 2020</h4>
+			<p>
+				A quick investigation into how space could be parametrized, partly undertaken as a part of Computer Generated Training Data. A design pattern 
+				which related pseudoranom elements to collective expresion was coded such that random collections of spaces following this pattern could be 
+				generated. 
+			</p>
+		</dd>
+		
+		<dt class="collapsible"><a href="/WaveGAN">WaveGAN.</a></dt>
+		<dd class="content">
+			<h4>Winter 2021</h4>
+			<p>
+			
+			</p>
+		</dd>
+		
+		<dt class="collapsible"><a href="/Cryptocurrency-AI">Proposals for a cryptocurrency trading AI.</a></dt>
+		<dd class="content">
+			<h4>Winter 2022</h4>
+			<p>
+			
+			</p>
+		</dd>
+		
+		<dt class="collapsible"><a href="/Skyrim-TNE">Elder Scrolls V Skyrim - True Nord Edition.</a></dt>
+		<dd class="content">
+			<h4>Winter 2022</h4>
+			<p>
+			
+			</p>
+		</dd>
+		
+		<dt class="collapsible"><a href="/AI-Art">Selected images created with AI.</a></dt>
+		<dd class="content">
+			<h4>Summer 2022</h4>
+			<p>
+			
+			</p>
+		</dd>	
+	</dl>	
+		
 	<script>
 		function expandcollapse(element){
 			var content = element.nextElementSibling;
@@ -143,12 +176,6 @@
 		
 		var coll = document.getElementsByClassName("collapsible");
 		var i;
-
-		for (i = 0; i < coll.length; i++) {
-		  coll[i].addEventListener("click", function() {
-			this.classList.toggle("clicked");
-		  });
-		}
 		
 		for (i = 0; i < coll.length; i++) {
 		  coll[i].addEventListener("mouseover", function() {

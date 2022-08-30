@@ -11,10 +11,6 @@ app.set("views",path.join(__dirname,"views"));
 app.engine('html',require('ejs').renderFile);
 app.set("view engine","ejs");
 
-
-
-
-
 function onHttpStart(){
     console.log("Server started, listening on " + HTTP_PORT); 
 }
