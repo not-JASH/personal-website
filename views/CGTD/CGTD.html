@@ -4,7 +4,12 @@
 		<meta charset="utf-8">
 		<title>CG Training Data</title>
 		<link href="../../assets/css/style.css" rel="stylesheet" type="text/css">
+		<link href="../../assets/css/comparison.css" rel="stylesheet" type="text/css">
+		
 		<link href="/css/style.css" rel="stylesheet" type="text/css">
+		<link href="/css/comparison.css" rel="stylesheet" type="text/css">
+		
+		<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 		
 		
 		<style>			
@@ -20,68 +25,12 @@
 			}	
 
 			p {
-
-				text-align: justify;
-			}
-
-			li {
-				font-size: 14px;
-			}
-
-			nav {
-				padding:50px 0%;
-			}
-
-			nav h1 {
-				paddng:0px 0px 0px 0px;
-				margin:0px 0px 0px 0px;
-			}
-			p {
 				font-size:14px;
 				width:100%;
 				padding:0px 0px 20px 0px;
 				text-align: justify;
 			}
-
-
-			h3 { 
-				height:8px;
-				padding: 0px 0px 0px 0px;
-			}
-
-			h4 {
-				height: 14px;
-				padding: 0px 0px 0px 0px;			
-			}
-
-			.collapsible {
-				background-color: white;
-				color: black;
-				cursor: pointer;
-				padding: 5px;
-				width: 100%;
-				height:5px;
-				border: none;
-				text-align: left;
-				outline: none;
-				font-size: 24px;
-			}
-
-			.active, .collapsible:hover {
-				background-color: white;
-				font-weight: bold;
-				color: black;
-			}
-
-			.content {
-				padding: 0 8px;
-				max-height: 0;
-				overflow: hidden;
-				transition: max-height 0.2s ease-out;
-				background-color: white;
-				color: black;
-			}
-
+			
 			.grid-container {
 				width: 100%;
 				padding:0px 0px 0px 0px;
@@ -100,96 +49,12 @@
 			.null:hover {
 				text-shadow: 0 0 0 black;
 			}	
-			
-			div#comparison { 
-				width: 60vw;
-				height: 33.75vw;
-				max-width: 500px;
-				max-height: 281.25px;
-				overflow: hidden; 
-			}
-			
-			div#comparison figure { 
-				background-image: url(https://chi01pap001files.storage.live.com/y4m9Z2Opb-EtzhZ4ARP_hIrl0K8oVmESLccd5gWdUxreJaXNZIF4CQf03nGwa5Y80bhgYgeDjxJDS23jZoInyPQfH1MZ26BOBIPoF-o3WpTCRkh2q4vZlfJn7n-JLi272u7IHLog6XXa0U7lAVe_tVI2wZONOYp0NHjpJNARJjtnbOZOg8KGvvs4lATrPjogjtJ?width=1600&height=900&cropmode=none); 
-				background-size: cover;
-				position: relative;
-				font-size: 0;
-				width: 100%; 
-				height: 100%;
-				margin: 0; 
-			}
-			
-			div#comparison figure > img { 
-				position: relative;
-				width: 100%;
-			}
-			
-			div#comparison figure div { 
-				background-image: url(https://chi01pap001files.storage.live.com/y4mNGZ65QPQV0ZxrX6J-hROE8SBT3reoOnKtMxMunL6l83afSdCXN7pWVvCNHgrkXDN4r3ghiP-gHJj5-omfrVlWOkQqjulTrRaVgPdOxCVkLScmxpegm7OdsXxT1PBEgbASDjzBcPE_Ei54qH1hQVxlzVLfdfp4v6j0QKw58enE45XmG2sn3f9F0MQsZCOczik?width=1600&height=900&cropmode=none);
-				background-size: cover;
-				position: absolute;
-				width: 50%; 
-				box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
-				overflow: hidden;
-				bottom: 0;
-				height: 100%;
-			}
-
-			input[type=range]{
-				-webkit-appearance:none;
-				-moz-appearance:none;
-				position: relative;
-				top: -2rem; left: -2%;
-				background-color: rgba(255,255,255,0.1);
-				width: 102%; 
-			}
-			
-			input[type=range]:focus { 
-				outline: none; 
-			}
-			
-			input[type=range]:active { 
-				outline: none;  
-			}
-
-			input[type=range]::-moz-range-track { 
-				-moz-appearance:none;
-				height:15px;
-				width: 98%;
-				background-color: rgba(255,255,255,0.1); 
-				position: relative;
-				outline: none;    
-			 }
-			input[type=range]::active { 
-				border: none; 
-				outline: none;
-			}
-			input[type=range]::-webkit-slider-thumb {
-				-webkit-appearance:none;
-				width: 20px; height: 15px;   
-				background: #fff;
-				border-radius: 0;
-			   }
-			input[type=range]::-moz-range-thumb {
-			 	-moz-appearance: none;
-			  	width: 20px;
-			  	height: 15px;
-			  	background: #fff;
-			  	border-radius: 0;
-			}   
-			
-			input[type=range]:focus::-webkit-slider-thumb {
-				background: rgba(255,255,255,0.5);
-			   }
-			input[type=range]:focus::-moz-range-thumb {
-				background: rgba(255,255,255,0.5);
-			   }
-
 		</style>
 	</head>
 	
 	<body>
-		<header><h1>Computer Generated Training Data</h1></header>
+		<h1>Computer Generated Training Data</h1>
+		
 		
 		<div id="comparison" style="width:100%">
 			<figure>
@@ -199,7 +64,7 @@
 		</div>
 		
 		
-		<p style="padding:25px 0px 25px 0px;">
+		<p style="padding:25px 0px 5px 0px;">
 			Accurately segmented, labeled data takes a long time to produce. For certain use-cases, it may be sufficient to train the bulk 
 			of a network on computer generated images, then finish training on a smaller set of real-world images. Computer generated images 
 			can be automatically labeled and segmented so large training sets are easy to obtain. In Blender, a series of random rooms with 
@@ -214,6 +79,13 @@
 			data was converted to bounding boxes from the png silhouettes. In summary, computer-generated data seems like a viable aggregate 
 			to real-world training-data. 
 		</p>
+		<p>
+			For more information, visit the GitHub repository 
+			<a style="font-size:14px;font-weight: bold;" href="https://github.com/not-JASH/computer_generated_segmented_data">here</a>
+			.
+		</p>
+		
+		
 
 		<hr>
 		<div class="grid-container">
