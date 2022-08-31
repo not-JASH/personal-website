@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+body { 
+	font-family: Helvetica,Arial;
+	max-width: 1500px;
+	width:90%;
+	color:white;
+	background-color:black;
+	margin:auto;
+	padding: 0px 0px 0px 0px;
+}
+
+h1 {
+	font-size:50px;	
+}
+
+h2 {
+	font-size:24px;
+}
+
+h3 {
+	font-size:16px;
+}
+
+h4 {
+	font-size:12px;
+}
+
+a { 
+	text-decoration: none;
+	font-size:20px;
+	color:white;
+}
+
+a:hover {
+	text-shadow: 0 0.01px 0.8px white;
+	text-decoration: none;
+	color:white;
+}
+
+a:active {
+	text-shadow: 0 0.01px 0.8px white;
+	text-decoration: none;
+	color:white;
+}
+
+nav {
+	display: grid;
+	row-gap:auto;
+}
+
+p,h2,h1 {
+	margin:auto;
+	width: 75%;	
+	text-align: justify;
+	max-width: 800px;
+}
+
+h1, h2 {
+	text-align: left;
+}
+
+img {
+	padding:0px 0px 50px 0px;
+	width:100%;
+	align-content: center;
+	max-width:2000px;
+}
+
+p {
+	font-size: 20px;
+	padding: 0px 0px 100px 0px;
+}
+
+.description {
+	padding: 50px 0px 25px 0px;
+}
+.grid-container {
+	margin:auto;
+}
+
+hr {
+	width:75%;
+}

@@ -1,23 +1,835 @@
 <!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>CHARS Feasibility</title>
-<link href="../assets/css/style.css" rel="stylesheet" type="text/css">
-<link href="/css/style.css" rel="stylesheet" type="text/css">
-</head>
-	
-<body>
-	<header><h1>Feasibility Study for an expansion at the Canadian High Arctic Research Station</h1></header>
-	
-	<hr>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/Portfolio">Portfolio</a>
-	</nav>
-	
-	<p>
+	<head>
+		<meta charset="utf-8">
+		<title>CHARS Feasibility</title>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<link href="/css/main_stylesheet.css" rel="stylesheet" type="text/css"><br>
+		<link href="/css/CHARS.css" rel="stylesheet" type="text/css"><br>
+		
+		<style>
+			body {
+				width: 100%;
+				max-width:none;
+				padding:0px 0px 0px 0px;
+			}
+			
+			a {
+				display: block;
+				font-size: 14px;
+			}
+			
+			a:active {
+				font-weight:normal;
+			}
+			
+			td, th, ol {
+				font-size: 14px;
+			}
+			
+			li {
+				font-size: 14px;
+				margin-bottom:4px;
+			}
+			
+			.at {
+				vertical-align: top;
+			}
+			
+			.pb10 {
+				padding-bottom: 12px;
+			}
+			
+			.CHARS {
+				padding:25px 0px 0px 0px;
+			}
 
-	</p>
-</body>
+			
+			.grid-container {
+				grid-template-columns: repeat(5,auto);
+			}
+			
+			.index {
+				position: fixed;
+				max-width:150px;
+				left:50%;
+				top:280px;
+				margin-left:-530px;
+			}
+			
+			.main-text {
+				align-content: center;
+				margin:auto;
+				width: 80%;
+				max-width:680px;
+			}				
+		</style>
+	</head>
+	
+	<body>		
+		<div class="index">
+			<a href="#definition">Project Definition</a>
+			<a href="#background">Background Information</a>
+			<a href="#objectives">Objectives</a>
+			<a href="#design-criteria">Design Criteria</a>
+			<a href="#constraints">Constraints</a>
+			<a href="#design-alts">Design Alternatives</a>
+			<a href="#geotechnical-design">Geotechnical Design</a>
+			<a href="#structural-design">Structural Design</a>
+			<a href="#environmental-design">Environmental Design</a>
+			<a href="#social-impact">Social Impact</a>
+			<a href="#aesthetics-concept">Aesthetics Concept</a>
+			<a href="#selected-design">Selected Design</a>
+			<hr>
+			<a href="/">Home</a>
+			<a href="/Portfolio">Portfolio</a>
+			<a href="/Work-Experience">Work Experience</a>
+			<a href="/Education">Education</a>
+			<a download
+				href="" >
+				Full Report</a>
+		
+		</div>
+		
+		<div class="main-text">
+			<h1>Canadian High Arctic Research Station Expansion Feasibility Study</h1>
+
+			<p>
+				<span style="font-weight:bold;">BARE Engineering and Consulting Ltd.</span> is interested in the task of the 
+				design and construction of an additional building to the Canadian High Arctic Research Station 
+				(CHARS)premises. This additional building will be a stand-alone state of the art renewable energy building 
+				known as the Renewable Energy Centre (REC). This new structure will be located north-west of the existing 
+				Field and Maintenance building at the CHARS facility, in Cambridge Bay, Nunavut. Plans are being prepared 
+				for the proposed development of the site with a new eco-friendly building tasked with eliminating the 
+				dependability of burning fossil fuels to provide energy in Canada's Arctic. BARE Engineering and Consulting 
+				Ltd. has performed a feasibility study of several criteria, constraints, schedule, budget, location, and 
+				possible approach that would be associated with the design of the structure. The intent of this report is to 
+				investigate the feasibility of implementing different geotechnical (foundation), structural, environmental, 
+				and social options. Preliminary alternatives were analysed based on several criteria to determine the optimal 
+				solution in each category to provide a safe, sustainable, and efficient new building for the country. We are 
+				pleased to be apart of such a world-renowned facility. Northern Canada is one of many remarkable parts of the 
+				nation, rich with heritage and national identity and the development of this historic area has been a focal 
+				point for the country. We at BARE are pleased to take on the responsibility and challenge of providing our 
+				client with an exceptional project from beginning to close-out. Preparation of this feasibility report 
+				provides preliminary findings and conclusions regarding several aspects of the project.	
+			</p>
+			
+			<div id="definition">
+				<h2>Project Definition</h2>
+				<h3>Geographic Area</h3>
+				<p>
+					The Canadian High Arctic Research Station (CHARS) is in Cambridge Bay, NU, which is on the southeast coast of 
+					Victoria Island across from the Canadian Mainland. The proposed renewable energy research building will be located 
+					North-West of the Field and Maintenance Building. Below is a satellite image of the site, this image gives an aerial 
+					view of the land that we must deal with. This area of Canada is located north of the line of discontinuous permafrost, 
+					in the continuous permafrost zone. Building in permafrost zones requires special consideration in design and 
+					construction aspects. The figure below outlines all the various areas of permafrost in Canada with Cambridge Bay, NU 
+					located in the continuous zone.
+				</p>
+
+				<img><! sattelite images and map of cambridge bay>	
+			</div>
+			
+			<div id="background">
+				<h2>Background Information on Building in the North</h2>
+				<h3>Transportation</h3>
+				<p>
+					Transportation holds key significance in projects that take place in Canada’s North. The remote location of the northern 
+					communities’ limits sometimes conventional or more cost-efficient modes of transportation. Other remedies must be looked 
+					at when considering jobs in the north such as transportation by water which is not without its limitations. In looking at 
+					previous projects it can be seen the different challenges that come budgeting when dealing with transportation. One 
+					project was only able to deliver material by chartered aircrafts; this cost about $10,000 a day for 8-10 day stretches of 
+					work on site (CHARS Feasibility). For the CHARS building water transportation will have to be utilized, which in Cambridge 
+					Bay can be costly. For this project items needed will be sent by water, which accounts for at least 80% of the items once 
+					a year arriving during the 1st week of September so plans must be made accordingly and precisely. It is noted that 
+					significant lead times as well as significant financial contingencies were important to lowering any problems that would 
+					arise with transportation (CHARS Feasibility).
+				</p>
+
+				<h3>Community Integration</h3>
+				<p>
+					Community involvement with the CHARS project is something that was important as well. Through information gathered about 
+					previous projects it was learned that success of the projects was directly linked to the support from the communities. Each 
+					project offered a different type of community involvement from: consultations throughout the entire lifespan of the project; 
+					partnering directly with communities to carry out construction work; and, in some cases, contracting directly to community 
+					organizations. This project is not any different similar routes will be taken to ensure success. For the CHARS project a few 
+					things will be taken into consideration: successful integration into Cambridge Bay in terms of infrastructure and activities, 
+					a strong relationship with the community that will aid with any problems that may happen throughout the project and trying to 
+					have someone from the community aid with the integration and ongoing consultations.
+				</p>
+
+				<h3>Weather and Climate</h3>
+				<p>
+					The weather and climate in Cambridge Bay will really affect a wide variety of people involved in the CHARS project. The 
+					ability to deal with the conditions can either make or break the project’s schedule and budget. Cambridge bay has a polar 
+					climate; no month in Cambridge Bay experiences an average temperature higher than 10 degrees Celsius (Environment Canada, 
+					2017). Workers would be battling with elements present in the region on top of the already low temperatures. The table below 
+					from Environment Canada gives a glimpse into the conditions that workers will be dealing with. There are three major 
+					conditions to look at when assessing Cambridge Bay: daylight hours, temperature, and wind.
+				</p>
+				
+				<p>
+					Temperature in Cambridge Bay will be something workers will have to find a way to adapt to. Cambridge Bay highest daily 
+					maximum temperature is seen in July where it could possibly go up to about 13 degrees Celsius; this is seen on the table 
+					below taken from Environment Canada. The average daily maximum temperature coming out of Ottawa is 26.5 degrees in July, 
+					making for a major difference in comfortability for workers and visitors to the Cambridge Bay area. The cold season does 
+					not offer much better results either as Cambridge Bay sees a daily average temperature of -32.5 degrees Celsius in February 
+					and Ottawa has a daily average temperature of 10.2 degrees Celsius in January, which can also be seen below in a Graph 
+					from Environment Canada.
+				</p>
+				
+				<p>
+					The number of daylight hours will greatly affect how productive the construction will be this will greatly impact the 
+					project schedule. Although working through the darkness can still be achieved, there are other issues that arise from this 
+					time of day such as colder temperatures, as well as extra costs for lighting and heating. In Cambridge Bay, due to its extreme 
+					latitude, the area experiences a factor called a polar day (also known as the midnight Sun) during the summer and a polar 
+					night during the winter. The precise start and end dates of polar day and night vary from year to year and depend on the precise 
+					location and elevation of the observer, and the local topography. Throughout the summer the sun is on average continuously 
+					above the horizon for approximately 62 days, between May 20 to July 21. In the winter months, from approximately November 30 to 
+					January 11, the sun is continuously below the horizon for around 42 days. The figure below accessed from the time and date site 
+					shows an approximate graph of how the sunlight behaves in this Northern community.
+				</p>
+				
+				<p>
+					The number of hours during which the Sun is visible (black line), with various degrees of daylight, twilight, and night, 
+					indicated by the color bands. From bottom (most yellow) to top (most gray): full daylight, solar twilight (Sun is visible 
+					but less than 6° from the horizon), civil twilight (Sun is not visible but is less than 6° below the horizon), nautical 
+					twilight (Sun is between 6° and 12° below the horizon), astronomical twilight (Sun is between 12° and 18° below the 
+					horizon), and full night.	
+				</p>
+				
+				<p>
+					The last condition to be looked at is wind. The wind speeds that are faced in Cambridge Bay could make for tougher work 
+					conditions. This will lead to slower production causing a shift in the project schedule. The data provided below from 
+					Environment Canada shows the different wind speeds each month deals with; this provides a month-to-month comparison. The 
+					increased winds make for harsher conditions especially for any workers coming into the area to work.
+				</p>
+
+				<h3>Project Management</h3>
+				<p>
+					One of the main and maybe most important parts of any project is the project management and planning stage. In this stage 
+					of the project preliminary drawings and details are drafted as well as providing a schedule for the project and setting 
+					project milestones to keep the project on track. When it comes to scheduling there are several things to consider that may 
+					alter the scheduling and overall change the length of the project. A few aspects that will affect the scheduling are 
+					transportation of material and labour, weather conditions, ease of construction, and manpower. All these things and more 
+					will go into the project management analyzing these aspects will allow for the team to find a way to provide the most 
+					efficient and least time-consuming way to finish this project. As the project moves forward the schedule will continually 
+					have to be refined as more and more information is brought forward.
+				</p>
+
+				<h3>LEED Eligibility</h3>
+				<p>
+					To apply for LEED certification, there are several minimum program requirements that must be met. These minimum requirements 
+					will be investigated below to determine if the building of a new building northwest of the Field and Maintenance building for 
+					CHARS is eligible for LEED certification. The numbers and system looked at below will be taken from the Canada Green 
+					Building Council. 
+				</p>
+				<h4>Rating System Selection</h4>
+				<p>
+					The proposed development involves the conceptual planning and design of a new building for CHARS. The LEED rating system that 
+					best suits the project is the New Construction and Major Renovation. The rating system is the Building Design and Construction 
+					(BD+C) aspect for the new structure. BARE Engineering and Consulting LTD. is aiming to reach LEED Gold Certification, which is
+					described as 60-79 points on the rating system. LEED points are awarded under seven different topics: Sustainable Sites, Water 
+					Efficiency, Energy and Atmosphere, Materials and Regional Priority.
+				</p>
+
+				<h3>Local Construction and Trades</h3>
+				<p>
+					During the construction of the CHARS project, the Inuit Benefit Plan (IBP) was implemented to ensure the employment of Inuit 
+					labour, engagement of Inuit professional services, and the use of Inuit suppliers during this project. The construction of CHARS 
+					is regulated under the Nunavut Land Claims Agreement (NLCA) obligations, which is a requirement with Indigenous and Northern 
+					Affairs Canada (INAC) projects. Article 24 of the NCLA which depicts Canada’s procurement obligations, which is related to the 
+					new structure of the CHARS facility. 
+				</p>
+				
+				<p>
+					Local trades and businesses will have primary consideration for any elements related to the construction of this project. If 
+					there are no local businesses that can supply demands of the project, then further consideration will be rewarded to outside 
+					businesses as a last resort.
+				</p>
+			</div>
+			
+			<div id="objectives">
+				<h2>Objectives</h2>
+				<p>
+					The goal is to improve the Canadian High Arctic Research Station by providing the facility with a new renewable energy research 
+					building. BARE Engineering and Consulting LTD. aims to equip CHARS with a usable space for renewable energy technologies, employ 
+					locally and to minimize cost while optimizing sustainability.
+				</p>
+				
+				<ul>
+					<li>Design a cost-effective building for the Canadian High Arctic Research Station.</li>
+					<li>Minimize environmental consequences through the reuse of materials and resources.</li>
+					<li>Design a self-sustaining building that focuses on renewable energy technologies while matching the current themes and social 
+						values set out for CHARS.</li>
+					<li>Maximize the use of local contractors during the construction process by designing a structure that matches the current 
+						construction skills and techniques of workers at Cambridge Bay. </li>
+					<li>Ensure that the design of the structure is applicable to Canada’s arctic climate, remaining sustainable for many years to 
+						come. </li>
+					<li>Eliminate any option that would yield an unsafe construction or an unsafe final product. </li>
+					<li>Minimize operation and maintenance requirements. </li>
+				</ul>
+			</div>
+			
+			<div id="design-criteria">
+				<h2>Design Criteria</h2>	
+				<p>
+					To select the optimal design alternative, each alternative will be weighed based on the same criteria to have an unbiased selection 
+					that yields the optimal results for the client. For this project, we have decided on 5 criteria upon which we will base our selection.
+				</p>
+				<p>
+					The criteria were selected to provide the best possible solution for the owner. Based on these criteria the optimal solution will 
+					have a low cost first and foremost. Given the complications involved with projects in this region, cost efficiency is our number one 
+					priority. The optimal solution will have to minimize the consequences on the environment and local fauna/flora. It will also have to 
+					be strong enough to support the required loads according to code and must have a long service life. This world class facility will be aesthetically appealing, and the new building will not stand out from the rest of the structure. The risk factor considers different 
+					aspects of the construction, sustainability, work quality and maintenance of building. Lastly, the implementation of the design will 
+					be easy as such that there will be little to no issues during the construction of the project. These criteria yield our selected 
+					design. The following table presents each criterion with its respective weight for the design selection.
+				</p>
+				
+				<h3>Design Criteria and Corresponding Weights</h3>
+				<table style="text-align:left;vertical-align:top;">
+					<colgroup>
+						<col style="width:">
+						<col style="width: 100px">
+						<col style="width:">
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="pb10 at">Criteria</th>
+							<th class="pb10 at">Weight</th>
+							<th class="pb10 at">Rationale</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="at">Cost</td>
+							<td class="at">45%</td>
+							<td>
+								Cost is considered as the most important criterion because construction in Canada’s Arctic is very expensive compared 
+								to Ontario. <br><br>
+							</td>
+						</tr>
+						<tr>
+							<td class="at">Environmental Impact</td>
+							<td class="at">25%</td>
+							<td>
+								CHARS being a world class facility regulated by the Nunavut Land Claims Agreement must be environmentally friendly now 
+								and in future years to come. <br><br>
+							</td>
+						</tr>
+						<tr>
+							<td class="at">Ease of Construction</td>
+							<td class="at">15%</td>
+							<td>
+								According to the Nunavut Land Claims Agreement, 75% of workers must be local; therefore, skilled trades may be hard to 
+								come by. <br><br>
+							</td>
+						</tr>
+						<tr>
+							<td class="at">Service Life</td>
+							<td class="at">10%</td>
+							<td>
+								It is crucial to the client that the sustainability of the station is excellent.<br><br>
+							</td>
+						</tr>
+						<tr>
+							<td class="at">Risk Factor</td>
+							<td class="at">5%</td>
+							<td>
+								During the construction phase and life of the facility, it must remain safe to the workers and public. The risk of 
+								unsafe or unsustainable construction must be considered. <br><br>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<p>
+					Each design alternative option in section 7.0 will be given a score from 1-10 corresponding to each criterion. Outlined in the 
+					decision matrix are the summed products of the option score and weight for each criterion, therefore yielding the optimal option 
+					and selected design. The table below presents the ranking of each criterion including a description of what is considered as poor, 
+					average, or excellent ranking.
+				</p>
+				
+				<h3>Criteria Rankings</h3>
+					<table style="text-align:left;vertical-align:top;">
+					<colgroup>
+						<col style="width:80px;">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+						<col style="width:">
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="pb10 at">Ranking</th>
+							<th class="pb10 at">Cost</th>
+							<th class="pb10 at">Environmental Impact</th>
+							<th class="pb10 at">Ease of Construction</th>
+							<th class="pb10 at">Service Life</th>
+							<th class="pb10 at">Risk Factor</th>							
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="at">Poor<br>(1-3)</td>
+							<td class="at">A cost which is exceptionally high.</td>
+							<td class="at">The design alternative will have the greatest impact on the environment.</td>
+							<td class="at">The design alternative will require skilled labour and complicated to construct.</td>
+							<td class="at">The design alternative will have the shortest service life and will require much maintenance.<br><br></td>
+							<td class="at">The design alternative is considered as unsafe and unreliable.</td>
+						</tr>
+						<tr>
+							<td class="at">Average<br>(4-7)</td>
+							<td class="at">A cost which is average in comparison to all alternatives.</td>
+							<td class="at">The design alternative will have some environmental impacts while being able to produce renewable energy.</td>
+							<td class="at">The design alternative may be difficult to construct but can be done with the skill set of the local workers.<br><br></td>
+							<td class="at">The design alternative will have an average service and require operation and maintenance. </td>
+							<td class="at">The design alternative is safe but unreliable throughout its service life.</td>
+						</tr>
+						<tr>
+							<td class="at">Excellent<br>(8-10)</td>
+							<td class="at">The design alternative with the lowest possible cost. </td>
+							<td class="at">Minimal environmental impact and can produce and sustain renewable energy. </td>
+							<td class="at">The construction the design alternative can be done with ease and with the skill set of the local workers. </td>
+							<td class="at">The design alternative will have low operation and maintenance, and a long service life. </td>
+							<td class="at">The design alternative is completely safe through construction and service life. </td>
+						</tr>
+					</tbody>
+				</table>
+				
+			</div>
+			
+			<div id="constraints">
+				<h2>Constraints</h2>		
+				<p>
+					As with any project there will be some constraints present. These constraints can halt a project all together no matter what stage the 
+					project has reached. For the CHARS project some of the constraints present can be seen below:
+				</p>
+				<h3>Public Safety</h3>
+				<ol>
+					<li>The project must be safe for all, there isn’t the option of having it safe enough for a certain percentage of people</li>
+					<li>The goal is to have the project be safe during the working phase and in the months or years after construction</li>
+					<li>The project cannot progress without evaluating its overall safety for the people involved.</li>
+				</ol>
+				<h3>Weather</h3>
+				<ol>
+					<li>The lack of daylight present during certain months will cause some setbacks in the work schedule</li>
+					<li>he drastic cold temperatures that are experienced in Cambridge Bay will affect workers anywhere from mood to motivation to work. 
+						The ability to be exposed for certain amounts of time to conditions also needs to be looked at.</li>
+				</ol>
+				<h3>Skilled Labour</h3>
+				<ol>
+					<li>Certain design alternatives cannot be used due to the lack of skilled workers in the region.</li>
+					<li>When choosing construction methods and materials the cost of training workers is something that must be heavily considered.</li>
+					<li>75% of workers must be local.</li>
+				</ol>
+				<h3>Transportation</h3>
+				<ol>
+					<li>Not an abundance of options when it comes to bring stuff in and out of the region.</li>
+					<li>Costly to rally materials for building.</li>
+					<li>Must plan accordingly when looking to transport material up to Cambridge Bay as the Sealift brings materials once a year.</li>
+				</ol>
+				<h3>Legislative</h3>
+				<ol>
+					<li>Must meet articles 23, 24, and 26 of Nunavut Land Claim Agreement (NLCA).
+						<ol type="a">
+							<li>Increase Inuit participation in government employment.</li>
+							<li>Provide reasonable support and assistance to Inuit firms to enable them to compete for government contracts.</li>
+							<li>An Inuit impact and benefit agreement (IIBA) must be finalized before a major development project may take place.</li>			
+						</ol>					
+					</li>
+					<li>Restrictions on what land can be built on.</li>
+					<li>Commitment to preserving the permafrost in the North.</li>
+				</ol>
+				
+				<p>
+					There are many limitations and constraints associated with projects in Canada's North. Due to the harsh climate, it should come as no 
+					surprise that there is a lack of road networks and railways. According to StatsCan, only 0.3% of the entire population lives in the North,
+					along with approximately 1% of the national total road network. Northern Canada and its lack of transportation access provide a rather
+					significant role in budget planning. Along with the limitations in transportation routes and methods, the harsh climate of Northern Canada
+					significantly shortens the length of the construction period. Construction methods for polar environments differ from standard construction
+					methods. Construction projects provide great opportunities for Northern communities to become more involved in their own economic and social
+					development. However, there are significant limitations in skilled labour. Once again, mainly due to the remote area of projects in the Arctic,
+					the availability of skilled labour is decreasing.
+				</p>
+			</div>
+			
+			<div id="design-alts">
+				<h2>Design Alternatives</h2>
+				<p>
+					The proposed area for development is in Cambridge Bay, Nunavut, which also shows the current location of the Canadian High Arctic Research
+					Station (CHARS). Special consideration and advanced planning must be considered due to the location of the proposed development. The two
+					proposed locations are pictured below.
+				</p>
+				<p>
+					The design of the new building to the CHARS facility begs the question of new vs. addition. In terms of the most feasible option, we recommend
+					a brand-new structure as opposed to adding a structure to the existing Field and Maintenance building (FMB). After careful consideration and
+					substantial analysis, we have determined the following.
+				</p>
+				<ul>
+					<li>Expanding the size of the existing FMB triggers additional fire-suppression requirements.</li>
+					<li>Fire suppression requirements mean the entire building (including the existing portion) would have to be equipped with a new sprinkler
+						system. </li>
+					<li>The new facility will be designed with preparedness for the future, allowing us to provide new services and future concepts.</li>
+					<li>Also, in terms of social impact, a brand-new structural facility will promote growth and community commitment.</li>
+				
+				</ul>
+				
+				<h3>Location</h3>
+				<p>
+					The proposed area for development is in Cambridge Bay, Nunavut, which also shows the current location of the Canadian High Arctic Research
+					Station (CHARS). Special consideration and advanced planning must be considered due to the location of the proposed development. The two
+					proposed locations are pictured below.
+				</p>
+				<img><! some picture i guess>
+				<p>
+					The design of the new building to the CHARS facility begs the question of new vs. addition. In terms of the most feasible option, we recommend
+					a brand-new structure as opposed to adding a structure to the existing Field and Maintenance building (FMB). After careful consideration and
+					substantial analysis, we have determined the following.
+				</p>
+				<ul>
+					<li>Expanding the size of the existing FMB triggers additional fire-suppression requirements. </li>
+					<li>Fire suppression requirements mean the entire building (including the existing portion) would have to be equipped with a new sprinkler
+						system. </li>
+					<li>The new facility will be designed with preparedness for the future, allowing us to provide new services and future concepts.</li>
+					<li>Also, in terms of social impact, a brand-new structural facility will promote growth and community commitment.</li>
+				</ul>
+			</div>
+			
+			<div id="geotechnical-design">
+				<h3>Geotechnical/Foundation Design</h3>
+				<h4>Thermopiles</h4>
+				<p>
+					Essentially, the thermopile is a seasonal self-refrigerating foundation support or anchor with a high conductivity of heat out of the ground and a high resistance to heat flow into the ground. When properly used, the thermopile will maintain a permanently frozen soil condition near the pile. Thermopiles depend on rapid withdrawal of heat from a foundation area during periods of sub-zero weather by vaporization-condensation cycling. A thermal inversion prevents vaporization of the charging liquid whenever the column or condensation area becomes warmer than the liquid containing portion of the pile. Thermopiles are load bearing two-phase thermosyphons that thrive when installed under the following conditions.
+				</p>
+				<ol>
+					<li>Installation at sites with a frost-susceptible active layer where heave and pile jacking are problems. Thermo-cycling reduces frost heave forces to negligible quantities.</li>
+					<li>Installation in marginal permafrost where pile creep rates are high. Thermo-cycling reduces soil temperatures and subsequently reduces creep rate. </li>
+					<li>Installation at sites with saline permafrost where allowable stresses are reduced due to substantial quantities of unfrozen water in the soil matrix. Thermo-cycling freezes water near piles and pushes salts away. Also proven effective for moving glycol from a pile face. </li>
+					<li>Installation at sites where development has increased the heat load to the subgrade. Heat transfer rates of the Thermopiles need to be sized to balance or exceed heat load</li>
+				</ol>
+				<h5>Pros</h3>
+				<ul>
+					<li>Advanced sustainability; drawing and depositing heat in soil subsurface.</li>
+					<li>Reduction of both fossil fuels and material. </li>
+					<li>No external energy required, cost efficient long term.</li>
+				</ul>
+				<h5>Cons</h3>
+				<ul>
+					<li>High initial cost; larger than conventional systems due to additional design and technology. </li>
+					<li>Not suitable for freeze-thaw cycle soils.</li>
+				</ul>
+				<h4>Adjustable Piling Foundation (APF)</h4>
+				<p>
+					Adjustable Piling Foundation is often the best solution for extremely unstable ground. CCHRC demonstrated several steel piling foundations, which are driven deep into the ground using a pile driver. These foundations are popular on permafrost, as the soil freezes against the pile to further stabilize the foundation. The convenience of being able to adjust the pile by hand is what differentiates this type of foundation. Although it is more suitable for small buildings such as houses, the use of an adjustable bracket welded to the top of the pile is a luxury to every building type.
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>				
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				<h4>Drilled Piles</h4>
+				<p>
+					Slurried pile foundations has been the most common foundation type used at permafrost sites since it was first developed. This foundation was developed to raise the building off the ground far enough to allow free air circulation between the surface of the ground and the bottom of the building. The foundation consists of piles embedded into the permafrost that also extend above the surface, which elevates the building. Free air circulation beneath the structure is what keeps the permafrost adequately protected from the heat of the building. Generally, larger buildings require a wider air space beneath, however, for a building to be thermally de-coupled from the surface it must be raised at least 2ft. In the case of our structural building, 3ft or more may be necessary to sufficiently encourage air flow beneath the structure.
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>				
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<h4>Multipoint Foundation</h4>
+				<p>
+					The multipoint foundation was developed in response to continued demand for a foundation strong enough to withstand the rigors of flooding, permafrost, and other variable soils. We developed an innovative building foundation that is economical, fast and easy to construct, suitable for any ground condition and any building plan. Our foundation frames are structurally proven and affordable ALTERNATIVE that has been successfully used for over 35 years. Housing and construction authorities in areas such as Alaska, Russia, and Northern Canada have all relied on Multipoint Foundations to provide solid solutions for areas that experience shifting and changing terrain.	
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>				
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				<h4>Decision Matrix for Geotechnical Design</h4>
+				<table></table>
+			</div>	
+				
+			<div id="structural-design">
+				<h3>Structural Design</h3>
+				<h4>Insulation: Sealed Building Envelope</h4>
+				<p>
+					According to Natural Resources Canada, “up to 34% of the energy a building consumes is lost by thermal transmittance and air leakage through its envelope” (NRC 3). This loss of energy is increased by the unique climate at Cambridge Bay. A sealed building envelope is key to combating energy loss through air and is therefore essential to any High Arctic installation. This is made apparent by the effectiveness of an igloo (which relies on a sealed envelope for insulation) as a high arctic shelter. By sealing the building envelope, the amount of energy used to heat incoming air and energy lost to outgoing air is minimized. The table above shows a variety of commonly found insulation materials and their corresponding U-values. The ideal material for our building envelope will be light-weight, non-porous, cost effective and visually appealing.
+				</p>
+				
+				<h4>Silica Aerogel Panels</h4>
+				<p>
+					Silica Aerogel is a silica based, synthetic material which has unique super-insulating properties. This material is formed by the slow evaporation of alcohol from a solution; the pores in the gel are slowly filled with gas. The gel’s nano structure is so small that air particles are largely unable to move freely. This results in almost no transfer of thermal energy through convection. In lab tests, demonstrated near-vacuum insulation; Buildings retrofitted with 10mm thick aerogel panels reduced annual heat-loss by 80% (M. Dowson, 2012). The same study concluded that the panels a financial payback period of 4.5 years and an environmental (carbon footprint) payback of 2.5 years. This material can be produced in monolithic and granular form; monolithic aerogel is very expensive to produce and as a result cannot be considered for this project. Granular aerogel panels are available from several manufacturers and suppliers in a variety of styles. A notable feature of this product is its partial transluscivity.
+				</p>
+				<p>
+					The total thermal conductivity of porous insulation depends on the amount of heat transfer through convection in the pores, conduction through the solid and pores, as well as radiation (Yokogawa, 2005; Ashby et al. 2009). Pores within aerogel range from 20-40nm, which is small enough to restrict the flow of air through the material. Air molecules have no space to transfer thermal energy by convection (Yokogawa, 2005; Smirnova, 2002).
+				</p>
+				<p>
+					Readymade panels of this material are available with reported U-factors less than 0.05 W/m*k at a standard testing temperature set by the NFRC (National Fenestration Rating Council). This value was obtained with an interior temperature of 25 degrees centigrade and an outside temperature of -17 degrees centigrade. The material in question is four inches thick. This material has unique thermal properties which scale nicely at lower temperatures. Shown on the right, is the material’s thermal conductivity at varying temperatures. At the temperatures in question (all to the left of 300 kelvin), the material’s thermal conductivity stays the same. The experimental and theoretical values corroborate this.
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>				
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				<h4>Insulated Concrete Forms</h4>
+				<p>
+					Prefabricated concrete forms are available for order from many manufacturers across Canada. Like Lego, these forms fit together for easy and quick assembly in turn reducing labor costs. Already common in Northern North America, these forms can also be fitted with additional reinforcement and or insulation if needed. These forms are also non-porous, which is highly desirable for an arctic construction.
+				</p>
+				<p>
+					While functionally ideal, ICF’s are not aesthetically ideal. Their polystyrene cladding means that it is not enough to simply use an ICF as an exterior wall. The ICF requires a facade to meet visual standards. Because the form’s insulating properties are independent of the facade, any material can be used; more visual styles can be accomplished without affecting the building’s thermal properties. However, this result in the need to source, ship and install one or more materials for the facade. What is more, ICF’s are limited to straight and 90-degree segments. This reduces the stylistic potential of the building.
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>				
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				
+				<h4>Concrete</h4>
+				<p>
+					Arguably the most popular material in construction, Concrete has many qualities which make it an ideal material for our cause. There are, however, some problems associated with pouring concrete in the arctic. Arctic Climate prevents regular concrete from hardening properly; in sub-zero temperatures, water in poured concrete freezes before the cement-water reaction. This results in less than predicted strength and durability. Also, Concrete is thermally conductive. If not properly insulated, heat can easily escape through this material. Certain precautions are necessary if this material is to be used. 
+				</p>
+				<p>
+					Rock crushing equipment can produce aggregate near-site at Cambridge Bay. With this, only cement will be needed to produce structural concrete at CHARS. This greatly reduces the shipping cost of materials for the project. However, it adds the cost of rock-crushing machines, excavators, and labor. This cost can be subsidized if concrete-production continues after project completion.
+				</p>
+				<p>
+					For this and more, Concrete is a preferred material to be used in arctic construction due to the possibility of using local aggregates in the making of concrete and its suitability for gravity structures specially to withstand the ice load. The main issues with concrete construction in the cold climate are its durability and concreting work. This problem can be handled with special techniques including the heating and protecting and use of admixtures in the making of concrete at low temperatures. The concrete members must be heated and protected till the required strength against freezing point is reached. Admixtures are used for better handling of fresh concrete and act like a freezing point reducing agent.
+				</p>
+				<p>
+					The main cause for the durability problem comes from the freezing of the fresh concrete before hardening, which can cause expansion of even 2%. The accumulation of the ice inside the structure causes considerable amount of strength loss, there is also a repeated freezing and melting process in concrete, which can easily damage the surface area of the concrete structure. Resistance to freeze-thaw behavior of the concrete can be achieved by getting the optimal porosity in the concrete which allows movement of the moisture in pores, which can be achieved by using air- entraining agent in the manufacturing stage. Although there are few approaches that can be undertaken to overcome the problems in the use of concrete, the cost for the approaches can be quite high, which is another major criterion that cannot be overlooked.
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>				
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				<h4>Structural Steel</h4>
+				<p>
+					Considering its pros and cons, steel can be a good option in the construction of the building; the major problem can be overcome by considering few approaches. The main problem with the use of steel comes from its brittle behavior at low temperatures and its corrosive properties. This problem can be overcome by considering the toughness of steel generally measured by Charpy V- test, which shows the relationship of ductile to brittle transition in absorbed energy at a series of temperature which is used to draw fracture toughness curve.
+				</p>
+				<p>
+					For structures in an arctic environment, the steel material must satisfy the fracture toughness requirements at temperature between -40 to -60 degree Celsius. The toughness of steel material can be increased by decreasing the strength and the grain size of the steel or by mixing it with materials like copper, nickel, and magnesium.
+				</p>
+				<p>
+					To withstand the environmental effects at Cambridge Bay, a light steel frame should be sufficient. While thermally conductive, this steel frame can be combined with insulated/insulating panels to prevent heat loss. Like the concrete forms, steel frames come in prefabricated systems which fit together for easy assembly.
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>				
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				<h4>Structural Wood</h4>
+				<p>
+					Wood is a good option considering its pros and cons. The pros in the use of wood as a construction material surpasses the cons. Wood are economically feasible, sustainable product with low carbon emission during the manufacturing process. (Figure 12 shows the carbon emission during the manufacturing process). It is already commonplace in Arctic buildings. Its low thermal conductivity makes it ideal for use as a material though its flammability poses a serious risk.
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>				
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div id="environmental-design">
+				<h3>Renewable Energy and Environmental Aspect</h3>
+				<h4>Geothermal Energy</h4>
+				<p>
+					Power plants generate electricity using heated water from beneath the Earth's crust. Three types of geothermal power: 1) Hydrothermal which is associated with steam and hot water; 2) Geopressurized water that uses a hydraulic turbine and 3) Petrothermal which is dry hot rock that requires water injection to make steam. Production well is drilled to access the geothermal liquid vapor.
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				<h4>Wind Power</h4>
+				<p>
+					Wind Power is used to generate electricity at both large and small scale uses movement of the air as kinetic energy that provides the mechanical power to perform various forms of work.
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				<h4>Concentrated Solar</h4>
+				<p>
+					Contrarily to solar power which utilizes solar panels to collect heat, which in turn, is used to process hot water, heat spaces or even air conditioning. Concentrated solar power amplifies the sunlight's intensity and converts it into steam to drive a thermal power plant or heat engine.
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				<h4>Waste Heat Utilization</h4>
+				<p>
+					The utilization of the unused heat generated when converting a temperature difference to mechanical energy, mainly throughout many different industrial processes. There are many ways in utilizing waste heat such as grbage incineration; harboring the unused heat from the incineration of garbage to create energy in a waste heat to power process. 
+				</p>
+				<h5>Pros</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<h5>Cons</h5>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				<h4>Discussion</h4>
+				<p>
+					After careful consideration, many of the alternatives mentioned above provide different advantages and all have a unique aspect to contribute to making the REC as eco-friendly as can be. Therefore, we recommend utilizing wind turbines to supply sufficient energy to the direct combustion garbage incinerator, which in turn, will provide more energy through the combustion of waste. The combustion process produces high pressure steam that is converted to electrical power using a turbine and generator. This produced electricity can be fed into the local community and provide a much-needed power source without burning substantial fossil-fuels.
+				</p>	
+			</div>		
+			
+			<div id="social-impact">
+				<h3>Social Impact</h2>
+				<p>
+					The CHARS installation is the largest construction in Cambridge Bay and being such, it should give back to the community. Plants are key to human survival. In addition to the production of oxygen, plants produce many psychological benefits to those they encounter (Kaplan). In a region where reduced daylight results in low-psychological morale, a garden may be a key asset. Plants can also be used to filter water, or to produce food or medicine. 
+				</p>
+				<p>
+					Given the limited energy and space available in Cambridge Bay, a food producing garden may be difficult to set up, and likely will not generate any noticeable amount of food. Stack farming technology can be used to increase production/unit area by factors starting at 8. Energy/kg produce does go up however, due to the increased light demand of vertical farms. A benefit to vertical farming, is that with an increase of atmospheric [CO2] of 3-4 times normal atmosphere, plant yields can be increased by up to 50%. If an on-site combustion-generator’s exhaust were to be passed through a vertical farm, not only would we lose carbon emissions, but the farm would also recover waste heat. 
+				</p>
+				<p>
+					It stands to reason that the locals do not often get the chance to eat fresh-fruits and vegetables, let alone see them before harvest. A food garden could greatly reduce the cost of what would otherwise be a luxury and could serve to increase the green rating of existing combustion tech, an option worth considering. In addition to a food garden, we at BARE propose a community garden where people can commune, rest, and relax in a pleasant environment juxtaposed to their day to day lives.
+				</p>
+				
+			</div>
+			
+			<div id="aesthetics-concept">
+				<h3>Aesthetics Concept</h3>
+			</div>
+			
+			<div id="selected-design">
+				<h2>Selected Design</h2>
+				<p>
+					After applying our criteria to the proposed design alternatives, it was determined that the building should be a light steel framed construction, mounted on driven piles and lifted three feet off the ground. This will minimize damage to the permafrost layer. To achieve modularity, the building’s structure will be a permanent, rigid frame with an inner, modular assembly. The assembly will be an easy to assemble steel kit and will allow for rapid installation of new technologies or modules.
+				</p>
+				<p>
+					To achieve the sealed building envelope, the building’s shell will be walled with silica aerogel panels which offer excellent insulation and allow for passive solar heating. The building will also be divided into two distinct climate zones. The outermost zone will act as an insulating layer of air between the elements and the inner zone. This can double as a wraparound walkway.
+				</p>
+				<p>
+					To power our new station, two systems will be used. The stations primary source of power will be a garbage incineration system. While powering the station, the incinerator will also rid the town of its waste, a highly desirable feature in the high North. Using a waste-heat capture system, excess heat from the process will be distributed to the installation and any surrounding building with a hook-up. This power plant will be placed in the core of the building so that any radiant heat can radiate outwards towards the colder outer climate zone.
+				</p>
+				<p>
+					As a secondary power supply, wind turbines will be installed near-site at CHARS. They will be set up at a distance to avoid noise pollution and direct environmental damage. Wind is in abundance at Cambridge Bay and our turbines will have no problem harnessing this for our advantage.
+				</p>
+				<p>
+					For community outreach, the station will feature a botanical garden. In a cold, dark environment, a warm lush garden may be the refuge of choice. Since fresh food is rare at Cambridge Bay, fruit giving trees/plants can be planted for consumption. Stack farms can be used to increase food production the garden must be maintained at a high temperature so excess heat from any source in the building will be redirected to the garden which will also be centrally located. It can then radiate out. For more heat and CO2 capture, emissions from the generator can be passed through the stack farms in turn increasing crop yield.
+				</p>
+				<p>
+					Excavation work, HVAC, plumbing, fire-suppression, and electrical work will be performed by contractors already at Cambridge Bay. They are skilled and will be able to come back on board when new modules are installed. The modular frame has easy connected for these systems so they will not be an issue.
+				</p>
+			</div>
+		</div>
+	</body>
 </html>

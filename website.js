@@ -37,14 +37,14 @@ app.get("/Education", function(req,res) {
 // Portfolio Pages
 
 //misc sketches ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/Misc-Sketches", function(req,res){
+/*(app.get("/Misc-Sketches", function(req,res){
     res.render("Sketches/MiscSketches.html");
-})
+})*/
 
 // tdsb arch ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/TDSB-Architecture", function(req,res){
+/*app.get("/TDSB-Architecture", function(req,res){
     res.render("TDSB/TDSB-Architecture.html");
-})
+})*/
 
 // chars feasibility ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/CHARS-Feasibility", function(req,res){
