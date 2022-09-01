@@ -24,6 +24,11 @@
 				font-weight:normal;
 			}
 			
+			/*table,th,td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}*/
+			
 			td, th, ol {
 				font-size: 14px;
 			}
@@ -51,69 +56,92 @@
 			}
 			
 			.index {
-				position: fixed;
-				max-width:150px;
+				position:fixed;
+				max-width: 150px;
+				top:90px;
 				left:50%;
-				top:280px;
-				margin-left:-530px;
+				margin-left:-510px;
 			}
 			
 			.main-text {
 				align-content: center;
 				margin:auto;
-				width: 80%;
-				max-width:680px;
-			}				
+				width: 550px;
+			}			
+			
+			.index a{
+				font-size:16px;
+			}
+
+			.index a:hover {
+				color:white;
+				background-color: black;
+			}
+
+			.index nav {
+				padding:0px 0px 0px 0px;
+			}
 		</style>
 	</head>
 	
 	<body>		
 		<div class="index">
-			<a href="#definition">Project Definition</a>
-			<a href="#background">Background Information</a>
-			<a href="#objectives">Objectives</a>
-			<a href="#design-criteria">Design Criteria</a>
-			<a href="#constraints">Constraints</a>
-			<a href="#design-alts">Design Alternatives</a>
-			<a href="#geotechnical-design">Geotechnical Design</a>
-			<a href="#structural-design">Structural Design</a>
-			<a href="#environmental-design">Environmental Design</a>
-			<a href="#social-impact">Social Impact</a>
-			<a href="#aesthetics-concept">Aesthetics Concept</a>
-			<a href="#selected-design">Selected Design</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="/Portfolio">Portfolio</a>
+				<a href="/Work-Experience">Work Experience</a>
+				<a href="/Education">Education</a>
+
+			</nav>
 			<hr>
-			<a href="/">Home</a>
-			<a href="/Portfolio">Portfolio</a>
-			<a href="/Work-Experience">Work Experience</a>
-			<a href="/Education">Education</a>
-			<a download
-				href="" >
-				Full Report</a>
-		
+			<nav>
+				<a href="#introduction">Introduction</a>
+				<a href="#definition">Project Definition</a>
+				<a href="#background">Background Information</a>
+				<a href="#objectives">Objectives</a>
+				<a href="#design-criteria">Design Criteria</a>
+				<a href="#constraints">Constraints</a>
+				<a href="#design-alts">Design Alternatives</a>
+				<a href="#geotechnical-design">Geotechnical Design</a>
+				<a href="#structural-design">Structural Design</a>
+				<a href="#environmental-design">Environmental Design</a>
+				<a href="#social-impact">Social Impact</a>
+				<a href="#aesthetics-concept">Aesthetics Concept</a>
+				<a href="#selected-design">Selected Design</a>
+				<a href="#appendix">Appendix</a>
+				<a download
+					href="" >
+					Full Report</a>
+			</nav>
+
+
 		</div>
 		
 		<div class="main-text">
-			<h1>Canadian High Arctic Research Station Expansion Feasibility Study</h1>
+			<div id="introduction">
+				<h1>Canadian High Arctic Research Station Expansion Feasibility Study</h1>
 
-			<p>
-				<span style="font-weight:bold;">BARE Engineering and Consulting Ltd.</span> is interested in the task of the 
-				design and construction of an additional building to the Canadian High Arctic Research Station 
-				(CHARS)premises. This additional building will be a stand-alone state of the art renewable energy building 
-				known as the Renewable Energy Centre (REC). This new structure will be located north-west of the existing 
-				Field and Maintenance building at the CHARS facility, in Cambridge Bay, Nunavut. Plans are being prepared 
-				for the proposed development of the site with a new eco-friendly building tasked with eliminating the 
-				dependability of burning fossil fuels to provide energy in Canada's Arctic. BARE Engineering and Consulting 
-				Ltd. has performed a feasibility study of several criteria, constraints, schedule, budget, location, and 
-				possible approach that would be associated with the design of the structure. The intent of this report is to 
-				investigate the feasibility of implementing different geotechnical (foundation), structural, environmental, 
-				and social options. Preliminary alternatives were analysed based on several criteria to determine the optimal 
-				solution in each category to provide a safe, sustainable, and efficient new building for the country. We are 
-				pleased to be apart of such a world-renowned facility. Northern Canada is one of many remarkable parts of the 
-				nation, rich with heritage and national identity and the development of this historic area has been a focal 
-				point for the country. We at BARE are pleased to take on the responsibility and challenge of providing our 
-				client with an exceptional project from beginning to close-out. Preparation of this feasibility report 
-				provides preliminary findings and conclusions regarding several aspects of the project.	
-			</p>
+				<p>
+					<span style="font-weight:bold;">BARE Engineering and Consulting Ltd.</span> is interested in the task of the 
+					design and construction of an additional building to the Canadian High Arctic Research Station 
+					(CHARS)premises. This additional building will be a stand-alone state of the art renewable energy building 
+					known as the Renewable Energy Centre (REC). This new structure will be located north-west of the existing 
+					Field and Maintenance building at the CHARS facility, in Cambridge Bay, Nunavut. Plans are being prepared 
+					for the proposed development of the site with a new eco-friendly building tasked with eliminating the 
+					dependability of burning fossil fuels to provide energy in Canada's Arctic. BARE Engineering and Consulting 
+					Ltd. has performed a feasibility study of several criteria, constraints, schedule, budget, location, and 
+					possible approach that would be associated with the design of the structure. The intent of this report is to 
+					investigate the feasibility of implementing different geotechnical (foundation), structural, environmental, 
+					and social options. Preliminary alternatives were analysed based on several criteria to determine the optimal 
+					solution in each category to provide a safe, sustainable, and efficient new building for the country. We are 
+					pleased to be apart of such a world-renowned facility. Northern Canada is one of many remarkable parts of the 
+					nation, rich with heritage and national identity and the development of this historic area has been a focal 
+					point for the country. We at BARE are pleased to take on the responsibility and challenge of providing our 
+					client with an exceptional project from beginning to close-out. Preparation of this feasibility report 
+					provides preliminary findings and conclusions regarding several aspects of the project.	
+				</p>
+			</div>
+
 			
 			<div id="definition">
 				<h2>Project Definition</h2>
@@ -527,17 +555,17 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Relatively inexpensive; comparatively to other foundation types </li>
+					<li>Quick freeze back; can be loaded sooner </li>
+					<li>Pile lengths are readily adjustable </li>
+					<li>Compensates for settling soils </li>
 				</ul>				
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Material may be damaged or distorted by hard driving </li>
+					<li>Driving equipment; restricted access to equipment in remote areas</li>
+					<li>Pre-preparation of soil in frozen soils; adds to cost </li>
+					<li>Placement accuracy; inferior to slurried piles </li>
 				</ul>
 				
 				<h4>Drilled Piles</h4>
@@ -546,15 +574,15 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Easily manipulated; variety of ways to obtain solution to difficult foundation problems.</li>
+					<li>Suitable for any soil type </li>
+					<li>Excavated material can be reused, cost efficient </li>
 				</ul>				
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Must be drilled into bedrock for stability, cost impact </li>
+					<li>Adfreeze bond between soil and pile temperature dependent </li>
+					<li>Heaving issues if not deep enough </li>
 				</ul>
 				<h4>Multipoint Foundation</h4>
 				<p>
@@ -562,15 +590,15 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Very little site preparation needed </li>
+					<li>Can be constructed year-round using unskilled labour </li>
+					<li>Provides resistance to overturning due to wind and distributes the loads evenly over the existing soils </li>
+					<li>Foundations can be relied upon to eliminate differential settlement </li>
+					<li>Gives strength to the building </li>
 				</ul>				
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Multipoint Foundations are not ideal for large scale projects</li>
 				</ul>
 				
 				<h4>Decision Matrix for Geotechnical Design</h4>
@@ -596,15 +624,15 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Very lightweight (0.3-0.05 g/cm3) </li>
+					<li>Near vacuum thermal properties</li>
+					<li>Partially translucent </li>
+					<li>Non-porous </li>
 				</ul>				
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
+					<li>Expensive</li>
+					<li>Not an established material for High-Arctic constructions </li>
 				</ul>
 				
 				<h4>Insulated Concrete Forms</h4>
@@ -616,14 +644,14 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Quick and easy to assemble </li>
+					<li>Non-porous </li>
+					<li>Thermally non-conductive </li>
 				</ul>				
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
+					<li>Shipping Cost </li>
+					<li>Requires poured concrete </li>
 				</ul>
 				
 				
@@ -642,16 +670,16 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Strong </li>
+					<li>Durable* </li>
+					<li>Fire resistant </li>
+					<li>Can store thermal energy and dissipate it if heating shuts down </li>
 				</ul>				
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Accommodations must be made if to be used in Arctic </li>
+					<li>Impractical for a small structure </li>
+					<li>May need to be set in bedrock </li>
 				</ul>
 				
 				<h4>Structural Steel</h4>
@@ -666,17 +694,17 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Highest strength to weight ratio </li>
+					<li>Ease in expansion of the structure </li>
+					<li>Flexibility of the material </li>
+					<li>Wide range of joining method: bolting, welding etc. </li>
 				</ul>				
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Brittle behavior at low temperature </li>
+					<li>High cost due to its demand </li>
+					<li>Skilled laborers are required </li>
+					<li>Weak resistance to fire </li>
 				</ul>
 				
 				<h4>Structural Wood</h4>
@@ -685,17 +713,17 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Readily available and economically feasible </li>
+					<li>Good insulation from the cold </li>
+					<li>Economically sustainable product </li>
+					<li>Exceptionally light with high tensile strength </li>
 				</ul>				
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Poor Durability </li>
+					<li>Vulnerability to water damage, decay and termites </li>
+					<li>Highly combustible </li>
+					<li>Time dependent deformation such as creep and viscoelasticity occur in wood </li>
 				</ul>
 			</div>
 			<div id="environmental-design">
@@ -706,19 +734,19 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Environmentally friendly and renewable; it can NEVER run out (available for as long as the planet exists), also produces significantly less pollution than fossil fuels </li>
+					<li>Reliable and Accessible; replenishes naturally, available during all seasons (including harsh Arctic winters) </li>
+					<li>Technologies are constantly evolving; innovative solutions will lower costs and make them more accessible to the public </li>
+					<li>No fuel needed; no mining or transportation related to the process meaning no fuel burned! </li>
+					<li>Smallest land footprint; extracts heat from hot water and the steam moves the turbines that produce the electricity. Smallest land footprint of any major energy source in the world </li>
 				</ul>
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Suitable to regions; geothermal power is secluded from urban areas, although it is suitable for Cambridge Bay, bigger cities and communities may find it difficult to implement </li>
+					<li>High Initial Costs; potential to be a huge setback until it pays itself off within a few years. </li>
+					<li>Cost of powering the pump; pumps need electricity to run that can transfer energy from the earth's core to the building. </li>
+					<li>Surface instability; has become infamous for causing earthquakes due to the alteration of the lands structure. </li>
+					<li>Difficulty; drilling into heated rock located within the earth's core is exactly as difficult as it sounds </li>
 				</ul>
 				
 				<h4>Wind Power</h4>
@@ -727,19 +755,18 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>No fuel; clean energy, no fuel to drill, frack, mine, burn or transport </li>
+					<li>Renewable and sustainable; self-sustaining with the movement of the wind </li>
+					<li>Decreasing costs; due to the high supply and demand, costs are decreasing gradually </li>
+					<li>Abundant domestic supply; will be here if the wind is. </li>
+					<li>Low life cycle carbon footprint </li>
 				</ul>
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Unpredictable; the wind is inconsistent, unsteady, and unpredictable </li>
+					<li>Noise; may be a nuisance to some people </li>
+					<li>Wildlife impact; birds, bats may experience fatalities </li>
+					<li>Location; suitable for Cambridge Bay however, localized impact on night-time temperatures and weather </li>
 				</ul>
 				
 				<h4>Concentrated Solar</h4>
@@ -748,19 +775,19 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Renewable, no fuels required </li>
+					<li>Carbon free (aside from transportation) </li>
+					<li>Operating costs are relatively low </li>
+					<li>High efficiency </li>
+					<li>Utility of thermal storage </li>
 				</ul>
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Intermittent </li>
+					<li>Low energy density </li>
+					<li>Initial costs can be high </li>
+					<li>Require considerable amount of space </li>
+					<li>Can create pollution (manufacturing) </li>
 				</ul>
 				
 				<h4>Waste Heat Utilization</h4>
@@ -769,20 +796,33 @@
 				</p>
 				<h5>Pros</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Production of renewable energy </li>
+					<li>Beneficial for the community in reducing excessive amount of garbage </li>
+					<li>Reduces Environment impact in 2 ways </li>
+					<ul>
+						<li>Reduces pollution (Excessive garbage)</li>
+						<li>Reduces dependence on diesel </li>
+					</ul>
 				</ul>
 				<h5>Cons</h5>
 				<ul>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li>Smell </li>
+					<li>Limited space </li>
+					<li>CO2 emissions from the incinerator </li>
+					<li>Aesthetic issue </li>
+				</ul>
+				
+				<h4>Cogeneration</h4>
+				<p>
+					the production of both heats, recovered from waste heat, and power using a single fuel source. The power would be generated using the energy created by the fuel combustion. Many different technologies are used as CHP such as: 				
+				</p>
+				<ul>
+					<li>Steam Turbine </li>
+					<li>Cyclone waste heat engine; small steam engine designed to produce power from the steam created by waste heat. </li>
+					<li>Screw type steam engine; Generated in waste heat boilers, steam produced is used in a conventional water steam-cycle to produce electric power </li>
+					<li>ORC technology: Designed to use solar energy, geothermal energy, and energy from biomass in decentralized units for power production based on industrial waste heat. Waste heat is transferred to a thermal oil cycle and further on to the ORC by heat exchangers to produce electricity 
+						<br>Electricity produced by ORC can be used to supply power to an industrial site or into the public grid for other people to use in the case of excess power.</li>
+					<li>GREENHOUSES; Waste heat can be used to provide heat for greenhouses</li>
 				</ul>
 				
 				<h4>Discussion</h4>
@@ -807,6 +847,9 @@
 			
 			<div id="aesthetics-concept">
 				<h3>Aesthetics Concept</h3>
+				<p>
+					The expansion is to be a platform for the development of new eco-technologies and should its mission through its outward appearance and its functionality. The building’s aesthetic should reflect its status as the most state-of-the-art installation in the High North. Simultaneously, the building’s design should respect the land it occupies and the people who made it possible. For intended effect, the building should stand out from its surroundings with minimal cultural/visual shock. A form resembling an iceberg is what we propose. Featuring exposed concrete, glass and white metal cladding, this form will visually blend in with the landscape. However, the building will stand out from its surroundings with an architectural style unlike any in the region.
+				</p>
 			</div>
 			
 			<div id="selected-design">
@@ -829,6 +872,12 @@
 				<p>
 					Excavation work, HVAC, plumbing, fire-suppression, and electrical work will be performed by contractors already at Cambridge Bay. They are skilled and will be able to come back on board when new modules are installed. The modular frame has easy connected for these systems so they will not be an issue.
 				</p>
+			</div>
+			<div id="appendix">
+				<h2>Appendix</h2>
+				<p>
+					The original report is available from the provided link. It contains all images, tables, and appendicies referenced in the text. 
+				</p>		
 			</div>
 		</div>
 	</body>
