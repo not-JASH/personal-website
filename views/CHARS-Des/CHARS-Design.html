@@ -1,23 +1,350 @@
 <!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>CHARS Design</title>
-<link href="../assets/css/style.css" rel="stylesheet" type="text/css">
-<link href="/css/style.css" rel="stylesheet" type="text/css">
-</head>
+	<head>
+		<meta charset="utf-8">
+		<title>CHARS Design</title>
+		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		<link href="/css/main_stylesheet.css" rel="stylesheet" type="text/css"><br>
+		<link href="/css/CHARS.css" rel="stylesheet" type="text/css"><br>
+		
+		
+		<style>
+			body {
+				width: 100%;
+				max-width:none;
+				padding:0px 0px 0px 0px;
+			}
+		
+			.index {
+				position:fixed;
+				max-width: 150px;
+				top:90px;
+				left:50%;
+				margin-left:-510px;
+			}
+			
+			.main-text {
+				align-content: center;
+				margin:auto;
+				width: 550px;
+			}			
+			
+			.index a{
+				font-size:16px;
+			}
+
+			.index a:hover {
+				color:white;
+				background-color: black;
+			}
+
+			.index nav {
+				padding:0px 0px 0px 0px;
+			}			
+		</style>
+	</head>
 	
 <body>
-	<header><h1>Design Report for Expansion at Canadian High Arctic Research Station</h1></header>
+	<div class="index">
+		<nav>
+			<a href="/">Home</a>
+			<a href="/Portfolio">Portfolio</a>
+			<a href="/Work-Experience">Work Experience</a>
+			<a href="/Education">Education</a>
+		</nav>
+		<hr>
+		<nav>
+			<a href="#introduction">Introduction</a>
+			<a href="#definition">Project Definition</a>
+			<a href="#design">Design</a>
+			<a href="#foundation">Foundation Plan</a>
+			<a href="#geotechnical">Geotechnical Issues and Mangagement Solutions</a>
+			<a href="#loading">Loading Conditions</a>
+			<a href="#connections">Steel-CLT Connection Design</a>
+			<a href="#envelope">Envelope Design</a>
+			<a href="#energy">Renewable Energy Plan</a>
+			<a href="#LEED">LEED</a>
+			<a href="#conclusion">Conclusion</a>
+			<a href="#appendix">Appendix</a>
+			<a download
+				href="https://onedrive.live.com/embed?cid=8912A15B8F0CAFF4&resid=8912A15B8F0CAFF4%212404&authkey=AFiXe4ixDozqggk&em=2">
+				Full Report</a>
+		</nav>
+	</div>
 	
-	<hr>
-	<nav>
-		<a href="/">Home</a>
-		<a href="/Portfolio">Portfolio</a>
-	</nav>
+	<div class="main-text">
+		<h1>Design Report for Expansion at Canadian High Arctic Research Station</h1>
+		<div id="introduction">
+			
+			<h2>Introduction</h2>
+			<h3>Site Location</h3>
+			<p>
+				The Canadian High Arctic Research Station (CHARS) is in Cambridge Bay, NU, which is on the southeast coast of Victoria Island across from the Canadian Mainland. The construction of the renewable energy research building will take place North-West of the Field and Maintenance Building. Below is a satellite image of the site, this image gives an aerial view of the land that we must deal with.
+			</p>
+			<img> <! some image>
+			<p>
+				Due to the area being in a zone of permafrost special steps must be taken to make sure the permafrost is not damaged, it has been determined that the site is a “Class C Site”, in accordance with Table 4.1.7.1 (4) of the National Building Code, 2010. This area of Canada is located north of the line of discontinuous permafrost, in the continuous permafrost zone. The figure below outlines all the various areas of permafrost in Canada with Cambridge Bay, NU located in the continuous zone. 
+			</p>
+			
+			<h3>Transportation</h3>
+			<p>
+				Transportation holds key significance in projects that take place in Canada’s North. The remote location of the northern communities’ limits sometimes conventional or more cost-efficient modes of transportation. Other remedies must be looked at when considering jobs in the north such as transportation by water which is not without its limitations. In looking at previous projects it can be seen the different challenges that come budgeting when dealing with transportation. One project was only able to deliver material by chartered aircrafts; this cost about $10,000 a day for 8-10 day stretches of work on site (CHARS Feasibility). For the CHARS building water transportation will have to be utilized, which in Cambridge Bay can be costly. For this project items needed will be sent by water, which accounts for at least 80% of the items once a year arriving during the 1st week of September so plans must be made accordingly and precisely. It is noted that significant lead times as well as significant financial contingencies were important to lowering any problems that would arise with transportation (CHARS Feasibility).
+			</p>
+			
+			<h3>Community Integration</h3>
+			<p>
+				Community involvement with the CHARS project is something that was important as well. Through information gathered about previous projects it was learned that success of the projects was directly linked to the support from the communities. Each project offered a different type of community involvement from: consultations throughout the entire lifespan of the project; partnering directly with communities to carry out construction work; and, in some cases, contracting directly to community organizations. This project is not any different similar routes will be taken to ensure success. For the CHARS project a few things will be taken into consideration: successful integration into Cambridge Bay in terms of infrastructure and activities, a strong relationship with the community that will aid with any problems that may happen throughout the project and trying to have someone from the community aid with the integration and ongoing consultations.
+			</p>
+			
+			<h3>Weather and Climate</h3>
+			<p>
+				The weather and climate in Cambridge Bay will really affect a wide variety of people involved in the CHARS project. The ability to deal with the conditions can either make or break the project’s schedule and budget. Cambridge bay has a polar climate; no month in Cambridge Bay experiences an average temperature higher than 10 degrees Celsius (Environment Canada, 2017). Workers would be battling with elements present in the region on top of the already low temperatures. The table below from Environment Canada gives a glimpse into the conditions that workers will be dealing with. There are three major conditions to look at when assessing Cambridge Bay: daylight hours, temperature, and wind.
+			</p>
+			<p>
+				Temperature in Cambridge Bay will be something workers will have to find a way to adapt to. Cambridge Bay highest daily maximum temperature is seen in July where it could possibly go up to about 13 degrees Celsius; this is seen on the table below taken from Environment Canada. The average daily maximum temperature coming out of Ottawa is 26.5 degrees in July, making for a major difference in comfortability for workers and visitors to the Cambridge Bay area. The cold season does not offer much better results either as Cambridge Bay sees a daily average temperature of -32.5 degrees Celsius in February and Ottawa has a daily average temperature of 10.2 degrees Celsius in January, which can also be seen below in a Graph from Environment Canada.
+			</p>
+			<p>
+				The number of daylight hours will greatly affect how productive the construction will be this will greatly impact the project schedule. Although working through the darkness can still be achieved, there are other issues that arise from this time of day such as colder temperatures, as well as extra costs for lighting and heating. In Cambridge Bay, due to its extreme latitude, the area experiences a factor called a polar day (also known as the midnight Sun) during the summer and a polar night during the winter. The precise start and end dates of polar day and night vary from year to year and depend on the precise location and elevation of the observer, and the local topography. Throughout the summer the sun is on average continuously above the horizon for approximately 62 days, between May 20 to July 21. In the winter months, from approximately November 30 to January 11, the sun is continuously below the horizon for around 42 days. The figure below accessed from the time and date site shows an approximate graph of how the sunlight behaves in this Northern community.
+			</p>
+			<p>
+				The number of hours during which the Sun is visible (black line), with various degrees of daylight, twilight, and night, indicated by the color bands. From bottom (most yellow) to top (most gray): full daylight, solar twilight (Sun is visible but less than 6° from the horizon), civil twilight (Sun is not visible but is less than 6° below the horizon), nautical twilight (Sun is between 6° and 12° below the horizon), astronomical twilight (Sun is between 12° and 18° below the horizon), and full night.
+			</p>
+			<p>
+				The last condition to be looked at is wind. The wind speeds that are faced in Cambridge Bay could make for tougher work conditions. This will lead to slower production causing a shift in the project schedule. The data provided below from Environment Canada shows the different wind speeds each month deals with; this provides a month-to-month comparison. The increased winds make for harsher conditions especially for any workers coming into the area to work.
+			</p>
+			
+			<h3>Local Construction and Trades</h3>
+			<p>
+				During the construction of the CHARS project, the Inuit Benefit Plan (IBP) was implemented to ensure the employment of Inuit labour, engagement of Inuit professional services, and the use of Inuit suppliers during this project. The construction of CHARS is regulated under the Nunavut Land Claims Agreement (NLCA) obligations, which is a requirement with Indigenous and Northern Affairs Canada (INAC) projects. Article 24 of the NCLA which depicts Canada’s procurement obligations, which is related to the addition of the Field and Maintenance building of the CHARS
+			</p>
+			<p>
+				Local trades and businesses will have primary consideration for any elements related to the construction of this project. If there are no local businesses that can supply demands of the project, then further consideration will be rewarded to outside businesses as a last resort.
+			</p>
+			
+			<h3>Design Innovations</h3>
+			<p>
+				Given the nature of our design - a building for the development of new, environmentally sustainable technologies in the high north - we implemented a variety of technological innovations we hope will become commonplace in the arctic. 
+			</p>
+			
+			<h4>Thermopiles</h4>
+			<p>As outlined in the foundation plan portion of this report our building rests on a layer of permafrost. Permafrost is susceptible to volume change resulting from an increase in temperature. This could produce structural damage to the foundations of a building if not considered and accounted for. To address this issue, we implemented thermal piles as the foundations for select parts of our building. Thermopiles maintain the temperature around a foundation at a low temperature so that water, frost, and ice do not form at the base of the building.  </p>
+			<p>The thermal piles we are researching in our design function via passive effects resulting from the expansion and compression of a gas. Consequently, the piles do not need a power source to function, a highly desirable property in a town with a limited supply of power.</p>
+			
+			<h4>Modularity</h4>
+			<p>The station designed is meant to develop new technologies in an Arctic setting. With that in mind, we designed the building’s interior to be modular. The building can evolve to meet possible requirements of future technologies. To achieve this, the building was designed with two structural systems; a rigid steel frame to withstand the elements and sustain the loads produced by the occupants, and a Cross Laminated Timber interior which is easy to assemble and replace. </p>
+			<p>Because of the limited labour force in Cambridge Bay, we designed the building’s walls and floors with standardized, repeating panels made primarily of Cross Laminated Timber (CLT). Cross laminated timber has several properties which make it ideal for use in Cambridge Bay. Firstly, its structural rigidity makes it so that with panels of size I1524mm x 3657.6 mm, supports are not required other than the existing steel frame.</p>
+			<p>At launch, our station will feature a set of standardized panels. The panels can support most of their weight and interlock with each other to allow for easy assembly (For details on panels dimensions consult appendix). Consequently, with a mobile crane, a small crew could install them at a rate of approximately five panels - except for certain key panels (like those arcing at the roof) the panels are standardized to a length of 1524mm. If desired, new panels with different functions could be designed and installed with relative ease. The building’s loads are carried entirely by the steel frame so that the interior can be swapped out without compromising the structure’s rigidity. </p>
+			<p>Furthermore, being wood, CLT has thermal insulating qualities. In and of its own, timber has a U-value of approximately one. With insulation and weather protection, a 90mm thick CLT panel would have a U-value of approximately 0.14. Our exterior panels feature two CLT panels, insulation, and weather protection. We hope to achieve a U value closer to 0.05.  </p>
+			
+			<h4>Temperature Controlled Zones</h4>
+			<p>In addition to the insulated panels, our building features distinct climate zones. These zones will keep heat localized in a specific region and thus improve thermal efficiency. The idea is that not all zones in the building need to maintain the same temperature. For example, the power plant has only to be kept at ta temperature above 0° C where the atrium/garden should be kept at a temperature closer to 23° C. By restricting airflow through these zones, we can focus energy used for heating and maximise efficiency.  Currently, the building is divided into three different climate zones. Zones one through three. Zone one, is primarily comprised of the outer fringes of the building which need not be heated. Areas like the truck loading area and outer hallways. The air in this zone is heated through the traffic flowing through it and waste heat from interior zones. This zone acts as an insulating layer for zones two and three. Consult floor plans in appendix for details concerning zoning. </p>
+			<p>Zone two is the first of the heated zones and is to be kept at or around room temperature. Offices and daily-use spaces make up this zone. This zone has little if any contact with the elements and acts as a second insulating layer for zone three. </p>
+			
+			<h4>Power Generation</h4>
+			<p>The aim of this station is to develop sustainable technologies for use in the Arctic. Being an expanding town (population has increased greatly since the construction of CHARS) the city has a growing demand for electricity. Supply lines are scarce in the high Arctic and little infrastructure exists for the generation of electricity via conventional means. Now, the town’s electricity demands are met exclusively by a gasoline fired power plant. This is an effective solution, but it requires the regular import of gasoline and has the potential to be disastrous to the town and the environment should something go wrong. To meet the town’s growing needs, our station will implement, test and develop three power generation technologies: solar, wind and waste gasification. On the south face of our building, we added solar panels to capture some energy.</p>
+			<p>On the north side of the building, we placed wind turbines. Being a coastal town amidst mountains, Cambridge Bay receives a decent amount of wind. Average monthly wind speed is 19.6 km/h with maximum speed at 101 km/h for the recorded period (see table 2). We expect to capture a decent amount of energy with these turbines.</p>
+			<p>The main power generation system in place in our building is a waste gasification plant. This plant consumes household waste and produces synthetic natural gas and ash which can be used as aggregate in concrete and asphalt. The plant heats waste to release carbon, hydrogen, and oxygen molecules. These are then superheated with a plasma torch to create free atoms. In a synthesizing chamber, the free atoms are combined to produce a chemical like methane. This gas can be used to run a gas-fired generator and therefore can produce electricity in a cleaner, more efficient manner than the more traditional waste-incineration method. While costly and difficult to implement, this is a highly desirable technology for Cambridge Bay since the town has a well documented garbage-disposal problem.</p>
+			
+			<h4>Garden</h4>
+			<p>To give back to the community, our building contains a reasonably sized garden. Trees and plants from temperate climates will be planted in this garden to create a space for local to congregate in a comfortable setting unlike any they've experienced. Furthermore, fruits and vegetables may be planted in this area for an added benefit; fruits and vegetables are scarce in Cambridge Bay. </p>
+		</div>
+		
+		<div id="definition">
+			<h2>Project Definition</h2>
+			<h3>Scope</h3>
+			<p>The need for renewable energy sources and sustainable designs has increased over the past few years with current trends in weather and changing climates, that is why a building for researching different solutions is needed. The remote northern community is an ideal location for such a building as a state-of-the-art research building (CHARS) is already placed on their land. This building will help the community to continue developing in a positive respect while maintaining the dignity of the land. The design team has investigated and analyzed new approaches that are suitable for the community and will implement them accordingly. The approach for building this renewable energy building involves the use of thermopiles, steel frames and cross-laminated timber. The scope of this project involves the design and planning of a new 6-storey building.</p>
+			<p>Through various meetings and communications with our client at Indigenous and Northern Affairs Canada (INAC), additional information was gained that helped with specifics and narrowing down choices when it came to functional and reasonable designs. An interest in a Gold LEED certification was expressed and that goal was met, as well as a desire for new innovative design approaches in Canada’s Northern region.</p>
+			
+			<h3>Priorities</h3>
+			<ol>
+				<li>Assemble an experienced project team, experienced in construction in the arctic climate. This will reduce the number of difficulties related to new construction.</li>
+				<li>Establish a clear line of communication between the project team and local community through open community meetings</li>
+				<li>Establish clear patterns of communication between the project team and the client, inspectors, and other visitors to the site.</li>
+				<li>Provide a sustainable design</li>
+			</ol>
+			
+			<h3>Constraints</h3>
+			<ol>
+				<li>Provide a safe working phase and in the months or years after construction </li>
+				<li>The lack of daylight present during certain months will cause some setbacks in the work schedule</li>
+				<li>The drastic cold temperatures that are experienced in Cambridge Bay will affect workers anywhere from mood to motivation to work</li>
+				<li>Construction method and materials must be chosen wisely as lack of skilled labour in the region</li>
+				<li>Must plan accordingly when looking to transport material up to Cambridge Bay as the Sealift brings materials once a year</li>
+				<li>The climate limits construction work to about 10 weeks a year</li>
+			</ol>
+			
+			<h3>Objectives</h3>
+			<ol>
+				<li>To design a cost-effective building for the Canadian High Arctic Research Station.</li>
+				<li>To minimize environmental consequences through the reuse of materials and resources.</li>
+				<li>To provide a self-sustaining building that focuses on renewable energy technologies while matching the current themes and social values set out for CHARS.</li>
+				<li>To maximize the use of local contractors during the construction process by designing a structure that matches current construction skills and techniques of the workers of Cambridge Bay.</li>
+				<li>Ensure that the design of the structure is applicable to the Canadian Arctic climate, remaining sustainable for many years to come.</li>
+				<li>To eliminate any option this would yield unsafe construction or an unsafe final product.</li>
+				<li>Minimize the operation and maintenance requirements.</li>
+			</ol>
+			
+			<h3>Work-Breakdown Structure and Estimate</h3>
+			<p>The work breakdown structure of the CHARS renewable energy building follows a will be provide in the appendix.  The work breakdown structure was developed in Master Format using RS Means data as a reference.</p>
+			
+			<h3>Delivery Estimate</h3>
+			<p>A unique challenge of the proposed design is the site location.  Unlike construction in the lower 48 states and southern Canada the high arctic construction requires special delivery methods.  Since it is not practical to provide truck delivery, and the infrastructure cannot support such means, it is necessary to ship material by oceanic freight.  The material must be packaged into 20’ x 8’ x 8.5’ steel shipping container.  Each shipping container can support material loading up to 29,000 lbs.</p>
+			<p>From previous projects completed in Cambridge Bay, Nunavut the company most used to deliver shipments is Nunavut Eastern Arctic Shipping (NEAS).  After consulting with a NEAS employee, the shipping schedule is focused around the months of August and September.  For shipments to Cambridge Bay the 2017 shipment left Kitikmeot port in Montreal, QC on August 8th and was delivered to Cambridge Bay September 4th.  NEAS specifies a price per revenue ton for all shipments, and deliveries to Cambridge Bay area are prices at $441.00 per ton.  An additional cost of shipping insurance must be applied at a rate of $12.00 per ton.</p>
+			<p>We are estimating that through optimization of packing we will average 16,000 lbs. (8 tons) per shipping unit.  Given that the estimated weight of all materials needed to ship this will require 150 shipping containers.   Multiplying the average weight per container by number of shipping containers we have a total shipping revenue of 1200 tons.  By unit pricing the total cost of delivery is $543,600.</p>
+			<p>A cost estimate of the construction of the structure has been developed using RS means and can be found in Annex. The estimate has been separated in 4 sections:</p>
+			<ol>
+				<li>Transportation cost</li>
+				<li>Construction cost</li>
+				<li>Engineering Fees</li>
+				<li>O&amp M Fees</li>
+			</ol>
+			<p>The cost estimates were calculated based on a location-based pricing with Ottawa, ON as its reference. Geographical index of 1.038 have been used to estimate the equivalent cost for pricing in Cambridge Bay, ON.</p>
+			<p>Generally, the total cost excluding the O&M fees summed up to $45,750,000.00 in Ottawa, without factoring in the geographical index. The total estimated cost in Cambridge Bay, using the factor, increases it to $47,488,500.00.</p>
+			
+			<h3>Cambridge Bay Cost Index</h3>
+			<p>Cambridge Bay Cost Index detailed in can be seen in Appendix A. The cost indices of Cambridge Bay, Nunavut was based on studies performed in the high arctic of living expenses, annual income, and construction costs.  To begin, Ottawa is a cost index of 1.08 weighted average against the national average.  When comparing Cambridge Bay to Ottawa it is necessary to use the closest city center of Yellowknife.  Yellowknife has a building construction cost index of 1.13 but based on studies conducted titled “Food and Living Expenses in the Canadian Arctic” the index is increased by 18%.  Thus, the construction index in Cambridge Bay is 1.308 total weighted average compared to the national average.</p>
+		</div>
+		
+		<div id="design">
+			<h2>Design</h2>
+			<h3>Site Plan</h3>
+			<p>The site plan accurately represents the exact location of the BARE Engineering building on the CHARS Campus. This area has been chosen as it was intentionally left open for future developments on the CHARS Site Plan. To determine the specifics of the site plan, geotechnical reports and local bylaws were inspected. From this information, the building setbacks will be at least 6m from the established property line to meet Cambridge Bay’s Zoning by Law number 222. To control the surface water runoff from the spring thaw, the site plan has been profiled with slopes away from the building foundation at a 2% slope, towards the drainage ditches and swales. The roadways will consist of a non- organic subgrade material of compacted sand or gravel. The granular sub-base will consist of 300mm of suitable ‘B’ Gravel, containing crushed bedrock or crushed sand and gravel. The top layer of gravel will include 200mm of Granular ‘A’, which will be comprised of crushed bedrock or crushed sand or gravel. All aggregate for walkways and roadways will be procured locally. All granular material is to meet ASTM D-698 standards and is to be compacted to 100% as per SPMDD requirements. The Image below represents the buildings on site, roadways, probe holes, and parking areas.</p>
+		</div>
+		
+		<div id="foundation">
+			<h3>Foundation Plan</h3>
+			<h4>Introduction</h4>
+			<p>The geotechnical engineers at BARE engineering firm were retained to develop a foundation design for the service building. A geotechnical investigation was completed and reported by esp. services Inc. The report provides the subsurface condition at the site, the active layer thickness and permafrost temperature.</p>
+			
+			<h4>Subsurface Conditions</h4>
+			<p>
+			Esp services Inc. provided geotechnical investigation report (Appendix A) shows the borehole locations, elevation, and other useful information regarding the proposed development area for the service building to be built. BH3, BH15, BH18 and BH20 are the relevant boreholes in this case. These boreholes were chosen to be representative of the soil beneath the foundation based on the proximity to the chosen site. The boreholes were at a distance less than 100 m from the chosen site. It was deemed unnecessary to take any additional boreholes into consideration due to their distance from the chosen site. The subsurface profile based on these boreholes is shown below.
+			</p>
+			<p>Figure 7 and 8 describes the variation in soil layers. There is a thin layer of organic tundra as topsoil at each borehole. It is followed by a layer of grey silty clay till consisting of boulders and cobbles at depths ranging between 2.4m and 5.2m, which reaches till the bedrock. The till in all the boreholes is underlain by limestone bedrock, which extends to the entire depth investigated. It is noted that BH15 starts at a considerate lower elevation than the other boreholes. BH3 was noted to have silty clay till to a greater depth compared to the other boreholes. The depth of the subsurface layers for the scaled proposed development area was approximated by drawing a slope connecting the different subsurface layers between the boreholes, which is represented in the Figure 7 and 8. </p>
+			
+			<h4>Groundwater Levels and Permafrost</h4>
+			<p>Consideration of groundwater is a key element in the foundation design.  Esp. services Inc. permitted monitoring of the groundwater levels by installation of flexible standpipes in the boreholes. All the boreholes taken into consideration were dry on completing of drilling and open to full depth.</p>
+			<p>The blue line in the Figure 7 and 8 represents the approximate depth of the permafrost below the surface. The average depth of the visible permafrost was recorded to be 0.5m below the ground surface. </p>
+			
+			<h4>Foundation Consideration</h4>
+			<p>A thorough examination of the geotechnical condition at the site provided the suitable foundation selection for the proposed building. It is recommended for the proposed Service building to be founded on an end bearing piles socketed into the bedrock.  The floor slab of the proposed building would be constructed as elevated structure supported on piles with a crawl space underneath.</p>
+			<p>The proposed building is to be founded on a round hollow structural section (HSS) steel pile socketed into clean, sound bedrock which was encountered on average at a depth of 2.0- 5.5m below the ground surface. The steel piles were designed based on loads ranging from 0.1 to 1MN. In addition to the end bearing, the bond between the gout and the bedrock was taken into consideration for design purposes.</p>
+			<p>The installation of the piles is to be installed in a pre-drilled oversized holes up to a thickness of 3 cm of the size of the pile for the addition of grout. The holes were cleaned properly so that the piles are set on the bedrock. There were also few considerations before the installation of the pile, if the piles are to be installed when the active layer is thawed, the accumulation of the groundwater in the pile holes will cause problem during pile installation as the water in the pile holes make it difficult for the drilling. A fast-settling arctic grout, with accelerating and water reducing agents is poured in the socket immediately after cleaning. The procedure of handling and installation is done with accordance to the manufacturer's recommendation. The portion of the pile that is grouted should be free of paint, oil to ensure a good bonding takes places. The piles is to be placed into the grout and vibrated to the bedrock surface. After a settling time for the grout, the space between the hole and the pile is filled with sandy slurry. The uplift forces on the piles due to seasonal freezing of the active layer can be taken care of by coating the upper pile with heavy grease. </p>
+			
+			<h4>Thermoprobe Technology</h4>
+			<p>Thawing of the permafrost layer has been a problem for many years in regions that experience ground temperatures below 0°C. The treacherous freeze-thaw cycle in these areas have many effects on engineering structures. As the active layer thaws, it will reduce the load-bearing strength of the subgrade beneath the structure. In turn, the building will begin to deform from settling and can result in serious damages and structural failure in extreme cases. Climate change is hazardous and can have severe impacts on regions where permafrost is present. As there are many causes related to climate change and temperature increases, the Earth’s surface is continually warming. During the warm seasons the ice and snow that insulates the Earth’s surface melts and the ground warms. The warming of the Earth’s surface includes not only the active layer of soil but also the permafrost layer. Thus, altering the bearing capacity of the soils the structures in these regions are built on. Construction and maintenance of engineering structures in the Arctic prove to be very troublesome. Not only do the construction efforts have to be altered, but also transportation and scheduling of the building’s materials must be examined. However, by understanding and studying the limitations and stipulations inherent in building in regions of permafrost a successful and safe build can occur.</p>
+			<p>A solution to the permafrost problem is thermosyphon technology. Two-phase thermosyphons are passive refrigeration devices that transfer heat against gravity. Construction is typically a closed ended tubular vessel charged with a two-phase working fluid. The vapor phase of the working fluid fills most of the interior of the vessel, with the liquid phase filling the minority of the volume. Thermosyphons function because of the two-phase working fluid. The working fluid is contained in a closed, sealed vessel (Thermopile or Thermoprobe) that is partially buried. Thermosyphons have typically functioned passively in cold climates during the winter months, at which time the above-ground portion is subjected to cold ambient air which cools and condenses the working fluid. The condensed fluid gravitates to below-ground level. Below ground, subjected to warmer temperatures, the working fluid warms, evaporates, and rises upward to repeat the cycle. This continuous recycling is irreversible because the cycling ceases in the summer when the air temperature is above the soil temperature. A typical system consists of multiple Thermoprobe, an active (powered) condensing unit, a two-phase working fluid, an interconnecting supply and return piping network, and a control system. Thermoprobe consist of an evaporator and a passive condenser section. Coupled with an active condenser, a Thermoprobe functions actively and removes heat from the ground without direct dependency on the ambient air temperature. The hybrid system can function simultaneously in both passive and active modes, when the ambient temperatures are sufficiently low, thereby reducing energy costs. The thermosyphon heat exchange principle is seen in the following figure.</p>
+			<p>Relevant calculations are in the original report document.</p>
+			
+			<h4>Crawlspace and Utility Pipeline</h4>
+			<p>The entire structure is designed to be built on pile foundation which is elevated 30cm above the ground surface. Structures constructed in permafrost regions are often raised up to avoid the transfer of heat from the interior of the building to the ground surface. It is an important consideration to avoid the convection of heat, as this will cause the permafrost to melt resulting in an accumulation of melted water and will also cause settlement. The crawlspace is designed to be closed in the section shown in figure 14. The closed section of the crawlspace is to account for pipelines to the building. The pipelines extend from the main station to the service building through a trench dug under the ground surface connecting to the building through the enclosed crawl space. The enclosed crawl section is insulated all around with foam to avoid the freezing of the pipelines and to reduce the transfer of heat to the ground surface as much as possible. It is also necessary to insulate the walls as well as the floor. Uninsulated walls result in source of humidity as moisture in the ground evaporates into air and can condense on cold walls where molds can establish itself. The selection for the thickness of the insulation for the top section of the crawl space  was chosen based on the amount of heat energy that needs to be entrapped within the building and the thickness of the lower section of the insulation was chosen based on the amount of thermal energy to be entrapped within the crawl space to maintain the permafrost from melting   (below 0 degree Celsius),which in turn based of the thermal conductivity of the material chosen for the insulation.</p>
+			<p>The mean annual air temperature was taken as -14 degree Celsius for Cambridge Bay which was derived from the Environment Canada online climate data (INAC 2011) and the mean annual ground temperature (MAGT) was estimated to be -8 degree Celsius which is derived from the data provided by exp. (INAC 2011). The temperature within the building is assumed to be taken as 18 degrees Celsius.</p>
+			<p>The purpose of the modelling is to take into consideration the different thickness of insulation to maintain a temperature of around 6-8 degree Celsius within the crawl space. Table 5 provides the data that shows the different combination for thickness of insulation and areas to be insulated resulting in various mean temperature (INAC 2011). </p>
+			<p>Scenario M03-02 is the recommended selection for the design with the top, bottom and side insulation thickness to be 100mm, which maintains a mean temperature of 8 degree Celsius in the late winter and 8.3 degree Celsius in the late summer. If the insulation is too thin, then heat would transfer from within the building to the crawl space resulting in higher building heating cost and if the insulation is too thick (INAC 2011), it would be difficult to maintain a higher temperature in the crawl space, due to which the 100mm insulation thickness seems optimal considering the various factors. Above all, it is recommended to monitor the air temperature within the crawlspace to record the performance of the insulation.</p>
+		</div>
+		<div id="geotechnical">
+			<h3>Geotechnical Issues and Management Suggestions</h3>
+			<h4>Subsurface and Groudnwater Management</h4>
+			<p>Water management around the structure is an important consideration especially in a permafrost region. It is recommended to construct drainage ditches around the structure to redirect ground water generated on site. </p>
+			
+			<h4>Permafrost Degradation</h4>
+			<p>The minor melting of permafrost is a given as it is exposed to long term source of heat from the structure. The settlement caused due to the melting is taken care of by driving the piles into the bedrock. </p>
+			
+			<h4>Site Drainage</h4>
+			<p>The proposed Renewable Energy Building will contain a deep pile foundation. Therefore, heat losses from the building and foundation will result in degradation of the permafrost in the vicinity of the structure. This would result in accumulation of the melt water around the structure. In addition, thawing of the active layer during spring melt would also result in accumulation of the melt water on the underlying permafrost.</p>
+			<p>It is noted that there are three possible sources that would have to be dealt with. These are: 1. surface water; 2. subgrade water from active layer; and 3.  subgrade water from degradation of the permafrost.</p>
+			<p>These waters will be controlled in the following ways:</p>
+			<ol>
+				<li>The site has been profiled with slopes away from the building towards drainage ditches. </li>
+				<li>Since the Main Research Building is set on a plateau, the subgrade water will tend to flow away from the building. Also, the site preparation for the roads and parking areas requires excavation and replacement of 1 m thick layer of free-draining gravel material. This material will be profiled at its surface and at its subsurface and will be sloped away from the buildings.</li>
+				<li>It is understood that the subgrade water from permafrost degradation is to be collected by a weeping tile installed around the perimeter of the building and will drain into a sump to be in the basement. Water will be pumped out from the basement using a sump pump. The weeping tile will collect any water produced by degradation of the permafrost due to heat generated by the building.</li>
+			</ol>
+			
+			<h4>Foundation Monitoring</h4>
+			<p>It is recommended that installation of the foundations at the site should be monitored by qualified geotechnical personnel. The monitoring would comprise supervision of installation of the piles to ensure that they are installed to the specified depth, the pile holes are properly cleaned and dewatered, and that the upper 2.0 m of the piles are properly greased and wrapped with polyethylene sheeting to minimize the effect of ad freeze uplift forces on the piles in the active layer. </p>
+			<p>Grain-size analyses should be performed on the backfill, base and sub-base materials to ensure that project specifications are being met. In-place density tests should be performed on backfill, base and sub-base materials to ensure that specified degree of compaction is being achieved.</p>
+		</div>
+		<div id="loading">
+			<h3>Loading Conditions</h3>
+			<p>For ease of design, shipping and construction, a single sized member was used throughout the steel assembly. With results obtained from sap2000, member size CISC w360x134 was selected. Moving in the long dimension from South to North, five 18288 tall columns, regularly spaced at 7620mm stand on top of piles. After these columns, stand six 12192 mm tall columns, regularly spaced at 6096 mm. This row of columns repeats twice laterally (moving north) with perpendicular spacing of 9144 mm followed by spacing 6096 mm.  The second iteration of columns however (the one at 9144 mm from the south face), does not include any 12192 mm columns. Connecting the columns at base, there is a frame of beams whose lengths vary with the spacing of the columns, beam lengths are 6096 mm, 9144 mm, and 7620 mm. This frame repeats vertically twice times with spacing 3657.6 mm. The tops of the 12192 mm columns are connected along the long dimension with beams of length 6096mm across the shorter dimension, all the columns are connected via an arched truss. The curvature of this arc is that of a circle with radius 41554 mm. The shape of the arc is denoted by the chord of said circle of length 24384 mm. On the other side of the building, lateral support for the first five rows of columns (moving north along the long dimension) repeats vertically as below three more times at regular spacing 3657.6 mm. The tops of these columns are connected along the longer dimension by steel beams 7620 mm in length. The shorter dimension is laterally supported at the top by the same trusses as above. For details concerning the steel support plan and the steel member dimensions, please consult the appendix. </p>
+			<p>From NBCC 2015, we know that for a mixed-use building, the live load which governs is the largest of the building’s uses. Because it is primarily an office building, the live load which governs is 4.8 kPa for the first floor and 2.4 kPa for floors two through five. From the load combinations, it was discovered that case 2 (1.25D + 1.4L) governs. </p>
+			<p>A summary of the conducted SAP2000 analysis can be found in the original report document.</p>
+		</div>
+		
+		<div id="connections">
+			<h3>Steel and Cross-Laminated Timber Members Design</h3>
+			<p>For steel-steel connections, angle plates and bolts will be used. The angles will be located on the laterally extending member and will connect to the column’s web or flange. CLT decking will rest on top of the beams and a ceiling will hang underneath at 457mm. For rigidity, the decking closest to the columns is connected via a steel angle with bolts.</p>
+		</div>
+		
+		<div id="envelope">
+			<h3>Envelope Design</h3>
+			<p>The building’s exterior is made up of several prefabricated timber panels. Outlined in the appendix, we designed a series of panels for both interior and exterior use. The key difference being the thickness per panel. The outer panels consist of three functional layers and two aesthetic. Going from inside-out, there is first a thin (24mm) layer of white plastic cladding. This cladding is attached by rod-fasteners to the first timber layer. This layer is 89mm thick and mainly serves as a mounting point for any utilities that may be located in the next layer. This layer is 200mm thick and is fully insulated. We suggest fiberglass insulation as it can easily accommodate any utility lines that may be run through this space. However, if preferred, paneled insulation can be easily accommodated. The next layer is a 143mm thick layer of timber. This layer is load bearing and can resist its weight as well as that of any panels above. This eases the strain placed on the steel frame and if necessary, in the future, the structure can be extended outwards from the steel frame. This layer is connected to the other timber layer via a series of timber studs. Lastly, the outer face is covered in white plastic cladding. This cladding is a higher grade than that of the interior as it has to withstand the elements. There are windows in the facade and to account for heat-loss, they are 70mm thick, silica-aerogel panels which promise R-values of 20 or greater (U=0.05).</p>
+		</div>
+		
+		<div id="energy">
+			<h3>Renewable Energy Plan</h3>
+			<p>Northern Canada is one of many remarkable parts of the nation, being a fundamental part of Canadian heritage and national identity. Although the vast stretch of land and ocean is rich with energy and materials, Cambridge Bay, like most of Canada's North relies exclusively on imported fossil fuels for its energy needs. Although fossil fuel-based energy is well established in the area and have relatively low up-front cost to install, they are becoming more and more expensive and are responsible for many causes of concern, such as air pollution, greenhouse gases and fuel spills.</p>
+			<p>With that in mind, the integration of various green strategies across all aspects of the building design during the development and schematic design phase is at the forefront of the engineering design team's deliberation. Considering the high cost of energy in Cambridge Bay, a sustainable design approach is applied at every step of the design development.</p>
+			<p>The concepts presented throughout the design project consider various aspects of sustainable design such as: renewable energy and energy conservation, reduction of potable water consumption, indoor air quality and reduction of construction impacts on site. We've decided to implement various means of energy conservation and renewable energy, some of which will be implemented intermittently due to some of the constraints associated with the remote location.</p>
+			<p>The use of on-site renewable energy has many benefits, one of which is to offset building energy cost. The CHARS facility in its entirety is composed of certain heavy equipment and research spaces, therefore, the energy cost accumulates rather quickly. The focal point of the building design was to incorporate as many innovative environmentally friendly, energy optimizing solutions.</p>
+			<p>Following advanced planning and extensive evaluation of on-site renewable energy potential proves to be extremely cost efficient to include as much renewable energy components as the project budget allows. Due to the high energy costs in Cambridge Bay, the return on investment is relatively short. The current goal is to implement cogeneration strategies including solar energy, wind energy and the innovative plasma gasification solution combined Preliminary electricity consumption of roughly +/- 370 000 kWh/year.</p>
+			
+			<h4>Solar Photovoltaic (PV)</h4>
+			<p>Photovoltaic energy conversion, as opposed to solar thermal energy, directly converts the sun's light into electricity. The PV name originates from the process of converting light (photons) to electricity (voltage). The potential market for PV in the North is significant for Canada, as the communities each have their own local electrical grid as opposed to being tied to the North American grid. Because of the remoteness of the communities and the high costs associated with transportation, diesel fuel can be extremely expensive.</p>
+			<p>Therefore, many of these communities can benefit from PV if proven reliable in the harsh climate. Following the installation of the PV panels on the Main Research Building, we will incorporate PV panels in the structure. Moreover, PV applications in Nunavut have been rather successful, an example being the Arctic College in Iqaluit which has been delivering electricity since 1995 with this same system. The PV system captures up to 20 hours of sunlight per day (summer) and 5 hours per day (winter).</p>
+			<p>The PV panels will be implemented into the exterior walls of the building, namely the south façade to take full advantage of the limited sun in the North. The surface available for PV panels limits the number of panels available, which in turn, limits the quantity of power generation. The estimated electrical power generated by these PV panels is around 50 kW power peak for the Renewable Energy Building. Battery banks will be used to store all the extra power generated from the panels.</p>
+			<p>The estimated cost to install a 50kW PV system is $6.00/W. This installation includes the per Watt installed cost of the modules, inverter, racking, electrical components, and installation. Considering the 50 kW = 50 000 W at a rate of $6.00/W = $300 000.00 excluding applicable taxes and shipping/transportation fees, this was seen from the Natural Resources of Canada.</p>
+			
+			<h4>Wind Turbines</h4>
+			<p>The amount of electricity generated by a wind turbine depends on various factors. To begin, it relies on turbine size, speed at which the wind is blowing and the wind turbine height. Although wind turbines installed in the North are limited in number and are relatively larger in size, such as the turbine installed in Cambridge Bay in 1994 operating at 100 kW. However, the cogeneration of power through various means of renewable energy is to complement one another. In the case of the wind turbine, helical technology will be used. The usage is primarily to make up for the loss of sunlight and PV electricity in the winter months. We will be implementing two small wind turbines, roughly 6 kW each.</p>
+			<p>It is estimated, given the turbine is spinning in clean laminar air, that it will produce around 13 000 kWh per year. Our primary focus is getting the tower for the turbine as high as possible to achieve the highest wind speeds, within the capacity of the turbine. The installation costs excluding applicable taxes and shipping/transportation fees is $100 000.00.</p>
+			
+			<h4>Plasma Gasification</h4>
+			<p>The most innovative of all planned renewable energy sources is the plasma gasification. With population increase, comes a growing waste disposal challenge. As of 2014, waste landfills in Nunavut are at or near capacity, yet there are very few immediate solutions.</p>
+			<p>We will be investing into Alter NRG's plasma gasification technology. Contrarily to garbage incineration, plasma gasification heats the waste and salvages slag for re-use in the construction industry and produces syngas to generate energy. With this technology we're able to achieve.</p>
+			<ol>
+				<li>Reduce landfill needs and subsequent environmental contamination issues</li>
+				<li>Create low cost, stable and predictable energy supplies as an alternative to fossil fuels</li>
+				<li>Lower green-house gas emissions from landfill and other fossil fuel sources.</li>
+				<li>Support a circular economy that focuses on reduction of waste, resource recovery, reuse, and recycling.</li>
+			</ol>
+			<p>This process can convert a various waste stream into clean syngas (synthesis gas), a fundamental building block that can be converted into other forms of energy. The focused waste stream targeted is municipal solid waste. Essentially, the plasma gasifier is an oxygen starved vessel that operates at extremely high temperatures (5000 degrees Celsius) achievable with plasma. The heat breaks the waste down into elements like hydrogen and compounds like carbon monoxide and water. Although, multiple waste streams can be processed, the target stream is municipal solid waste (MSW). Synthesis gas (syngas) is then created from the organic components and the inorganic components like metal, glass and concrete are melted into slag which can be safely used as aggregate. Syngas, a fundamental building block that can be converted into other forms of energy, is suitable for use in sophisticated equipment such as high efficiency gas turbines and engines.</p>
+			<p>A clean, full size, syngas plant that processes 1000 tonnes per day of municipal solid waste will produce about 3 500 000 GJ/year of synthesis gas. It will also produce roughly 250 tonnes per day of slag that can be sold or used as a safe aggregate. In summary, a clean syngas plant will convert 1000 tonnes per day of municipal solid waste will output only 20 tonnes per day of residuals that require disposal. The remaining 980 tonnes per day is converted into syngas and other valuable products. However, the plant considered for CHARS is merely a fraction of the full size of the referenced AlterNRG plant, therefore, we can expect the same ratios of production but on a substantially smaller scale. </p>
+			<p>Once this technology is proven reliable internally to the CHARS facility, the primary focus will be to expand into the community of Cambridge Bay, and later to extended communities. By converting MSW into clean renewable energy and valuable products we can solve the growing waste disposal problem, all the while, saving on energy costs and reducing emissions from the CHARS facility.</p>
+			<p>Estimating the cost is quite complex with a newer technology such as this. AlterNRG customizes every facility they manufacture specifically to the needs of the consumer. We’ve estimated an annual tonnage of waste for Cambridge Bay to be 1 812 which is roughly 5 tonnes per day. A Garbage incineration plant for the same capacity would cost $4 660 000.00. Applying a cost multiplier of 1.25 for the added technology in regard to the plasma gasification, we estimate the total cost excluding applicable taxes and transportation fees of $5 825 000.00. </p>
+		</div>
+		
+		<div id="LEED">
+			<h2>LEED</h2>
+			<p>‘LEED certification is able to provide verification that a building, home or community was designed and built using strategies aimed at achieving high performance in key areas of human and environmental health: location and transportation, sustainable site development, water savings, energy efficiency, materials selection and indoor environmental quality.’  </p>
+			<p>Certification is earned through a point system in which there are four possible levels:</p>
+			<ul>
+				<li>Certified 40–49 points</li>
+				<li>Silver 50–59 points</li>
+				<li>Gold 60–79 points</li>
+				<li>Platinum 80 points and above</li>
+			</ul>
+			<h4>LEED Project Scope</h4>
+			<p>For the new renewable energy building a Gold certification or higher is trying to be achieved. Our client had expressed their interest in being leaders and innovators in the field of environmental awareness. Using the LEED rating system is an excellent way to achieve this notion. The rating system will have some limitations though due to the location of the project, there are measures in place to deal with these setbacks. Although Cambridge Bay provides many challenges, the design team also can provide innovative solutions to these long-standing problems.</p>
+			<p>Consult the original report for a detailed analysis of expected LEED scores.</p>
+			<p>This project involves the conceptual planning and designing of a 6-storey building, this means the rating system that best fits our needs is the rating system for Building Design and Construction (BD+C).</p>
+			<h4>LEED Summary</h4>
+			<p>After using the LEED rating system, it is seen that the project will meet its goal of attaining a gold certification. This project received 61 points from the LEED rating system. This is an amazing achievement for the project and further develops the narrative of this building be sustainable and a great source of renewable energy.</p>
+		</div>
+		
+		<div id="conclusion">
+			<h2>Conclusion</h2>
+			<p>The challenge to design an innovative Renewable Energy Building for Aboriginal and Northern Affairs Canada was met head on and BARE Engineering feels like we have met the task. From the very beginning, careful consideration was placed in the final design in regard to our clients needs, all the while respecting the design criteria. Our design consists of a logistical plan to have the site prepped and ready for foundation construction by the time the materials are shipped to site by ocean freighter.  Due to the restricted construction window in northern Canada the construction will take place immediately after the delivery of material and be completed in 1030 days. Through our building materials and practices, we will be able to obtain LEED Gold Certification, an important objective for our client, and deliver a product that exceeds his expectations and performance specifications. Our structure contains steel rock socketed pipe piles with a steel frame structure and CLT panels. The most innovative and note-worthy point of this project is the use of renewable energy technologies through Thermoprobe, solar panels, wind energy and a garbage gasification plant.  A final point of our design is the environmental, social, and cultural benefits the project will bring to Cambridge Bay, Nunavut.  The local population, as well as researchers, will have access to a space to meet and bring an economic benefit to the society. The final cost of the BARE Building is $47,010,000.</p>
+		</div>
+		
+		<div id="appendix">
+			<h2>Appendix</h2>
+			<p>
+				The original report is available from the provided link. It contains all images, tables, and appendicies referenced in the text. 
+			</p>		
+		</div>
+	</div>
 	
-	<p>
-
-	</p>
 </body>
 </html>
