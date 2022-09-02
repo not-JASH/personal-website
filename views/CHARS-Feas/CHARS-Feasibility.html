@@ -3,10 +3,8 @@
 	<head>
 		<meta charset="utf-8">
 		<title>CHARS Feasibility</title>
-		<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-		<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+		
 		<link href="/css/main_stylesheet.css" rel="stylesheet" type="text/css">
-		<link href="/css/collapsible.css" rel="stylesheet" type="text/css">	
 		
 		<style>
 			body {
@@ -935,37 +933,5 @@
 				</p>		
 			</div>
 		</div>
-		
-		<script>
-			function expandcollapse(element){
-				var content = element.nextElementSibling;
-				if (content.style.maxHeight){
-					content.style.maxHeight = null;
-				} else {
-					content.style.maxHeight = content.scrollHeight + "px";
-				} 	
-			};	
-
-			var coll = document.getElementsByClassName("collapsible");
-			var i;
-
-			for (i = 0; i < coll.length; i++) {
-			  coll[i].addEventListener("mouseover", function() {
-				  if (!this.classList.contains("clicked")){
-					this.classList.toggle("active");
-					expandcollapse(this);
-				  }	  
-			  });
-			}
-
-			for (i = 0; i < coll.length; i++) {
-			  coll[i].addEventListener("mouseout", function() {
-				if (!this.classList.contains("clicked")){
-					this.classList.remove("active");
-					expandcollapse(this);
-				}  			
-			  });
-			}
-		</script>	
 	</body>
 </html>
