@@ -21,14 +21,6 @@ a {
 	text-decoration: none;
 	color: #000;
 }	
-
-a:hover {
-	text-shadow: 0 0 0.01px #000;
-}
-
-a:active {
-	font-weight: bold;
-}
 		
 p {
 	font-size:14px;

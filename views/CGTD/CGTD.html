@@ -3,104 +3,145 @@
 	<head>
 		<meta charset="utf-8">
 		<title>CG Training Data</title>
+		
 		<link href="/css/main_stylesheet.css" rel="stylesheet" type="text/css">
 		
-		
-		<style>			
+		<style>
 			body {
-				margin: auto;
-				width:80%;
-				max-width: 500px;
-				padding: 0px 20%;
-			}
-
-			a {
-				font-size:24px;
-			}	
-
-			p {
-				font-size:14px;
-				width:100%;
-				padding:0px 0px 20px 0px;
-				text-align: justify;
+				width: 100%;
+				max-width:none;
+				padding:0px 0px 0px 0px;
 			}
 			
-			.grid-container {
-				width: 100%;
-				grid-template-columns: auto auto auto auto auto;
-				padding:0px 0px 0px 0px;
-				margin: 0px 0px 0px 0px;
-			}
-
-			.grid-item a {
+			a {
+				display: block;
 				font-size: 14px;
 			}
-
-			.content p {
-				padding: 0px 0px 0px 0px;
-				width: 100%;
+			
+			a:active {
+				font-weight:normal;
+			}
+			
+			/*table,th,td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}*/
+			
+			td, th, ol {
+				font-size: 14px;
+			}
+			
+			li {
+				font-size: 14px;
+				margin-bottom:4px;
+			}
+			
+			.at {
+				vertical-align: top;
+			}
+			
+			.pb10 {
+				padding-bottom: 12px;
+			}
+			
+			.CHARS {
+				padding:25px 0px 0px 0px;
 			}
 
-			.null:hover {
-				text-shadow: 0 0 0 black;
-			}	
+			
+			.grid-container {
+				grid-template-columns: repeat(5,auto);
+			}
+			
+			.index {
+				position:fixed;
+				max-width: 200px;
+				width: 200px;
+				top:90px;
+				left:50%;
+				margin-left:-550px;
+			}
+			
+			.main-text {
+				align-content: center;
+				margin:auto;
+				width: 550px;
+			}			
+			
+			.index a{
+				font-size:16px;
+			}
+
+			.index a:hover {
+				color:white;
+				background-color: black;
+			}
+
+			.index nav {
+				padding:0px 0px 0px 0px;
+			}
+			
+			img {
+				max-width: 100%;
+				margin-left:auto;
+				margin-right:auto;
+				display: block;
+			}				
 		</style>
 	</head>
 	
-	<body>
-		<h1>Computer Generated Training Data</h1>
-		
-		
-		<div id="comparison" style="width:100%">
-			<figure>
-				<div id="divisor"></div>
-			</figure>
-			<input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
-		</div>
-		<h4>This image and its segmented counterpart were procedurally generated.</h4>
-		
-		<p style="padding:25px 0px 25px 0px;">
-			Accurately segmented, labeled data takes a long time to produce. For certain use-cases, it may be sufficient to train the bulk 
-			of a network on computer generated images, then finish training on a smaller set of real-world images. Computer generated images 
-			can be automatically labeled and segmented so large training sets are easy to obtain. In Blender, a series of random rooms with 
-			different furniture arrangements and lighting conditions were rendered on a frame-by-frame basis and metadata saved to txt files. 
-			Object vertices (three dimensional coordinates relative object origin) were projected onto the camera lens before saving to text 
-			file. Projected coordinates were consolidated into just the vertices which described the object in the image; vertices not 
-			relevant to the object’s silhouette in the image plane were discarded. Parallax distortion was a major factor here and some 
-			object silhouettes do not perfectly align with the object in the image-plane. Silhouettes were exported to binary pngs on a 
-			per-object basis. Several scripts were written to convert binary-pngs to different annotation formats. For example: COCO_V3 
-			JSON. Several network models were trained on this data, however technical limitations resulted in inconclusive results. Training 
-			and image-segmentation model MaskRCNN was infeasible due to time-constraints. Decent results were obtained when training FastRCNN; 
-			data was converted to bounding boxes from the png silhouettes. In summary, computer-generated data seems like a viable aggregate 
-			to real-world training-data. 
-		</p>
-		
-		<hr>
-		<div class="grid-container">
-			<div class="grid-item">
+	<body>		
+		<div class="index">
+			<nav>
 				<a href="/">Home</a>
-			</div>
-			<div class="grid-item">
 				<a href="/Portfolio">Portfolio</a>
-			</div>
-			<div class="grid-item">
-				<a href="/Work-Experience">Work Experience</a>
-			</div>
-			<div class="grid-item">
-				<a href="/Education">Education</a>
-			</div>
-			
-			<div class="grid-item">
-				<a href="https://github.com/not-JASH/computer_generated_segmented_data">GitHub</a>
-			</div>
+				<!--a href="/Work-Experience">Work Experience</a-->
+				<!--a href="/Education">Education</a-->
+			</nav>
+			<hr>
+			<nav>
+				<a href="">Full Report</a>
+				<a href="https://github.com/not-JASH/computer_generated_segmented_data">GitHub</a>		
+			</nav>
 		</div>
+		</div>
+		
+		<div class="main-text">		
+			<h1>Computer Generated Training Data</h1>
 
+			<div id="comparison" style="width:100%;align-content: center;margin-left: auto;margin-right: auto;">
+				<figure>
+					<div id="divisor"></div>
+				</figure>
+				<input type="range" min="0" max="100" value="50" id="slider" oninput="moveDivisor()">
+			</div>
+			<h4>This image and its segmented counterpart were procedurally generated.</h4>
+
+			<p style="padding:25px 0px 25px 0px;">
+				Accurately segmented, labeled data takes a long time to produce. For certain use-cases, it may be sufficient to train the bulk 
+				of a network on computer generated images, then finish training on a smaller set of real-world images. Computer generated images 
+				can be automatically labeled and segmented so large training sets are easy to obtain. In Blender, a series of random rooms with 
+				different furniture arrangements and lighting conditions were rendered on a frame-by-frame basis and metadata saved to txt files. 
+				Object vertices (three dimensional coordinates relative object origin) were projected onto the camera lens before saving to text 
+				file. Projected coordinates were consolidated into just the vertices which described the object in the image; vertices not 
+				relevant to the object’s silhouette in the image plane were discarded. Parallax distortion was a major factor here and some 
+				object silhouettes do not perfectly align with the object in the image-plane. Silhouettes were exported to binary pngs on a 
+				per-object basis. Several scripts were written to convert binary-pngs to different annotation formats. For example: COCO_V3 
+				JSON. Several network models were trained on this data, however technical limitations resulted in inconclusive results. Training 
+				and image-segmentation model MaskRCNN was infeasible due to time-constraints. Decent results were obtained when training FastRCNN; 
+				data was converted to bounding boxes from the png silhouettes. In summary, computer-generated data seems like a viable aggregate 
+				to real-world training-data. 
+			</p>
+		</div>
+	
 		<script>
 			var divisor = document.getElementById("divisor"),
 			slider = document.getElementById("slider");
 			function moveDivisor() { 
 				divisor.style.width = slider.value+"%";
 			}			
-		</script>	
+		</script>
+	
+	
 	</body>
 </html>

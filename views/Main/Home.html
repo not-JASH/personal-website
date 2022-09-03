@@ -1,34 +1,231 @@
 <!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Home Page</title>
-	
-	<link href="/css/main_stylesheet.css" rel="stylesheet" type="text/css">
-	
-	<style>	
-	</style>
-</head>
-	
-<body>
-	<nav>
-		<h1>Jashua Luna</h1>
-		<a href="/Portfolio">Portfolio</a>
-		<a href="/Work-Experience">Work Experience</a>
-		<a href="/Education">Education</a>
-	</nav>
-	<h2 style="color:orange">Please note this website is under construction.</h2>
-	<br>
-	
-	<p>
-		I am a Civil Engineering Graduate, with a wealth of knowledge stemming from multiple 
-		disciplines, who enjoys solving complex problems. I have a strong background in 
-		mathematics and programming and can work independently with minimum supervision.
-		With my undergraduate studies completed and graduate studies on the horizon, I hope to 
-		find employment I can be passionate about to make a strong start to a successful career. 
-	</p>
-	<br>
-	
+	<head>
+		<meta charset="utf-8">
+		<title>Jashua Luna</title>
+		
+		<link href="/css/main_stylesheet.css" rel="stylesheet" type="text/css">
+		
+		<style>
+			body {
+				width: 100%;
+				max-width:none;
+				padding:0px 0px 0px 0px;
+			}
+			
+			a {
+				display: block;
+				font-size: 14px;
+			}
+			
+			a:active {
+				font-weight:normal;
+			}
+			
+			/*table,th,td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}*/
+			
+			td, th, ol {
+				font-size: 14px;
+			}
+			
+			li {
+				font-size: 14px;
+				margin-bottom:4px;
+			}
+			
+			.at {
+				vertical-align: top;
+			}
+			
+			.pb10 {
+				padding-bottom: 12px;
+			}
+			
+			.CHARS {
+				padding:25px 0px 0px 0px;
+			}
 
-</body>
+			
+			.grid-container {
+				grid-template-columns: repeat(5,auto);
+			}
+			
+			.index {
+				position:fixed;
+				max-width: 150px;
+				top:90px;
+				left:50%;
+				margin-left:-510px;
+			}
+			
+			.main-text {
+				align-content: center;
+				margin:auto;
+				width: 550px;
+			}			
+			
+			.index a{
+				font-size:16px;
+			}
+
+			.index a:hover {
+				color:white;
+				background-color: black;
+			}
+
+			.index nav {
+				padding:0px 0px 0px 0px;
+			}
+			
+			img {
+				max-width: 100%;
+				margin-left:auto;
+				margin-right:auto;
+				display: block;
+			}
+			
+			
+			.fig {
+				padding-left: 0px;
+				font-size: 12px;
+				text-align: center;
+			}
+			
+			.procon {
+				grid-template-columns: auto auto;
+			}
+			
+		</style>
+	</head>
+	
+	<body>		
+		<div class="index">
+			<nav>
+				<a href="/Portfolio">Portfolio</a>
+				<!--a href="/Work-Experience">Work Experience</a-->
+				<!--a href="/Education">Education</a-->
+			</nav>
+			<hr>
+			<nav>
+				<a href="#Introduction">About Me</a>
+				<a href="#Education">Education</a>
+				<a href="#Work-Experience">Work Experience</a>			
+			</nav>
+		</div>
+		</div>
+		
+		<div class="main-text">		
+			<h1>Jashua Luna</h1>
+			<h2 style="color:orange">Please note this website is under construction.</h2>
+			
+			<div id="Introduction">
+				<p>
+					I am a Civil Engineering Graduate, with a wealth of knowledge stemming from multiple 
+					disciplines, who enjoys solving complex problems. I have a strong background in 
+					mathematics and programming and can work independently with minimum supervision.
+					With my undergraduate studies completed and graduate studies on the horizon, I hope to 
+					find employment I can be passionate about to make a strong start to a successful career. 
+				</p>	
+			</div>
+			
+			<div id="Education">
+				<h2>Education</h2>
+				<h3>Bachelor of Applied Science in Civil Engineering with Specialization in Geotechnical and Structural Engineering</h3>
+				<div class="grid-container" style="grid-template-columns: 300px auto;">
+					<div class="grid-item" style="text-align: left;font-size: 12px;">
+						<span>University of Ottawa</span>
+						
+					</div>
+					<div class="grid-item" style="text-align: right;font-size:12px;">
+						<span>September 2013 - April 2019</span>
+					</div>		
+				</div>
+				<h3>Computer Programming Diploma</h3>			
+				<div class="grid-container" style="grid-template-columns: 300px auto;">
+					<div class="grid-item" style="text-align: left;font-size: 12px;">
+						<span>Seneca College of Applied Arts and Technology</span>						
+					</div>
+					<div class="grid-item" style="text-align: right;font-size:12px;">
+						<span>September 2020 - April 2022</span>
+					</div>		
+				</div>				
+			</div>
+			
+			<p></p>
+			
+			<div id="Work-Experience">
+				<h2>Work Experience</h2>
+				
+				
+				<h3>Architectural Field Student</h3>		
+				<div class="grid-container" style="grid-template-columns: 300px auto;">
+					<div class="grid-item" style="text-align: left;font-size: 12px;">
+						<span>Ottawa Community Housing</span>						
+					</div>
+					<div class="grid-item" style="text-align: right;font-size:12px;">
+						<span>May 2018 - August 2018</span>
+					</div>		
+				</div>		
+				<p>	
+					Worked in a team to update Ottawa Community Housing’s (OCH) fire life safety plan. 
+					Created documents detailing the locations of fire protection and life safety systems, 
+					and their serviceability states for over a hundred of OCH’s properties. Creating 
+					these documents entailed site visits, consulting or creating floor plans, and 
+					meetings with relevant and concerned parties. 	
+				</p>
+				
+				
+				<h3>Heritage Research Assistant</h3>
+				<div class="grid-container" style="grid-template-columns: 300px auto;">
+					<div class="grid-item" style="text-align: left;font-size: 12px;">
+						<span>Architectural Conservancy of Ontario</span>						
+					</div>
+					<div class="grid-item" style="text-align: right;font-size:12px;">
+						<span>June 2017 - August 2017</span>
+					</div>		
+				</div>	
+				<p>
+					Researched how Toronto’s sociopolitical landscape reflects in the architecture of 
+					Toronto’s public schools; particularly the impact of changes in Toronto District School 
+					Board administration and changing theories concerning educational practice. Sourced 
+					information from a combination of archival data, expert interviews, and site visits. 
+				</p>
+				
+				
+				<h3>Student Construction Inspector</h3>
+				<div class="grid-container" style="grid-template-columns: 300px auto;">
+					<div class="grid-item" style="text-align: left;font-size: 12px;">
+						<span>MMM Group</span>						
+					</div>
+					<div class="grid-item" style="text-align: right;font-size:12px;">
+						<span>January 2018 - April 2016</span>
+					</div>		
+				</div>	
+				<p>
+					Inspected work on several plant expansion and maintenance jobs at TTC (Toronto Transit 
+					Commission). Reported to project managers and senior construction inspectors. Read plans 
+					to verify work and ensured sites were up to safety code. Maintained a detailed record of 
+					site activities and catalogued this in TTC’s database. Also established and maintained 
+					correspondence with parties relevant to project contracts. 
+				</p>
+			
+				<h3>Academic Tutor</h3>
+				<div class="grid-container" style="grid-template-columns: 300px auto;">
+					<div class="grid-item" style="text-align: left;font-size: 12px;">
+						<span>UOttawa Student's Union</span>						
+					</div>
+					<div class="grid-item" style="text-align: right;font-size:12px;">
+						<span>September 2015 - April 2019</span>
+					</div>		
+				</div>		
+				<p style="text-align: left;">
+					Tutored first, second, and third-year students in Linear Algebra, Calculus, Engineering 
+					Materials, Statics, Dynamics, C Programming for Engineers, and Physics for Engineers. 
+				</p>
+			</div>
+		</div>
+	</body>
 </html>

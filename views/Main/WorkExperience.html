@@ -1,113 +1,212 @@
 <!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Work Experience</title>
+	<head>
+		<meta charset="utf-8">
+		<title>Education</title>
+		
+		<link href="/css/main_stylesheet.css" rel="stylesheet" type="text/css">
+		
+		<style>
+			body {
+				width: 100%;
+				max-width:none;
+				padding:0px 0px 0px 0px;
+			}
+			
+			a {
+				display: block;
+				font-size: 14px;
+			}
+			
+			a:active {
+				font-weight:normal;
+			}
+			
+			/*table,th,td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}*/
+			
+			td, th, ol {
+				font-size: 14px;
+			}
+			
+			li {
+				font-size: 14px;
+				margin-bottom:4px;
+			}
+			
+			.at {
+				vertical-align: top;
+			}
+			
+			.pb10 {
+				padding-bottom: 12px;
+			}
+			
+			.CHARS {
+				padding:25px 0px 0px 0px;
+			}
+
+			
+			.grid-container {
+				grid-template-columns: repeat(5,auto);
+			}
+			
+			.index {
+				position:fixed;
+				max-width: 150px;
+				top:90px;
+				left:50%;
+				margin-left:-510px;
+			}
+			
+			.main-text {
+				align-content: center;
+				margin:auto;
+				width: 550px;
+			}			
+			
+			.index a{
+				font-size:16px;
+			}
+
+			.index a:hover {
+				color:white;
+				background-color: black;
+			}
+
+			.index nav {
+				padding:0px 0px 0px 0px;
+			}
+			
+			img {
+				max-width: 100%;
+				margin-left:auto;
+				margin-right:auto;
+				display: block;
+			}
+			
+			h5 {
+				padding-left:20px;
+			}
+			
+			.fig {
+				padding-left: 0px;
+				font-size: 12px;
+				text-align: center;
+			}
+			
+			.procon {
+				grid-template-columns: auto auto;
+			}
+			
+		</style>
+	</head>
 	
-	<link href="/css/main_stylesheet.css" rel="stylesheet" type="text/css">
-
-	<style>			
-
-	</style>
-</head>
-
-<body>	
-	<nav>
-		<a href="/">Jashua Luna</a>
-		<a href="/Portfolio">Portfolio</a>
-		<h1>Work Experience</h1>
-		<a href="/Education">Education</a>
-	</nav>
-
-	
-	<button class="collapsible" style="font-size:24px">Architectural Field Student</button>
-	<div class="content">
-		<h3>Ottawa Community Housing</h3>
-		<h4 >May 2018 - August 2018</h4>
-		<p>	
-			Worked in a team to update Ottawa Community Housing’s (OCH) fire life safety plan. 
-			Created documents detailing the locations of fire protection and life safety systems, 
-			and their serviceability states for over a hundred of OCH’s properties. Creating 
-			these documents entailed site visits, consulting or creating floor plans, and 
-			meetings with relevant and concerned parties. 	
-		</p>
-	</div>
-	
-	<button class="collapsible" style="font-size:24px">Heritage Research Assistant</button>
-	<div class="content">
-		<h3>Architectural Conservancy of Ontario</h3>
-		<h4>June 2017 - August 2017</h4>
-		<p>
-			Researched how Toronto’s sociopolitical landscape reflects in the architecture of 
-			Toronto’s public schools; particularly the impact of changes in Toronto District School 
-			Board administration and changing theories concerning educational practice. Sourced 
-			information from a combination of archival data, expert interviews, and site visits. 
-		</p>
-	</div>
-
-	<button class="collapsible" style="font-size:24px">Student Construction Inspector</button>
-	<div class="content">
-		<h3>MMM Group (Now WSP)</h3>
-		<h4>January 2018 - April 2016</h4>
-		<p>
-			Inspected work on several plant expansion and maintenance jobs at TTC (Toronto Transit 
-			Commission). Reported to project managers and senior construction inspectors. Read plans 
-			to verify work and ensured sites were up to safety code. Maintained a detailed record of 
-			site activities and catalogued this in TTC’s database. Also established and maintained 
-			correspondence with parties relevant to project contracts. 
-		</p>
-	</div>
-
-	<button class="collapsible" style="font-size:24px">Academic Tutor</button>
-	<div class="content">
-		<h3>UOttawa Student's Union</h3>
-		<h4>September 2015 - April 2019</h4>
-		<p style="text-align: left;">
-			Tutored first, second, and third-year students in Linear Algebra, Calculus, Engineering 
-			Materials, Statics, Dynamics, C Programming for Engineers, and Physics for Engineers. 
-		</p>
-	</div>
+	<body>		
+		<div class="index">
+			<nav>
+				<a href="/">Home</a>
+				<a href="/Portfolio">Portfolio</a>
+				<a href="/Work-Experience">Work Experience</a>
+				<!--a href="/Education">Education</a-->
+			</nav>
+		</div>
 		
-	<script>
+		<div class="main-text">		
+			<h1>Work Experience</h1>
+			
+			<button class="collapsible" style="font-size:24px">Architectural Field Student</button>
+			<div class="content">
+				<h3>Ottawa Community Housing</h3>
+				<h4 >May 2018 - August 2018</h4>
+				<p>	
+					Worked in a team to update Ottawa Community Housing’s (OCH) fire life safety plan. 
+					Created documents detailing the locations of fire protection and life safety systems, 
+					and their serviceability states for over a hundred of OCH’s properties. Creating 
+					these documents entailed site visits, consulting or creating floor plans, and 
+					meetings with relevant and concerned parties. 	
+				</p>
+			</div>
+
+			<button class="collapsible" style="font-size:24px">Heritage Research Assistant</button>
+			<div class="content">
+				<h3>Architectural Conservancy of Ontario</h3>
+				<h4>June 2017 - August 2017</h4>
+				<p>
+					Researched how Toronto’s sociopolitical landscape reflects in the architecture of 
+					Toronto’s public schools; particularly the impact of changes in Toronto District School 
+					Board administration and changing theories concerning educational practice. Sourced 
+					information from a combination of archival data, expert interviews, and site visits. 
+				</p>
+			</div>
+
+			<button class="collapsible" style="font-size:24px">Student Construction Inspector</button>
+			<div class="content">
+				<h3>MMM Group (Now WSP)</h3>
+				<h4>January 2018 - April 2016</h4>
+				<p>
+					Inspected work on several plant expansion and maintenance jobs at TTC (Toronto Transit 
+					Commission). Reported to project managers and senior construction inspectors. Read plans 
+					to verify work and ensured sites were up to safety code. Maintained a detailed record of 
+					site activities and catalogued this in TTC’s database. Also established and maintained 
+					correspondence with parties relevant to project contracts. 
+				</p>
+			</div>
+
+			<button class="collapsible" style="font-size:24px">Academic Tutor</button>
+			<div class="content">
+				<h3>UOttawa Student's Union</h3>
+				<h4>September 2015 - April 2019</h4>
+				<p style="text-align: left;">
+					Tutored first, second, and third-year students in Linear Algebra, Calculus, Engineering 
+					Materials, Statics, Dynamics, C Programming for Engineers, and Physics for Engineers. 
+				</p>
+			</div>
+			
+		</div>
 		
-		function expandcollapse(element){
-			var content = element.nextElementSibling;
-			if (content.style.maxHeight){
-				content.style.maxHeight = null;
-			} else {
-				content.style.maxHeight = content.scrollHeight + "px";
-			} 	
-		};
-		
-		
-		var coll = document.getElementsByClassName("collapsible");
-		var i;
-		
-		for (i = 0; i < coll.length; i++) {
-		  coll[i].addEventListener("click", function() {
-			this.classList.toggle("clicked");
-		  });
-		}
-		
-		for (i = 0; i < coll.length; i++) {
-		  coll[i].addEventListener("mouseover", function() {
-			  if (!this.classList.contains("clicked")){
-				this.classList.toggle("active");
-	  			expandcollapse(this);
-			  }	  
-		  });
-		}
-		
-		for (i = 0; i < coll.length; i++) {
-		  coll[i].addEventListener("mouseout", function() {
-			if (!this.classList.contains("clicked")){
-				this.classList.remove("active");
-				expandcollapse(this);
-			}  			
-		  });
-		}
-	</script>	
+		<script>
+			function expandcollapse(element){
+				var content = element.nextElementSibling;
+				if (content.style.maxHeight){
+					content.style.maxHeight = null;
+				} else {
+					content.style.maxHeight = content.scrollHeight + "px";
+				} 	
+			};
 
 
-</body>
+			var coll = document.getElementsByClassName("collapsible");
+			var i;
+
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("click", function() {
+				this.classList.toggle("clicked");
+			  });
+			}
+
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("mouseover", function() {
+				  if (!this.classList.contains("clicked")){
+					this.classList.toggle("active");
+					expandcollapse(this);
+				  }	  
+			  });
+			}
+
+			for (i = 0; i < coll.length; i++) {
+			  coll[i].addEventListener("mouseout", function() {
+				if (!this.classList.contains("clicked")){
+					this.classList.remove("active");
+					expandcollapse(this);
+				}  			
+			  });
+			}
+		</script>	
+		
+		
+		
+	</body>
 </html>

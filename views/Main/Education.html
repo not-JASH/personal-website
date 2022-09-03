@@ -1,52 +1,125 @@
 <!doctype html>
-<!doctype html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Education</title>
-	
-	<link href="/css/main_stylesheet.css" rel="stylesheet" type="text/css">
-	<style>
-
-	</style>
-</head>
-
-<body>
-	<nav>
-		<a href="/">Jashua Luna</a>
-		<a href="/Portfolio">Portfolio</a>
-		<a href="/Work-Experience">Work Experience</a>
-		<h1>Education</h1>
-	</nav>
-	
-	<button class="collapsible">Bachelor of Applied Science in Civil Engineering</button>
-	<div class="content">
-
-	</div>
+	<head>
+		<meta charset="utf-8">
+		<title>Education</title>
 		
-	<button class="collapsible">Computer Programming Diploma</button>
-	<div class="content">
-	
-	</div>
-				
-	
-	
-	<script>
-		var coll = document.getElementsByClassName("collapsible");
-		var i;
+		<link href="/css/main_stylesheet.css" rel="stylesheet" type="text/css">
+		
+		<style>
+			body {
+				width: 100%;
+				max-width:none;
+				padding:0px 0px 0px 0px;
+			}
+			
+			a {
+				display: block;
+				font-size: 14px;
+			}
+			
+			a:active {
+				font-weight:normal;
+			}
+			
+			/*table,th,td {
+				border: 1px solid black;
+				border-collapse: collapse;
+			}*/
+			
+			td, th, ol {
+				font-size: 14px;
+			}
+			
+			li {
+				font-size: 14px;
+				margin-bottom:4px;
+			}
+			
+			.at {
+				vertical-align: top;
+			}
+			
+			.pb10 {
+				padding-bottom: 12px;
+			}
+			
+			.CHARS {
+				padding:25px 0px 0px 0px;
+			}
 
-		for (i = 0; i < coll.length; i++) {
-		  coll[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-			var content = this.nextElementSibling;
-			if (content.style.maxHeight){
-			  content.style.maxHeight = null;
-			} else {
-			  content.style.maxHeight = content.scrollHeight + "px";
-			} 
-		  });
-		}
-	</script>	
+			
+			.grid-container {
+				grid-template-columns: repeat(5,auto);
+			}
+			
+			.index {
+				position:fixed;
+				max-width: 150px;
+				top:90px;
+				left:50%;
+				margin-left:-510px;
+			}
+			
+			.main-text {
+				align-content: center;
+				margin:auto;
+				width: 550px;
+			}			
+			
+			.index a{
+				font-size:16px;
+			}
+
+			.index a:hover {
+				color:white;
+				background-color: black;
+			}
+
+			.index nav {
+				padding:0px 0px 0px 0px;
+			}
+			
+			img {
+				max-width: 100%;
+				margin-left:auto;
+				margin-right:auto;
+				display: block;
+			}
+			
+			h5 {
+				padding-left:20px;
+			}
+			
+			.fig {
+				padding-left: 0px;
+				font-size: 12px;
+				text-align: center;
+			}
+			
+			.procon {
+				grid-template-columns: auto auto;
+			}
+			
+		</style>
+	</head>
 	
-</body>
+	<body>		
+		<div class="index">
+			<nav>
+				<a href="/">Home</a>
+				<a href="/Portfolio">Portfolio</a>
+				<a href="/Work-Experience">Work Experience</a>
+				<!--a href="/Education">Education</a-->
+			</nav>
+		</div>
+		
+		<div class="main-text">		
+			<h1>Education</h1>
+			<h2>Bachelor of Applied Science in Civil Engineering</h2>
+			<h2>Computer Programming Diploma</h2>
+			
+		</div>
+	</body>
 </html>
+

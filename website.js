@@ -26,6 +26,7 @@ app.get("/Portfolio", function(req,res){
     res.render("Main/Portfolio.html");
 })
 
+/*
 app.get("/Work-Experience", function(req,res){
     res.render("Main/WorkExperience.html");
 })
@@ -33,6 +34,7 @@ app.get("/Work-Experience", function(req,res){
 app.get("/Education", function(req,res) {
     res.render("Main/Education.html");
 })
+*/
 
 // Portfolio Pages
 
