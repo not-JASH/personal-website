@@ -44,7 +44,6 @@
 			.index {
 				position:fixed;
 				width:200px;
-				max-width: 200px;
 				top:90px;
 				left:50%;
 				margin-left:-550px;
@@ -85,7 +84,16 @@
 				font-size: 12px;
 				text-align: center;
 			}
-	
+			
+			.portfolio-item .image{
+				width: 550px;
+				height: 310px;
+				background-color:aqua;
+			}
+			
+			.portfolio-item h2{
+				height:50px;
+			}
 			
 		</style>
 	</head>
@@ -117,15 +125,14 @@
 			<h1>Portfolio</h1>
 			
 			<div class="portfolio-item" id="landing-placeholder">
+				<!--div class="image"></div-->				
 				<h2>Welcome to my portfolio.</h2>
-				<h2>This section will soon be replaced with pictures :)</h2>
 				
-			
 			</div>
 			
-			
-			
 			<div class="portfolio-item" id="CHARS-Feasibility" style="display: none;">
+				<!--div class="image"></div-->		
+				
 				<h2>Feasibility Study for an Expansion at the Canadian High Arctic Research Station.</h2>
 				<div class="grid-container" style="grid-template-columns: 300px auto;">
 					<div class="grid-item" style="text-align: left;font-size: 12px;">
@@ -143,6 +150,8 @@
 			</div>
 			
 			<div class="portfolio-item" id="231-Cobourg-Foundation" style="display: none;">
+				<!--div class="image"></div-->		
+				
 				<h2>Shallow Foundation Design for a Condominium at 231 Cobourg Ave.</h2>
 				<div class="grid-container" style="grid-template-columns: 300px auto;">
 					<div class="grid-item" style="text-align: left;font-size: 12px;">
@@ -161,6 +170,8 @@
 			</div>
 
 			<div class="portfolio-item" id="CHARS-Design" style="display: none;">
+				<!--div class="image"></div-->	
+				
 				<h2>Waste-to-Energy Plant Design to Service Canadian High Arctic Research Station.</h2>
 				<div class="grid-container" style="grid-template-columns: 300px auto;">
 					<div class="grid-item" style="text-align: left;font-size: 12px;">
@@ -179,6 +190,8 @@
 			</div>
 
 			<div class="portfolio-item" id="TenthLine-Foundation" style="display: none;">
+				<!--div class="image"></div-->	
+				
 				<h2>Foundation Design for a New Commercial Building at Tenth Line.</h2>
 				<div class="grid-container" style="grid-template-columns: 300px auto;">
 					<div class="grid-item" style="text-align: left;font-size: 12px;">
@@ -195,6 +208,8 @@
 			</div>
 			
 			<div class="portfolio-item" id="FTWT-Notes" style="display: none;">
+				<!--div class="image"></div-->	
+				
 				<h2>Notes on Wavelets and the Extended Fourier Transform.</h2>
 				<div class="grid-container" style="grid-template-columns: 300px auto;">
 					<div class="grid-item" style="text-align: left;font-size: 12px;">
@@ -212,8 +227,10 @@
 			</div>
 
 			<div class="portfolio-item" id="CGTD" style="display: none;">
+				<!--div class="image"></div-->	
+				
 				<h2>Computer generated training data.</h2>
-								<div class="grid-container" style="grid-template-columns: 300px auto;">
+				<div class="grid-container" style="grid-template-columns: 300px auto;">
 					<div class="grid-item" style="text-align: left;font-size: 12px;">
 						<span>Autumn 2020</span>						
 					</div>
@@ -230,10 +247,13 @@
 			</div>
 
 			<div class="portfolio-item" id="Parametric-Space" style="display: none;">
+				<!--div class="image"></div-->	
+				
+				
 				<h2>Parametric Space.</h2>
-								<div class="grid-container" style="grid-template-columns: 300px auto;">
-					<div class="grid-item" style="text-align: left;font-size: 12px;">
-						<span>Sutumn 2020</span>						
+				<div class="grid-container" style="grid-template-columns: 300px auto;">
+				<div class="grid-item" style="text-align: left;font-size: 12px;">
+					<span>Sutumn 2020</span>						
 					</div>
 					<div class="grid-item" style="text-align: right;font-size:12px;">
 						<a href="/Parametric-Space">More Info</a>
@@ -247,6 +267,9 @@
 			</div>
 
 			<div class="portfolio-item" id="WaveGAN" style="display: none;">
+				<!--div class="image"></div-->	
+				
+				
 				<h2>WaveGAN.</h2>
 				<div class="grid-container" style="grid-template-columns: 300px auto;">
 					<div class="grid-item" style="text-align: left;font-size: 12px;">
@@ -264,6 +287,8 @@
 			</div>
 
 			<div class="portfolio-item" id="CryptoAI-Proposals" style="display: none;">
+				<!--div class="image"></div-->	
+				
 				<h2>Proposals for a Trading AI.</h2>
 								<div class="grid-container" style="grid-template-columns: 300px auto;">
 					<div class="grid-item" style="text-align: left;font-size: 12px;">
@@ -281,6 +306,8 @@
 			</div>
 
 			<div class="portfolio-item" id="Skyrim-TrueNord" style="display: none;">
+				<!--div class="image"></div-->	
+				
 				<h2>Elder Scrolls V Skyrim - True Nord Edition.</h2>
 								<div class="grid-container" style="grid-template-columns: 300px auto;">
 					<div class="grid-item" style="text-align: left;font-size: 12px;">
@@ -298,12 +325,14 @@
 			</div>
 
 			<div class="portfolio-item" id="AIArt" style="display: none;">
+				<!--div class="image"></div-->	
+				
 				<h2>AI &amp Art.</h2>
 				<div class="grid-container" style="grid-template-columns: 300px auto;">
 					<div class="grid-item" style="text-align: left;font-size: 12px;">
 						<span>Summer 2022</span>						
 					</div>
-					<div class="grid-item" style="text-align: right;font-size:12px;">
+					<div id="moreinfo" class="grid-item" style="text-align: right;font-size:12px;">
 						<a href="/AI-Art">More Info</a>
 					</div>		
 				</div>		
@@ -355,6 +384,14 @@
 		
 		
 		<script>
+			function showDetails(element) {
+				var linkeditem = element.href.split("#")[1]
+				var item = document.getElementById(linkeditem).getElementsByClassName("grid-item")[1].getElementsByTagName('a')[0];
+				console.log(item);
+				window.location.replace(item.href);				
+			}
+			
+			
 			function showItem(element){
 				const items = document.getElementsByClassName("portfolio-item");
 				
@@ -373,7 +410,15 @@
 				indexitems[i].addEventListener("mouseover",function(){
 					showItem(this);
 				});	
+				
+				indexitems[i].addEventListener("click",function(){
+					showDetails(this);
+				});
 			}
+			
+			
+			
+			
 		</script>		
 	</body>
 </html>
