@@ -1,4 +1,4 @@
-<!doctype html>
+	<!doctype html>
 <!doctype html>
 <html>
 	<head>
@@ -56,10 +56,10 @@
 			
 			.index {
 				position:fixed;
-				max-width: 200px;
+				width:200px;
 				top:90px;
 				left:50%;
-				margin-left:-510px;
+				margin-left:-550px;
 			}
 			
 			.main-text {
@@ -86,23 +86,24 @@
 				margin-left:auto;
 				margin-right:auto;
 				display: block;
+				padding-bottom:0px;
 			}
-			
-			h5 {
-				padding-left:20px;
-			}
-			
+						
 			.fig {
-				padding-left: 0px;
 				font-size: 12px;
 				text-align: center;
+				padding: 0px 0px 0px 0px;
 			}
 			
-			.procon {
-				grid-template-columns: auto auto;
-			}
+			.alg {}
+			
+			.eqn {}
 			
 		</style>
+		
+		<script type="text/javascript" async
+  			src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+		</script>
 	</head>
 	
 	<body>		
@@ -128,6 +129,7 @@
 				<a download
 					href="https://onedrive.live.com/embed?cid=8912A15B8F0CAFF4&resid=8912A15B8F0CAFF4%212403&authkey=AH751rUvsmbCKto&em=2">
 					Full Report</a>
+				<a href="/WaveGAN">WaveGAN</a>
 			</nav>
 
 		</div>
@@ -136,66 +138,194 @@
 			<h1>Proposals for a Cryptocurrency Trading AI</h1>
 			<h2>Wavelets and Generative Adversarial Networks for Extrapolating Random Signals</h2>
 			
+			<img src="https://chi01pap001files.storage.live.com/y4mXFFgkZ2Tpyy3zizrboC41fVVRIz08ONSh8FjOqHnrcCfUt8m8Tk6YWwj0pWYTv00UAakdBZXl0vfJZbFN0xBCzWZOrDc3C0AmYsjA5RqXl3K97TWAqpaFwHsnqasAphtk3RYeIO1AhL2cUvj-yIPj5BPe50V-pl-G6sTHu164Iv11x8bQ8-Ao54Q9FYfuJm6?width=1175&height=949&cropmode=none">
+			<h5 class="fig">Real and Complex Values of Reference and Predicted Samples</h5>
+			
 			<div id="Introduction">
 				<h2>Introduction</h2>
-				<p>Since the advent of Bitcoin in 2009, decentralized crypto currencies have taken the world by storm. Quickly becoming the cornerstone of financial discussions around the world, their proliferation has many baffled. Their explosive growth is uncharacteristic of an emerging market and their extended dominance of the public sphere is unlike that of a bubble. It is unknown why these new products are so captivating; perhaps they are the purest currently available form of fiduciary expression, perhaps its simply because of their inherent integration with the internet. Whatever the reason, the fact remains, cryptocurrencies are not to be ignored. </p>
-				<p>If not for their captivation of the public’s attention, they are not to be ignored because of their anomalous behaviour. When compared with other financial assets, the price of cryptocurrencies is highly volatile and next to impossible to predict. Rational traders struggle to juggle forecasting techniques when trying to stay ahead of the price of bitcoin for example. When trading cryptocurrency based on relative strength index might yield massive profits one week, the same strategy might yield massive losses only a few days after. Such is the unpredictability of cryptocurrency, and this is a large part of why so many are so captivated. </p>
-				<p> Despite all the abnormality however, it is noted that the change in price from one observation to the next (measured by the change in price from candle open to candle close) maintains a constant distribution independent of time or market conditions. Two samples equally sized samples of this statistic taken at completely different times will – when observed from a point of reference independent of time - undoubtedly be similar, maybe the same if the sample size is sufficiently large. It was noted that the probability of a change of price occurring at any given moment is constant and that to a degree this extends to the spectral content of samples, as determined by the Fourier transform. </p>
-				<p>An AI which exploits the similarities in the frequency content of samples closely situated in time to make accurate predictions and in turn profitable trades is therefore developed. Underlying trends in the data are revealed by convolution with the Complex Wavelet Transform before a neural network makes price predictions. The neural network greatly benefits from the redundant information resulting from the Complex Wavelet transform and can accurately replicate the data’s stochasticity time shifted forward by means of a generative adversarial training scheme. This is also a boon to the AI because in live trading a generalized prediction based on stochastic patterns is preferable to a precise estimate. </p>
-				<p>Steps are taken at several levels of the AI to mitigate the effects of noisy and fundamentally chaotic data. These come in the form of robust statistics, several lowpass filters, and redundant reweighted predictions. Ultimately, this results in an AI which performs decently in a simulated trading environment. Much of what is outlined in this report is working state and could be implemented for use in live trading. The input, output, and prediction layers are functional though the latter might not be fully optimized. Some possible decision layers are proposed each with unique properties. </p>
-				<p>The decision to implement a trading AI is outside the scope of this report and is not recommended from the results obtained. The simulated trading environment used to evaluate the decision layer is not analogous to a real-world scenario as such the results obtained should not carry weight when deciding to implement something like this. In fact, a system such as this one is more than likely to lose money without further revision. Some live trading was done with early versions of this AI with inconclusive results. </p>
-				<p>What is important is to see in this report is how a seemingly random signal has some constant properties which a neural network, trained with a generative adversarial network scheme, and equipped with wavelets can use to make accurate predictions. </p>			
+				<p>
+					Since the advent of Bitcoin in 2009, decentralized crypto currencies have taken the world by storm. Quickly becoming the cornerstone of financial discussions around the world, their proliferation has many baffled. Their explosive growth is uncharacteristic of an emerging market and their extended dominance of the public sphere is unlike that of a bubble. It is unknown why these new products are so captivating; perhaps they are the purest currently available form of fiduciary expression, perhaps its simply because of their inherent integration with the internet. 
+				</p>
+				
+				<p>
+					If not for their captivation of the public’s attention, they are a unique asset because of their anomalous behaviour. When compared with other financial assets, the price of cryptocurrencies is highly volatile and next to impossible to predict. Rational traders struggle to juggle forecasting techniques when trying to stay ahead of the price of bitcoin for example. When trading cryptocurrency based on relative strength index might yield massive profits one week, the same strategy might yield massive losses only a few days after. Such is the unpredictability of cryptocurrency, and this is a large part of why so many are so captivated. 
+				</p>
+				
+				<p> 
+					Despite all the abnormality however, it is noted that the change in price from one observation to the next (measured by the change in price from candle open to candle close) maintains a constant distribution independent of time or market conditions. Two samples equally sized samples of this statistic taken at completely different times will – when observed from a point of reference independent of time - undoubtedly be similar, maybe the same if the sample size is sufficiently large. It was noted that the probability of a change of price occurring at any given moment is constant and that to a degree this extends to the spectral content of samples, as determined by the Fourier transform. 
+				</p>
+				
+				<p>
+					An AI which exploits the similarities in the frequency content of samples closely situated in time to make accurate predictions and in turn profitable trades is therefore developed. Underlying trends in the data are revealed by convolution with the Complex Wavelet Transform before a neural network makes price predictions. The neural network greatly benefits from the redundant information resulting from the Complex Wavelet transform and can accurately replicate the data’s stochasticity time shifted forward by means of a generative adversarial training scheme. This is also a boon to the AI because in live trading a generalized prediction based on stochastic patterns is preferable to a precise estimate.
+				</p>
+				
+				<p>
+					Steps are taken at several levels of the AI to mitigate the effects of noisy and fundamentally chaotic data. These come in the form of robust statistics, several lowpass filters, and redundant reweighted predictions. Ultimately, this results in an AI which performs decently in a simulated trading environment. Much of what is outlined in this report is working state and could be implemented for use in live trading. The input, output, and prediction layers are functional though the latter might not be fully optimized. Some possible decision layers are proposed each with unique properties. 
+				</p>
+				
+				<p>
+					The decision to implement a trading AI is outside the scope of this report and is not recommended from the results obtained. The simulated trading environment used to evaluate the decision layer is not analogous to a real-world scenario as such the results obtained should not carry weight when deciding to implement something like this. In fact, a system such as this one is more than likely to lose money without further revision. Some live trading was done with early versions of this AI with inconclusive results. 
+				</p>
+				
+				<p>
+					What is important is to see in this report is how a seemingly random signal has some constant properties which a neural network, trained with a generative adversarial network scheme, and equipped with wavelets can use to make accurate predictions. 
+				</p>			
 			</div>
 			
 			<div id="Concept">
 				<h2>Concept</h2>
-				<p>At its core, the herein proposed AI is empirically determined and accordingly robust to errors in human judgement. However, certain assumptions about the behaviour of the price of cryptocurrency are made when developing a viable network model. Primarily, assumptions about the fundamental randomness of the price of cryptocurrencies are what govern the design of the proposed AI. </p>
+				<p>
+					At its core, the herein proposed AI is empirically determined and accordingly robust to errors in human judgement. However, certain assumptions about the behaviour of the price of cryptocurrency are made when developing a viable network model. Primarily, assumptions about the fundamental randomness of the price of cryptocurrencies are what govern the design of the proposed AI. 
+				</p>
 				
 				<h3>Random Walk Characteristics</h3>
-				<p>The price of bitcoin like most popular cryptocurrencies is very volatile thus difficult to predict. At a glance it would be reasonable to assume it to have random walk characteristics and therefore impossible if not exceedingly difficulty to reliably model and or predict. A histogram of the minute-to-minute price of bitcoin for the year 2021 does not reveal any definite trends and suggests that the price of bitcoin is not defined by any conventional stochastic model. </p>
-				<eqn></eqn>
-				<p>However, the probability distribution for minute-to-minute changes in price is much clearer, resembles a Laplace distribution, and is approximately zero mean. Furthermore, subsamples taken from the latter distribution have similar distributions to each other and the overall sample. </p>
-				<eqn></eqn>
-				<p>From bitcoin’s 2021 price data, and the minute-to-minute change in price, subsamples were drawn each containing 60 minutes of information. Subsamples drawn from change in price exhibited distributions like the complete dataset, with similar means and variances. Conversely, subsamples drawn from Bitcoin’s price dataset each had different distributions, means and variances. Figures three and four demonstrate subsample distributions for five random subsamples of bitcoin price and change in price datasets respectively. Figure five compares the means and variances of subsamples taken from both sets. From these it is concluded that the change in price has uniform characteristics which make it ideal for use in developing an accurate prediction model. If necessary, the price of an asset can be recovered by integration. </p>
-				<p>It should be noted that for 2021 the mean change in price was -0.0112usd/minute; since a distribution with precisely zero mean would have a net value of zero, most stocks and valued assets have positive means approaching zero. </p>
-				<p>While it can be said that the price of bitcoin has random walk characteristics, it clearly observes some pattern in that its change in price always maintains a regular distribution. The subsequently developed model seeks to exploit this observation to make accurate price predictions. </p>
+				<div class=grid-container style="grid-template-columns:auto auto;">
+					<div class="grid-item">
+						<img src="https://chi01pap001files.storage.live.com/y4mczSZwsdO-5ytR1sy9cE_rXPPieZc-U0HK_K2c4bet8WuQJP_60CbR04e6RAfLzsb2-DgY5P2ksqCnXgjXuIuvUbrFM0VQpyprrbUInakWcw7e-ffBQ1Pd_mLQNx1DA4SaG28MIHKD66weA2A7Ge_sUWrwrt9RA6dD5THd09APZQnkIzsc9KyUwUCCm2eC5n2?width=560&height=420&cropmode=none">					
+					</div>
+					<div class="grid-item">
+						<img src="https://chi01pap001files.storage.live.com/y4m3DuuidCaeYtdtPj60NHRNk8Qu_EMXs6ExXnWxtcr1qhQCXg1zOlzOQaM4LXbAB1FGoPWJEBDXZzw4uLsnamD3tb28NTxD_UaNZJrRF1MJ3zBqRWYc253bKHzple8fQO4cmEypkWwDrUPcDj58pt47PFAbTnjIVHBCJbmyTUjj2ejJXkmrOrCdOOvqnPYCyR0?width=560&height=420&cropmode=none">					
+					</div>
+				</div>
+				<h5 class="fig">Distributions for Price and Change of Price of Bitcoin in 20201 (One Minute Candles)</h5>
+				
+				
+				<p>
+					The price of bitcoin like most popular cryptocurrencies is very volatile thus difficult to predict. At a glance it would be reasonable to assume it to have random walk characteristics and therefore impossible if not exceedingly difficulty to reliably model and or predict. A histogram of the minute-to-minute price of bitcoin for the year 2021 does not reveal any definite trends and suggests that the price of bitcoin is not defined by any conventional stochastic model. 
+				</p>
+				
+				<div class="eqn">
+					$$ \mathcal{B}(t) \left \{ t,\mathcal{B}(t) \in \mathbb{R} : t,\mathcal{B}(t) > 0 \right \} $$
+					$$ \lim_{n \rightarrow \infty}\frac{1}{n}\int_{t}^{t+n}\mathcal{B}(t)dt = 0 $$
+				</div>
+				<h5 class="fig">Wehre \(\mathcal{B}\) deontes the price of Bitcoin at an arbitrary time \(t\)</h5>
+				
+				<p>
+					However, the probability distribution for minute-to-minute changes in price is much clearer, resembles a Laplace distribution, and is approximately zero mean. Furthermore, subsamples taken from the latter distribution have similar distributions to each other and the overall sample. 
+				</p>
+				
+				<div class="eqn">
+					$$ \mathbb{E}\left [ \mathcal{B}'(_{n}^{n+w_s}) \right ] \approx \mathbb{E}\left [ \mathcal{B}'(_{m}^{m+w_s}) \right ] $$
+				</div>
+				<h5 class="fig">For arbitrary times \(m\) and \(n\), and sample window size \(w_s\)</h5>
+				
+				<p>
+					From bitcoin’s 2021 price data, and the minute-to-minute change in price, subsamples were drawn each containing 60 minutes of information. Subsamples drawn from change in price exhibited distributions like the complete dataset, with similar means and variances. Conversely, subsamples drawn from Bitcoin’s price dataset each had different distributions, means and variances. Figures three and four demonstrate subsample distributions for five random subsamples of bitcoin price and change in price datasets respectively. Figure five compares the means and variances of subsamples taken from both sets. From these it is concluded that the change in price has uniform characteristics which make it ideal for use in developing an accurate prediction model. If necessary, the price of an asset can be recovered by integration. It should be noted that for 2021 the mean change in price was -0.0112usd/minute; since a distribution with precisely zero mean would have a net value of zero, most stocks and valued assets have positive means approaching zero. 
+				</p>
+				
+				<div class=grid-container style="grid-template-columns:auto auto;">
+					<div class="grid-item">
+						<img src="https://chi01pap001files.storage.live.com/y4meWuPsILUdye7Vhne3KvX6vFRFlO82tl-TVbVN2Dpks1Imr2m2T5yHjm5NL5eCBxiJjvtmBD3HSUzVgU19zgd7Fjg6zIFlvi_EsnsL62Y6yGpWrX-VrVWAl8IOPkdR4WeJc5xlMechm3LJtXsbw2GSmeAXg-p23CkUEJYvuN7RvCOvWau4lgJiTxQMdtwLE6n?width=560&height=420&cropmode=none">					
+					</div>
+					<div class="grid-item">
+						<img src="https://chi01pap001files.storage.live.com/y4mZZG__V28SsVXcPL6cX1XpPnI7SvyumclqiawA75lAnZOvJegeWXGKuCcH5BLx4os4iLEC9dVhgMfA0DNLMlY7G8SpBp_HeOo6EKCNgdyaMaRmAqcfG8JAAKaYEpQHbAC8TWzNZxUg16VivYP0vpBmJO2H-Vc_QpmYSBO4t5c-yk93DU0qPb6OF9pWFdvuGaE?width=560&height=420&cropmode=none">					
+					</div>
+				</div>
+				<h5 class="fig">Subsample Distributions for Price and Change of Price of Bitcoin in 20201 (One Minute Candles)</h5>
+				
+				<p>
+					While it can be said that the price of bitcoin has random walk characteristics, it clearly observes some pattern in that its change in price always maintains a regular distribution. The subsequently developed model seeks to exploit this observation to make accurate price predictions.
+				</p>
 				
 				<h3>Finite States</h3>
-				<p>Despite its volatility, the price of bitcoin may be considered a finite state system. This means that all information about future states is contained in present and past state information. In turn, a function exists which can accurately predict / model future states given an input of present and past states. In the case of bitcoin’s price, there are many states in which it could find itself at a given time. However, as demonstrated in figure two, when its state at one time is known a pretty good idea of its subsequent state is also known by way of its change in price probability distribution. Because the change in price always maintains a constant distribution, given a sequence of previous states an accurate next state might be determined. </p>
-				<eqn></eqn>
-				<p>A transfer function is to be determined by which future price changes of bitcoin can be determined from a windowed sample of present and past price changes. This function is analytically determined by minimizing loss on a hierarchical neural network. From this, trading decisions can be made. The selected prediction model will take advantage of invariant distributions to make accurate predictions from which trading decisions will be made by a decision model. Considering bitcoin’s volatility, some error is to be expected. As noted in figures four and five, despite having similar variances and means, no two samples have the exact same statistics. Error in prediction may result from an inadequate model, or simply random events unpredictable by the network (henceforth referred to as noise in data). Both are to be minimized though the latter might prove insurmountable; at least as far as accurate predictions are concerned. In effect, it can be said that the true future state of the system is given by a determined function of past and present states, plus an error term. </p>
-				<eqn></eqn>
-				<p>In addition to accurate predictions, it is vital for the purposes of a trading algorithm that the effects of noisy data or inadequate model are minimized and mitigated. This is achieved with robust statistics and lowpass filters at different stages. M-Estimators are used to reweight observations such that statistical outliers have less of an effect on the overall sample. Lowpass filters are then used to remove high frequency oscillations in price which may be considered noise. Given some limitations imposed by the AI-trading network interface high frequency trading is unfeasible so that data is ignored. </p>
+				<p>
+					Despite its volatility, the price of bitcoin may be considered a finite state system. This means that all information about future states is contained in present and past state information. In turn, a function exists which can accurately predict / model future states given an input of present and past states. In the case of bitcoin’s price, there are many states in which it could find itself at a given time. However, as demonstrated in figure two, when its state at one time is known a pretty good idea of its subsequent state is also known by way of its change in price probability distribution. Because the change in price always maintains a constant distribution, given a sequence of previous states an accurate next state might be determined. 
+				</p>
+				
+				<div class="eqn">
+					$$ \mathbb{E}\left [ X_t \right ] \approx \mathbb{E}\left [ X_{t+ \Delta t} \right ] \left \{ X_t = \mathcal{B}(t)_{t-w_s}^t \right \} $$
+					$$ \hat{X_t} = f(\Theta,X_t)\left \{ \Theta \in \mathbb{R} \right \} $$
+					$$ \Theta = \text{argmin} \mathcal{L}\left [ X_{t + \Delta t},f(\Theta,X_t) \right ] $$
+				</div>
+				<h5 class="fig">For parameters \(\Theta\) with dimensionality determined by the network's architecture.</h5>
+				
+				<p>
+					A transfer function is to be determined by which future price changes of bitcoin can be determined from a windowed sample of present and past price changes. This function is analytically determined by minimizing loss on a hierarchical neural network. From this, trading decisions can be made. The selected prediction model will take advantage of invariant distributions to make accurate predictions from which trading decisions will be made by a decision model. Considering bitcoin’s volatility, some error is to be expected. As noted in figures four and five, despite having similar variances and means, no two samples have the exact same statistics. Error in prediction may result from an inadequate model, or simply random events unpredictable by the network (henceforth referred to as noise in data). Both are to be minimized though the latter might prove insurmountable; at least as far as accurate predictions are concerned. In effect, it can be said that the true future state of the system is given by a determined function of past and present states, plus an error term. 
+				</p>
+				
+				<div class="eqn">
+					$$ X_{t+\Delta t} = \hat{X_t} + \text{error} $$
+				</div>
+				
+				<p>
+					In addition to accurate predictions, it is vital for the purposes of a trading algorithm that the effects of noisy data or inadequate model are minimized and mitigated. This is achieved with robust statistics and lowpass filters at different stages. M-Estimators are used to reweight observations such that statistical outliers have less of an effect on the overall sample. Lowpass filters are then used to remove high frequency oscillations in price which may be considered noise. Given some limitations imposed by the AI-trading network interface high frequency trading is unfeasible so that data is ignored. 
+				</p>
 				
 				<h3>Profit Maximization</h3>
-				<p>Because an AI can trade around the clock without emotional bias, it is feasible to always be involved in some trading position. Bluntly put, the price of an asset is at any given moment either increasing or decreasing. There are times of uncertainty where even a seasoned trader might choose not to take a position but an AI with a perfect model for predicting price changes might not be as cautious.  By longing or shorting an asset, it is possible to constantly profit. However, issues arise when actions taken by the network are not immediately reflected in the market, or if they somehow change the flow of events such that the original prediction which led to the action is no longer valid. Heuristic measures taken to prevent these situations come in the form of an imposed minimum trade duration and maximum position size. By enforcing a minimum trade duration and maximum position size, the chances of the network’s trading orders being fulfilled are maximized. Limiting the size of position that the network can enter is easily accomplished by specifying a constant position size, which meets the limit’s criteria, in the output layer. Enforcing a minimum trade duration is not as straight forward and two methods are considered. By increasing the extrapolation length of the prediction network, it becomes possible to apply a lowpass filter which in effect ignores high frequency information and permits the decision network to focus on longer term trends. Increasing the prediction length is necessary for this method to not suffer losses in accuracy resulting from the windowing function. </p>
-				<p>Alternatively, a network can be trained to translate a price data signal to the ideal trading pattern. An ideal trading strategy which maximizes profits and surmounts the limitations imposed by the interface can be used to generate an ‘ideal’ binary trading signal for historical data. A decision network can then be trained on this data. Both methods are considered in conjunction with redundant predictions for further robustness to minor changes in price; accordingly, both benefit from increased extrapolation lengths.</p>
+				<p>
+					Because an AI can trade around the clock without emotional bias, it is feasible to always be involved in some trading position. Bluntly put, the price of an asset is at any given moment either increasing or decreasing. There are times of uncertainty where even a seasoned trader might choose not to take a position but an AI with a perfect model for predicting price changes might not be as cautious.  By longing or shorting an asset, it is possible to constantly profit. However, issues arise when actions taken by the network are not immediately reflected in the market, or if they somehow change the flow of events such that the original prediction which led to the action is no longer valid. Heuristic measures taken to prevent these situations come in the form of an imposed minimum trade duration and maximum position size. By enforcing a minimum trade duration and maximum position size, the chances of the network’s trading orders being fulfilled are maximized. Limiting the size of position that the network can enter is easily accomplished by specifying a constant position size, which meets the limit’s criteria, in the output layer. Enforcing a minimum trade duration is not as straight forward and two methods are considered. By increasing the extrapolation length of the prediction network, it becomes possible to apply a lowpass filter which in effect ignores high frequency information and permits the decision network to focus on longer term trends. Increasing the prediction length is necessary for this method to not suffer losses in accuracy resulting from the windowing function. 
+				</p>
+								
+				<p>
+					Alternatively, a network can be trained to translate a price data signal to the ideal trading pattern. An ideal trading strategy which maximizes profits and surmounts the limitations imposed by the interface can be used to generate an ‘ideal’ binary trading signal for historical data. A decision network can then be trained on this data. Both methods are considered in conjunction with redundant predictions for further robustness to minor changes in price; accordingly, both benefit from increased extrapolation lengths.
+				</p>
 			</div>
 			
 			<div id=Implementation>
 				<h2>Implementation</h2>
-				<p>This section outlines in detail the various components which make up the cryptocurrency trading AI. Fundamentally this AI consists of three components, an interface with the trading network, a prediction system, and a decision system. The trading interface connects with a trading network and is responsible for retrieving price information and enacting trades when required. The prediction network is a neural network trained to predict future price information based on current and past system states. This network assumes the price of a cryptocurrency has a deterministic model; at least for the time frame determined by the extrapolation length. The decision network is responsible for determining if a new position is to be entered based on information from the prediction network. This network is trained to determine the best times for trades such that profit is optimized. This layer also considers during training some of the unideal properties inherent to a trading interface.</p>
-				<p>These three components once implemented take the form of four layers. An input layer, a prediction layer, a decision layer and finally an output layer. The AI cycles between these layers as can be seen in figure six. It could be said that a fifth layer exists between the input and prediction layers corresponding to the preparation of data for use in the neural networks. In figure six this operation has its own box but is a part of the prediction layer in the overall system.</p>
+				<p>
+					This section outlines in detail the various components which make up the cryptocurrency trading AI. Fundamentally this AI consists of three components, an interface with the trading network, a prediction system, and a decision system. The trading interface connects with a trading network and is responsible for retrieving price information and enacting trades when required. The prediction network is a neural network trained to predict future price information based on current and past system states. This network assumes the price of a cryptocurrency has a deterministic model; at least for the time frame determined by the extrapolation length. The decision network is responsible for determining if a new position is to be entered based on information from the prediction network. This network is trained to determine the best times for trades such that profit is optimized. This layer also considers during training some of the unideal properties inherent to a trading interface.
+				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4m4uidaSWyfxvOLr0Ir_fjqpl4vefgWKmsirZTU1LBdYZCXD2ZYf3GbKCZoOiaEBUNZbJRDC_9mAIFRvItRvIcsMX9FWy8EhveydPeVSD_AFHnx-ude1ICF66-AjVN1zoaH5EzpqwaHdTNbfvKTSULWqXxYd2uZI8cfQZ7D49Cxy2lk37b-hY0YcXYoW8o9_qv?width=326&height=341&cropmode=none">
+				<h5 class="fig">A General Overview of this Trading Algorithm</h5>
+				
+				<p>
+					These three components once implemented take the form of four layers. An input layer, a prediction layer, a decision layer and finally an output layer. The AI cycles between these layers as can be seen in figure six. It could be said that a fifth layer exists between the input and prediction layers corresponding to the preparation of data for use in the neural networks. In figure six this operation has its own box but is a part of the prediction layer in the overall system.
+				</p>
 			</div>
 			
 			<div id="Input-Layer">
 				<h3>Input Layer</h3>
-				<p>The input layer establishes a connection with a cryptocurrency trading network and regularly requests price information. Trade networks like Binance or Liquid have APIs which facilitate this operation. For this implementation the input layer will use HTML request response syntax via predetermined endpoints on Binance’s network. Socket endpoints are available for continuous data streams but for the time being html requests and responses are sufficient. For this implementation, and for obtaining data for training and evaluation, sammchardy’s Python Binance API utilities package was used. This package is publicly available on GitHub and is easily installed on a machine via pip. </p>
-				<p>Once a minute, the latest one-minute candle is requested and stored in memory. Price data is stored in a double array, initialized as zeros, with elements corresponding to the window size of the prediction model. New candles are appended to the front of the array and the last element removed. This way price information cycles through the array with each iteration and the array is always the same size. The program does not exit the input layer until the array is filled with price information. For ease of implementation, this means the program waits n minutes before starting to make predictions where n is the windowSize of the prediction model.</p>
-				<p>When candles are requested via API this layer waits for a response from the network. If the response contains anything but the requested information, the layer repeats the request until the correct information is received. In case there is a request response delay exceeding the specified sample rate, this layer adjusts the request to fill in missed data. Consequently, and alternatively, the program may request n candles at each time interval thus bypassing the need to wait n minutes before predictions and the need to cycle data through a memory array. However, because this entails a larger response package from the trading network a larger delay can be expected. Depending on the prediction layer’s windowSize and specified sample rate this might be unfeasible.</p>
+				<p>
+					The input layer establishes a connection with a cryptocurrency trading network and regularly requests price information. Trade networks like Binance or Liquid have APIs which facilitate this operation. For this implementation the input layer will use HTML request response syntax via predetermined endpoints on Binance’s network. Socket endpoints are available for continuous data streams but for the time being html requests and responses are sufficient. For this implementation, and for obtaining data for training and evaluation, sammchardy’s Python Binance API utilities package was used. This package is publicly available on GitHub and is easily installed on a machine via pip. 
+				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mXy0JlLGk8LDNQ1hsAHPMg5xG4Z5X2quQQeiO37hcQ_dzJ70RBS3ipjR73UFBY0pIYZww1rkiCfjMDAf48-GW01DxhmGEsVZluR5Ci7oWgUkaL0h4V0lJU1i-Z7271837lZEcPxVzSHCdB7aGs-lKgjUPGAUyeOk6wyuV3GTEnTYDQWYqbUVVOVvT9-KydFyK?width=239&height=431&cropmode=none">
+				<h5 class="fig">Input Layer Flowchart</h5>
+				
+				
+				<p>
+					Once a minute, the latest one-minute candle is requested and stored in memory. Price data is stored in a double array, initialized as zeros, with elements corresponding to the window size of the prediction model. New candles are appended to the front of the array and the last element removed. This way price information cycles through the array with each iteration and the array is always the same size. The program does not exit the input layer until the array is filled with price information. For ease of implementation, this means the program waits n minutes before starting to make predictions where n is the windowSize of the prediction model.
+				</p>
+				
+				<p>
+					When candles are requested via API this layer waits for a response from the network. If the response contains anything but the requested information, the layer repeats the request until the correct information is received. In case there is a request response delay exceeding the specified sample rate, this layer adjusts the request to fill in missed data. Consequently, and alternatively, the program may request n candles at each time interval thus bypassing the need to wait n minutes before predictions and the need to cycle data through a memory array. However, because this entails a larger response package from the trading network a larger delay can be expected. Depending on the prediction layer’s windowSize and specified sample rate this might be unfeasible.
+				</p>
 			</div>
 			
 			<div id="Output-Layer">
 				<h3>Output Layer</h3>
-				<p>The output layer is the final layer of the AI and is the one by which trades orders are placed. This layer receives instructions from the decision layer and determines how these will be enacted on the trading network. It stores in memory its current trading position for comparison to incoming decision information which in turn determines if a new trade order is to be placed. For example, if the decision network determines that it is a good time to long the market, but the output layer knows it is already in a long position, then no new trade order is placed. Orders are opened and closed in the same way the input layer receives data, by way of Binance’s API endpoints. </p>
-				<p>Because this network does not make exact predictions about the price of an asset, this layer only enacts market orders which are filled by whatever is available at the time. Furthermore, because it is important this AI does not influence the market (for the prediction network to be reliable for as long as is possible), only relatively small positions are entered, and are always the same size. By maintaining the small size of positions, the chances of having orders enacted the instant they appear are maximized. Furthermore, with small positions, the chances of slippage resulting from a large market order are mitigated. </p>
-				<p>If required, a network could be developed that variably sets order size and price. Such a network however imposes some obstacles which are outside the scope of this AI. Furthermore, without a dynamic model with which to test the performance of a proactive model, the only way to test would be with the real market which would likely incur unwanted costs. This is discussed in more detail at the end of this report. </p>
-				<p>The output layer pushes a new order to the trading network and waits for a response. The response from Binance contains information about the new order. If the order was pushed successfully, the output layer updates its internal state and transfers control to the input layer. If the response indicates anything but the successful placement of the order, the layer attempts to close the existing position and resets its internal state. This is done to prevent losing money from an unsuccessfully closed position. </p>
+				<p>
+					The output layer is the final layer of the AI and is the one by which trades orders are placed. This layer receives instructions from the decision layer and determines how these will be enacted on the trading network. It stores in memory its current trading position for comparison to incoming decision information which in turn determines if a new trade order is to be placed. For example, if the decision network determines that it is a good time to long the market, but the output layer knows it is already in a long position, then no new trade order is placed. Orders are opened and closed in the same way the input layer receives data, by way of Binance’s API endpoints. 
+				</p>
+				
+				<p>
+					Because this network does not make exact predictions about the price of an asset, this layer only enacts market orders which are filled by whatever is available at the time. Furthermore, because it is important this AI does not influence the market (for the prediction network to be reliable for as long as is possible), only relatively small positions are entered, and are always the same size. By maintaining the small size of positions, the chances of having orders enacted the instant they appear are maximized. Furthermore, with small positions, the chances of slippage resulting from a large market order are mitigated. 
+				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4m7c2ad4u5-BDRJWt2IlwWNNbPObEvSOS1ao4cKy0VOTlVYsIFcus9IgySgOFc2Y70KdcnmJxN8J9ex2u-snX895kkwhzpz9TCk6WYRXpRZ3XG5y7SZImnNSbtVsbXSP-G1YBTfQZmvTbkBm7S3dG26EV6Gw-YlzLGDVP12nvS4vvdGC6hD7ciGYLpzSAK9A1H?width=273&height=571&cropmode=none">
+				<h5 class="fig">Output Layer Flowchart</h5>
+				<p>
+					If required, a network could be developed that variably sets order size and price. Such a network however imposes some obstacles which are outside the scope of this AI. Furthermore, without a dynamic model with which to test the performance of a proactive model, the only way to test would be with the real market which would likely incur unwanted costs. 
+				</p>
+				
+				<p>
+					The output layer pushes a new order to the trading network and waits for a response. The response from Binance contains information about the new order. If the order was pushed successfully, the output layer updates its internal state and transfers control to the input layer. If the response indicates anything but the successful placement of the order, the layer attempts to close the existing position and resets its internal state. This is done to prevent losing money from an unsuccessfully closed position. 
+				</p>
 				
 				<h4>Unideal Interface</h4>
-				<p>Central to many aspects of this AI’s design is the fact that the method in which trades are made is highly imperfect. Several properties of the output layer’s API interface impose some restrictions which must be somehow circumvented. Firstly, there is a request response lag associated with any network operation. Ideally this lag is as close to zero as possible but considering the trading network is based in China and the AI in Canada, a lag time greater than 100ms can be expected; on top of however much time it takes to transfer the associated data packet. When new price information is received, it is vital any trading operations are made as quickly as possible, so the market’s state is as close to that observed when the operation takes place. If there is too long of a delay between receiving information and enacting a trade, the conditions which made the new trade viable may no longer be present. For this reason, steps are taken to ensure a minimum trade duration, and the output layer closes trades when a new position is not entered soon enough after a request is made. By ensuring a minimum trade duration, the effects of delay associated with request response lag are mitigated. </p>
-				<p>It is also unknown to this version of this AI the price at which an order can be filled. The AI has some notion of the direction in which price moves and uses that to long or short the market but as far as the exact price of an asset is concerned, this neural network is blind. Knowing the exact price of an asset is a complex problem whose solution is not necessary to profit. However, without knowledge of the price of an asset, the output layer cannot make limit orders and some profits are lost. A limit order imposes some ideality in price but also might not be filled quickly, completely, or at all.  Were a limit order to be placed by the output layer in one request, a subsequent request would have to be made to verify the status of the order. And possibly more requests until the order was completed. Not to mention that by the time the order is filled the market might have changed enough that that order is no longer viable. Market orders which use existing orders to fill the request are therefore preferred over limit orders. </p>
-				<p>However, market orders result in slippage. When a market order is placed, open orders in the orderbook are filled as they come. For example, if a market buy order is placed for $100, the first $100 of sell orders in the book are filled. If ten units of the asset are available at $7 and fifteen at $10, the network will fill the $100 market order with ten at $7 and three at $10 for an average price of $7.69. This order was placed when market price was $7, and it is now $10. This is slippage and it varies depending on market conditions and the size of order placed. The prediction network also has no way of predicting its influence on the market which means large changes resulting from its actions might throw off its predictions. Therefore, the output layer limits the size of position which may be placed to something that may be filled quickly consistently.</p>
+				<p>
+					Central to many aspects of this AI’s design is the fact that the method in which trades are made is highly imperfect. Several properties of the output layer’s API interface impose some restrictions which must be somehow circumvented. Firstly, there is a request response lag associated with any network operation. Ideally this lag is as close to zero as possible but considering the trading network is based in China and the AI in Canada, a lag time greater than 100ms can be expected; on top of however much time it takes to transfer the associated data packet. When new price information is received, it is vital any trading operations are made as quickly as possible, so the market’s state is as close to that observed when the operation takes place. If there is too long of a delay between receiving information and enacting a trade, the conditions which made the new trade viable may no longer be present. For this reason, steps are taken to ensure a minimum trade duration, and the output layer closes trades when a new position is not entered soon enough after a request is made. By ensuring a minimum trade duration, the effects of delay associated with request response lag are mitigated. 
+				</p>
+				
+				<p>
+					It is also unknown to this version of this AI the price at which an order can be filled. The AI has some notion of the direction in which price moves and uses that to long or short the market but as far as the exact price of an asset is concerned, this neural network is blind. Knowing the exact price of an asset is a complex problem whose solution is not necessary to profit. However, without knowledge of the price of an asset, the output layer cannot make limit orders and some profits are lost. A limit order imposes some ideality in price but also might not be filled quickly, completely, or at all.  Were a limit order to be placed by the output layer in one request, a subsequent request would have to be made to verify the status of the order. And possibly more requests until the order was completed. Not to mention that by the time the order is filled the market might have changed enough that that order is no longer viable. Market orders which use existing orders to fill the request are therefore preferred over limit orders. 
+				</p>
+				
+				<p>
+					However, market orders result in slippage. When a market order is placed, open orders in the orderbook are filled as they come. For example, if a market buy order is placed for $100, the first $100 of sell orders in the book are filled. If ten units of the asset are available at $7 and fifteen at $10, the network will fill the $100 market order with ten at $7 and three at $10 for an average price of $7.69. This order was placed when market price was $7, and it is now $10. This is slippage and it varies depending on market conditions and the size of order placed. The prediction network also has no way of predicting its influence on the market which means large changes resulting from its actions might throw off its predictions. Therefore, the output layer limits the size of position which may be placed to something that may be filled quickly consistently.
+				</p>
 			</div>
 			
 			<div id="Prediction-Layer">
@@ -208,14 +338,32 @@
 				<p>
 					Despite having a narrow distribution centered on zero, the price of bitcoin is fundamentally random and at any time may change drastically in a short period of time. A sample containing such an event has skewed statistics which make it unsuitable for use in prediction. Outlier detection and removal is required at this stage to ensure each sample will result in the most accurate prediction possible. While true that this might affect the accuracy of the predictions, this is not an issue because the layer following this one only needs reliable data to make trading decisions; ultimatley the exact price is irrelevant. Using a Blackman window with a size of 120 minutes, the short time fourier transform (STFT) of a seven day sample of BTCUSDT was developed - Blackman window was selected for its increased time localization over other windowing functions and there is no overlap between STFT samples.. This STFT (Figure 10) reveals high energy bands around areas where statistical anomalies occurred. Most notably around sample four thousand. An “estimator can track possible future changes in observations only if the assumptions about the system dynamics are actually occurring” (Akram et al. ,10). To this end, outliers must be removed and data scaled.
 				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mc_ZoRId11ttEDnM2_4yZLOvfP1Oqz27l4sH0P1zA7keaviMemWJWkt-21_o8sk8iIaK-ksxBI6VCgdt78Af9ngbEaf0TVABpQHgKILYYM2EenJk6YMbSZjaUtNVSJ5lq-NGQ_2inDqpLu34V1QfDzb-yjF4C_sF_K9RuUv-WmEE3syaGRHIml5SqI-oqNdfW?width=1561&height=655&cropmode=none">
+				<h5 class="fig">Seven Days of BTCUSDT sampled at 0.166hz, and it's spectrogram</h5>
+				
 				<p>
 					dynamics are actually occurring” (Akram et al. ,10). To this end, outliers must be removed and data scaled.
 					Because of its near zero mean and regular distribution between samples, change in price was selected as the data for the prediction network. Nonetheless, each sample varies in statistics and frequency distributions. Robust statistics can be applied to normalize samples such that better predictions can be made. To mitigate the effects outliers have on the overall sample each observation is reweighted. Observation weights (W) are calculated as the Huber weight resulting from a scaled residual. For these purposes Scale Factor (SF) is calculated as the median absolute deviation of the sample scaled by a coefficient (1/0.6745), and residual is calculated as the absolute difference between each observation and the sample median. Median is used as a baseline because it is unique to each sample and is robust to the effects an outlying observation might have; because each sample is expected to have mean zero, zero could be used in place of the sample’s median. 
 				</p>
-				<eqn></eqn>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mar8wyd4N2_K4R-Cb-OESZj3zt20QaYruc77LDx-klDTykivzibwv1DOrWWOsQMq2Lm8R_GDNMgsb3dAb1kpx0LvffPAaRhn7-s35mCHyy55JuLoeb5xIrY0aiL9sicKU9YbUAnX7FSLLhnM39d2FCQpE-72IZGrhTkuJD4y5b2zXv2zoHkvKGgihJoszcH1V?width=1498&height=602&cropmode=none">
+				<h5 class="fig">Cumulative Sums and Statistics for Reweighted Samples Using Various Estimators</h5>
+				
+				<div class="eqn">
+					$$ SF = \frac{\text{median}(\text{abs}(X_i - \text{median}(X)))}{0.6745} $$
+					$$ \text{Residual} = \frac{\text{abs}(X_i - \text{median}(X))}{SF} $$
+					$$ W_i = \left\{\begin{matrix} 1, \text{if } \frac{\left | X_i - \text{median}(X) \right |}{SF} \leq 1.547 \\ \frac{1.547}{\left | X_i \right |} , \text{otherwise} \end{matrix}\right.$$
+					<p style="text-align: right;">(Akram et Al.)</p>
+				</div>
+				
 				<p>
 					Figures eleven and twelve show the relative performance of different estimators in eliminating outlying data. Figure twelve shows the reweighted means and variances of fifty 120-minute samples of BTCUSDT’s changes in prices. In cases where the mean is noticeably divergent from zero, it can be said the sample exhibits some trend. Like the upwards trend shown in figure eleven. Since an algorithmic trader has the capacity for sustained high transaction rates (High Frequency Trading), it might be desirable to have a detrended signal which reveals higher frequency price oscillations. This depends on several factors which will be discussed in subsequent sections. For now, it is sufficient to say a detrended signal is undesirable as much valuable information is lost. Huber’s weight function is ultimately selected because samples reweighted with this function group more tightly around mean zero and have smaller variances than reference samples, and it does not detrend data; Huber’s weight function has tolerance for values within a certain range and only reweights outlying data. By reweighting the sample before performing the short time Fourier transform, a comparison of reweighted and non-reweighted short time Fourier transforms can be made. This enables the comparison of the spectral content of subsequent samples. Samples were reweighted using Huber’s weight function, windowed with an 80-point Blackman window, and had overlap of 20 observations between subsamples. 
 				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mLVYrNl9RFH704zyQ8z3NnZsqdEaU8qn_t55rAjC8ScYCGMXI0ExNco69AXRkRmSP7AJPTQiYmNcqzmMsgPPn2bSAzYtuSpdAV_oebL7EalUNfDQrCy5z_31vo0gABwq-oiPl8DVszy2IdQ9j1FiCLhsgDRSWKI1LjFImMPCS70giX86ChrAyR0yX2AHhZLkU?width=1267&height=468&cropmode=none">
+				<h5 class="fig">Comparison of Short Time Fourier Transforms for reference and weighted samples.</h5>
+				
 				<p>
 					Figure 11b shows the short time Fourier transforms of a reference (left) and reweighted (right) seven-day sample of the minute-to-minute changes in price of BTCUSDT. The bands in the reference STFT disappear with the application of the reweighting operation.  It can also be seen that subsamples’ spectral information is more uniform and of slightly lower magnitude with the reweighting operation. It should be noted the reweighting operation was applied to the complete seven-day sample. The prediction layer will likely not have a windowsize anywhere near seven days and the effects of reweighting are expected to be less pronounced. 
 				</p>
@@ -224,67 +372,137 @@
 				<p>
 					Earlier it was noted that the prediction network would exploit the similarities between different subsamples’ frequency distributions to make accurate predictions. Particularly for samples closely situated in time, similarities in frequency distributions may be extended to similarities in spectral densities. In other words, the absolute value of the Fourier transforms of two samples, taken relatively close to one another in time, should be approximately the same. 
 				</p>
-				<eqn></eqn>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mbUtYgH6ldp-54ZgLEh7wyxhUL-hx9ZYo91DIdjWbWsDo0FcRwTFqqMQ8pQF3hiO6UbpAyfiUfhmAK5r-Y69-TBmPBRuvm1PkBISlukN2HYa8f7VvX1C1FOW8ZBYr5iTr9QJw2Coc9J1aGCWaqSG-o9SnBzB0E8F56cA8nNO4UKUQctc5rhKf4PJQ8qDaPCGJ?width=1065&height=431&cropmode=none">
+				<h5 class="fig">Autocorrelation of Sample Spectral Density. Blue is reference, Orange is reweighted.</h5>
+				
+				<div class="eqn">
+					$$ \left | FT(X_t) \right | \approx \left | FT(X_{t+k}) \right | $$
+				</div>
+				<h5 class="fig">For small values of \(l\)</h5>
+				
 				<p>
 					Figure thirteen shows the average autocorrelations of one thousand reweighted (and the 95% confidence interval boundaries) for and non-reweighted samples’ spectral content. Correlation was computed as the Pearson’s linear correlation coefficient between the absolute value of the Fourier transforms of a sample at time t and time t plus a delay. Considering an autocorrelation of 0.8 as the threshold for similar samples, it can be said that for a period approximately equal to one tenth of the sample’s window size, with an unchanged sample, the assertions above hold true. This figure also reveals that the spectral autocorrelation of a reweighted sample starts off much lower but decreases at a lesser rate. For reweighted samples, the prediction lengths which meet the threshold for similar samples are considerably fewer than the alternatives. Nonetheless outlier removal will be present; In any case prediction lengths are unlikely to exceed five minutes.  
 				</p>
+				
 				<p>
 					Because of the increased level of information which would be available to a network, it might be preferable to use sample spectral content as the data for use in prediction. The network would thus be tasked with learning how spectral content changes with time. The Extended Fourier transform was considered for use in projecting frequency data but ultimately proved ineffective. The Extended Fourier Transform algorithm projects a windowed signal’s Fourier transform to a specified length and iteratively reduces error in the extrapolation’s spectral density such that it matches that of the original sample. This ultimately proved inadequate for predicting the price of cryptocurrency because its spectral content varies with time; as evidenced by the short time Fourier transform in figure ten and the spectral autocorrelations in figures thirteen and fourteen.
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ FT(X_{t+k} = f(\Theta,FT(X_t))) $$
+				</div>
+				
 				<p>
 					The decision layer could then recover price data with the inverse Fourier transform or use the predicted spectral density to make decisions. However, in the interest of increasing the amount of information available to a prediction network, it might be better to use a wavelet transform. This would have the added benefits of improved time localization resulting from wavelet’s compact support, and a more detailed analysis at varying frequency ranges. Furthermore, because wavelet transforms separate a signal into several signals corresponding to their spectral content, it is easy to clean a noisy signal like the one in question; Omitting wavelet decompositions corresponding to high frequencies has the same effect as a low pass filter. High frequency oscillations in price can not be capitalized on because of constraints later discussed so it would be beneficial to remove them. Additionally, a network might struggle to learn to predict high frequency patterns as these seem to be the most random. 
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ WT(X_{t+k}) - f(\Theta,WT(X_t)) $$
+					$$ IWT(WT(X_t)) + \zeta $$
+				</div>
+				
 				<p>
-					Several wavelet transform (WT) algorithms are available and each has unique properties though for an algorithm to be considered viable for use in the prediction network the above assertion must hold true. The original sample must be recoverable within a very small margin of error by the inverse of the selected transform (IWT). This assertion must be made because most algorithms detrend data before applying the wavelet transform. Significant errors in prediction might arise if the selected algorithm does not return information pertaining to its applied detrend. This is highly pronounced in the Continuous Wavelet Transform (CWT) algorithm which is otherwise a phenomenal tool for frequency analysis. CWT detrends data by fitting a high order polynomial to the data and applying the wavelet transform to the difference of the data and this polynomial. This results in a very detailed spectral analysis with reasonable variance and mean zero. If not for the rapid decay of the trend polynomial’s accuracy outside of the sample’s window, and the lack of information about it returned, this algorithm would be an excellent method to extract information from a sample before feeding it to the prediction network. Conversely, the Discrete Wavelet Transform (DWT) Algorithm does return information about the applied detrend but trades detail for performance. Where CWT produces several convolutions corresponding to several frequencies, DWT performs a stepwise decomposition by separating the signal – or the difference between the signal and the previous approximation(s) - into approximation and detail coefficients. The latter provides a near exact reconstruction but does not provide as much detail in decomposition. Alternatively, the Dualtree Complex Wavelet Transform (DCWT) returns scaling and detail coefficients, with multiple sources of redundant information from which the prediction network may benefit. This algorithm’s shift invariance may also prove useful for a sequence-to-sequence network. Average values for Xi were computed using one thousand eight-hour samples of bitcoin’s change in price, and the reweighted versions of those samples. Average values for Xi (as per the equation above) for the Continuous Wavelet Transform, Discrete Wavelet Transform, and Dualtree Complex Wavelet Transform were found to be 8.68, 3.122e-7, and 4.016e-14 respectively. As expected, reconstructions resulting from the Continuous Wavelet Transform exhibited the highest degree of error, while those from the Dualtree Complex Wavelet Transform the least. For this and other reasons yet to be discussed the Dualtree Complex Wavelet Transform will be used in this AI. Figure fifteen shows the cumulative sums of a reference sample and its reconstructions with the wavelet transforms. It is important to notice that the cumulative sums of the reference sample, and those of the reconstructions with the Discrete Wavelet Transform and Dualtree Complex Wavelet Transform, appear as one line. It was also mentioned earlier that a low pass filter could be easily applied to a signal decomposed by a wavelet transform. Limiting the signals used in the inverse wavelet transform to those which correspond to convolutions with wavelets dilated up to a specified wavelength limits the spectral content of the reconstructed signal to frequencies meeting this criterion. Figure fifteen also shows the cumulative sums of signals reconstructed with only a fraction of the original decomposition; a quarter of decompositions, corresponding to high frequency content, were set to zero or discarded before reconstruction. While it is possible for a neural network to learn to predict high frequency data it is unnecessary to achieve the desired level of trading efficacy. Furthermore, in only using a fraction of the available input data the complexity of the process is reduced. 
+					Several wavelet transform (WT) algorithms are available and each has unique properties though for an algorithm to be considered viable for use in the prediction network the above assertion must hold true. The original sample must be recoverable within a very small margin of error by the inverse of the selected transform (IWT). This assertion must be made because most algorithms detrend data before applying the wavelet transform. Significant errors in prediction might arise if the selected algorithm does not return information pertaining to its applied detrend. This is highly pronounced in the Continuous Wavelet Transform (CWT) algorithm which is otherwise a phenomenal tool for frequency analysis. CWT detrends data by fitting a high order polynomial to the data and applying the wavelet transform to the difference of the data and this polynomial. This results in a very detailed spectral analysis with reasonable variance and mean zero. If not for the rapid decay of the trend polynomial’s accuracy outside of the sample’s window, and the lack of information about it returned, this algorithm would be an excellent method to extract information from a sample before feeding it to the prediction network. Conversely, the Discrete Wavelet Transform (DWT) Algorithm does return information about the applied detrend but trades detail for performance. Where CWT produces several convolutions corresponding to several frequencies, DWT performs a stepwise decomposition by separating the signal – or the difference between the signal and the previous approximation(s) - into approximation and detail coefficients. The latter provides a near exact reconstruction but does not provide as much detail in decomposition. 
 				</p>
-				<eqn></eqn>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mct8UDLFh-5HiVo4d00hZ2NWOXHNrbIeOvvpJDCSJsG2-ggM-SEzn5K2TxWwUpVhlz_YCibu2uKuJ5UD423d_7LNSkvP6qpCDD_OPzJ-1Lbk8t3wJVIwUw73xDMElQgHCdi_tUpw2Jw4s6iFvfaDFTFvxHJ63FvKvlU8D3yq76cPZj-dYJ7hsPjg-fyLrewpV?width=2087&height=806&cropmode=none">
+				<h5 class="fig">Cumulative Sums of a Sample and its Reconstruction by Several Wavelet Transforms</h5>
+				
+				<p>
+					Alternatively, the Dualtree Complex Wavelet Transform (DCWT) returns scaling and detail coefficients, with multiple sources of redundant information from which the prediction network may benefit. This algorithm’s shift invariance may also prove useful for a sequence-to-sequence network. Average values for zeta were computed using one thousand eight-hour samples of bitcoin’s change in price, and the reweighted versions of those samples. Average values for zeta (as per the equation above) for the Continuous Wavelet Transform, Discrete Wavelet Transform, and Dualtree Complex Wavelet Transform were found to be 8.68, 3.122e-7, and 4.016e-14 respectively. As expected, reconstructions resulting from the Continuous Wavelet Transform exhibited the highest degree of error, while those from the Dualtree Complex Wavelet Transform the least. For this and other reasons yet to be discussed the Dualtree Complex Wavelet Transform will be used in this AI. Figure fifteen shows the cumulative sums of a reference sample and its reconstructions with the wavelet transforms. It is important to notice that the cumulative sums of the reference sample, and those of the reconstructions with the Discrete Wavelet Transform and Dualtree Complex Wavelet Transform, appear as one line. It was also mentioned earlier that a low pass filter could be easily applied to a signal decomposed by a wavelet transform. Limiting the signals used in the inverse wavelet transform to those which correspond to convolutions with wavelets dilated up to a specified wavelength limits the spectral content of the reconstructed signal to frequencies meeting this criterion. Figure fifteen also shows the cumulative sums of signals reconstructed with only a fraction of the original decomposition; a quarter of decompositions, corresponding to high frequency content, were set to zero or discarded before reconstruction. While it is possible for a neural network to learn to predict high frequency data it is unnecessary to achieve the desired level of trading efficacy. Furthermore, in only using a fraction of the available input data the complexity of the process is reduced. 
+				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mA0U0hf6GlTnxEwMb3tWyNqkfB-2ueUONViAm_jEcrbwAbIQazC7OexbF8JvVa90zZfJGFHA7iI2AnAZdSGQ0E7wjdUJPhsFOEpZIVqRZ8j1e5J7Un2TOsvrU_2BdHNknB7t0BQ3c5bgl4rC_7nVo2ccCtiaS_BcJsAk71Tq6gEW1ShbExqo_samUkGVyi2qG?width=1202&height=475&cropmode=none">
+				<h5 class="fig">Real and Complex Values of a Training Sample with WindowSize 80</h5>
+				<div class="eqn">
+					$$ \Psi_c(t) = \Psi_r(t) + j \cdot \Psi_i(t) $$
+					<p style="text-align: right;">(Selenick et Al.)</p>
+				</div>
+				
 				<p>
 					In addition to providing the most information about a signal – from which a prediction network could benefit – the Dualtree Complex Wavelet Transform has another key characteristic which makes it ideal for a sequence-to-sequence task. As noted in the Dualtree algorithm’s expose in Signal Processing Magazine, real valued wavelets are not suited to anomalies in a signal which changes with time. “A small shift of the signal greatly perturbs the wavelet coefficient oscillation pattern around singularities” (Selesnick et al. 125). This paramount for this prediction layer because it is important that the wavelet decomposition at time t is as similar as possible to the one at time t + 1. Shift invariance is when an anomaly in a signal produces the same output from the algorithm regardless of the anomaly’s location in time. The Dualtree Complex Wavelet Transform achieves this by introducing a complex valued wavelet – comprised of two wavelets which form a Hilbert transform pair – and a complex valued scaling function. This has the collateral effect of creating several redundancies in information from which the prediction network can capitalize on. With reweighted outliers and shift invariance the prediction layer is considerably robust to anomalous events. Before a sample of price data is passed to the prediction network it is reweighted with Huber’s weight function, deconstructed with the Dualtree wavelet transform, and then rearranged such that different levels of wavelet decomposition are beside one another in a two-dimensional array as is shown in figures sixteen and seventeen. To enable their arrangement in a two-dimensional array, decompositions beyond the first level are interpolated such that they contain the same number of elements. Akima Spline Interpolation was selected because it does not infer any pattern to the data beyond the locations of two consecutive points and works well with complex valued data. It should be noted that if a lowpass filter is to be applied, the corresponding decomposition signals are removed before interpolation. The resultant array is then split into two equal sized arrays (one for real the other for complex values) and concatenated along the third dimension. After all these operations are performed, the sample has dimensionality [nlv nel 2] where nlv is the number of decompositions resulting from the signal’s Dualtree wavelet transform minus the number of levels removed by lowpass filtering, and nel is the number of elements in the decomposition which contains the highest frequency data (after the filter is applied). It is unnecessary to introduce scaling coefficients to the prediction network as in most cases these do not change much between prediction intervals so the scaling coefficients for sample at time t could be used with reasonable success at time t plus a prediction length. Should the need arise, a pipeline could be made to predict these coefficients using linear extrapolation, which would be more than sufficient for these. Figure eighteen shows the autocorrelation of these scaling coefficients for windowSize eighty minutes. Results from one thousand samples were fitted to a standard probability distribution to develop confidence intervals.
 				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4miaHIt7nQjETlcWt39nnvGAU1ANR6c72PEUs3RrBzB4xAu85eyZdcRmgaikCv4Fh9rgkmCZ6OyyNDtw79w0dtsbtkncQAQYdx_heXcO3Uh5m2ZKdRmXTAHGkSF_3qClwqCR7hqsfMFx5560rICA3JI5Qu282BTBqQXHfFggigBs7iAYVHRTbQ_7ALMac7qVES?width=560&height=420&cropmode=none">
+				<h5 class="fig">Scaling Coefficient Autocorrelation (averaged over 1000 samples)</h5>
+				
 				
 				<h4>Kalman Filter</h4>
 				<p>
 					Considering the prediction layer’s model to be perfect at the time of its implementation, it can not be expected to have perfect accuracy in prediction. Between sources of uncertainty inherent to some of the approximations made when preparing data, errors in the model, or even changes in the underlying mechanics of the system it seeks to predict, a perfectly accurate prediction is unlikely. In the case of the price of a cryptocurrency, the price at a given moment might be higher or lower than it should be possibly resulting from euphoria or panic. The network in question should be robust to such changes in price and it might be useful to consider these system noise. Data is lowpass filtered and decomposed via wavelets to offer a more complete view, but these can be said to be retroactive measures. As new information comes in, it is difficult to distinguish between new trends and noise. Either end of a lowpass filtered signal sees some fishtailing as new information comes in and it may be said that there is lag when lowpass filtering data. If an ideal price exists, which would maximize profits if a trader made trades according to it, then the market price of the asset in question could be described as the ideal price plus some noise. 
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ \text{price} = \text{idealprice} + \text{noise} $$
+				</div>
+				
 				<p>
 					With statistical knowledge of how noise relates to the ideal price, and knowledge of previous states, Kalman filters provide close to real-time approximations of actual states. This is key when making predictions as it reduces the effects that fishtailing data might have on consecutive predictions. Fundamentally a Kalman Filter works by cycling through these equations. 
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ \hat{X} _{k+1}^{\text{ _}} = \Phi_k \cdot \hat{X}_k , P_{k+1}^{\text{ _}} = \Phi_k P_k \Phi_k^T + Q_k $$
+					$$ K_k = P_k^{\text{ -}} H_k^T (H_k P_k^{\text{_}} H_k^T + R_k)^{-1}  $$
+					$$ \hat{X}_k = \hat{X}_k^{\text{ _}} + K_k(Z_k H_k \hat{X}_k^{\text{ _}}) $$
+					$$ P_k (I-I_k H_k)P_k^{\text{ _}} $$				
+					<p style="text-align: right;">(Grover et Al.)</p>
+				</div>
+				
 				<p>
 					Where K, H are Kalman Gain and Observation Jacobian determined from optimal state estimate. Q is a system observation, and P is error (Brown). By maintaining an estimate of system error, a Kalman filter can accurately estimate the correct new system state as the information comes in. It takes some iterations to converge but after it does, an accurate system state is known. The lag or inaccuracies from other filtering methods are no longer an issue. It should be noted however that the accuracy of Kalman Filters suffers when the underlying assumptions of system dynamics change or are otherwise incorrect (Akram et al.). Considering the lowpass filtered price obtained by omitting the wavelet decompositions corresponding to high frequency content (like in figure 15) as the ideal price, error statistics could be determined by observing the differences between measured and ideal prices. A cursory evaluation showed error for a sample like the one in figure 15, and its lowpass filtered Dualtree reconstruction had mean -1.5594e-8, variance 1.07e3 with a distribution not unlike a standard distribution. The prediction network could be trained on the lowpass filtered data and at each time step, the next states computed with it and updated according to the classic Kalman Filter equations. Because the price of a crypto currency is a highly dynamic system these equations may be insufficient to keep up with system changes. The system governing the price of a cryptocurrency is likely to change faster than this filter which could result in divergence of determined and ideal system states. Iterative Kalman filters exist which seek to mitigate errors stemming from quickly changing systems but in the case of crypto currencies, particularly where neural networks are involved, these may not be the best alternative. A network architecture which incorporates to an extent the concepts expressed in a Kalman filter is therefore to be selected. 
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ \hat{X}_{k+1}^{\text{ _}} = f(\Theta,Z_k,\hat{X}_k^{\text{ _}})	$$
+				</div>
+				
 				<p>
 					By having the last prediction as a network input in parallel with the latest observation, the network will have the chance to adjust its prediction based on any error. It is hoped that the proposed network architecture will develop its own version of the Kalman filter; one that is robust to changes in the data’s stochasticity. 
 				</p>
+				
 				<p>
 					During Training the network is expected to learn how predictions differ from actual values and how it can correct them for the next prediction. The network is expected to develop a substitute (in spirit and function only) for Kalman Gain and a Kalman Filter’s state update equation. This presents a Catch 22 for the training scheme because if the network learns to compensate for its errors in prediction, then its new predictions will not be the same as those it learned to correct. Given a dataset of samples obtained through the procedure described earlier D_x and its corresponding samples time shifted forward D_y, a dataset of predictions could be obtained by feeding D_x  through the network. D_x ̂ =f(Θ,D_x,D_r ). Because at the time of initialization previous predictions are unknown a random sample D_r could be used in substitute; for all intents and purposes it would be ok to use the sample time shifted backwards. Here is the Catch 22
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ \Theta_{k+1} = \text{argmin } \mathcal{L}(f(\Theta,\mathcal{D}_x,\mathcal{D}_{\hat{X},k}),\mathcal{D}_y)	$$
+					$$ \mathcal{D}_{\hat{X},k+1} = f(\Theta_{k+1},\mathcal{D}_x,\mathcal{D}_{\hat{X},k})	$$
+				</div>
+				
 				<p>
 					At any cycle through these equations the network is trained to account for the errors produced by its previous iteration. This could result in error during predictions. However, because the aim of the training routine is to reduce error between predicted and expected values, over time the predicted values might converge at the expected values.
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ \Theta = \text{argmin } \mathcal{L}(f(\Theta,\mathcal{D}_x,\mathcal{D}_x),\mathcal{D}_y)	$$
+				</div>
+				
 				<p>
 					For training it is therefore assumed that predicted values converge at expected values after several training iterations which means that the prediction from time t minus n equals the sample at time t (for an arbitrary point in time t and prediction length n).  So, during training the same sample is used for both inputs. 
 				</p>
 				
 				<h4>Generative Adversarial Training Scheme</h4>
-				<p style="font-weight: bold;color:red;">
-					The fundamental nature of cryptocurrency, or for that matter any tradeable asset, makes it impossible to accurately predict a future price while profiting from those predictions. In quantum mechanics Heisenberg’s uncertainty principle states that there is a trade-off between uncertainty in a particle’s position and uncertainty of its momentum. Similarly, there is a trade-off between predicting the price of an asset and being able to profit from these predictions; at least when predictions are made without factoring in the new position to be entered based on the prediction’s information. Suppose the network herein developed learns to have one hundred percent accuracy when prediction future price trends and trades are then entered based on this predicted information. As soon as the trade is executed from this information, the system which the network models change to one that includes this network. The resulting change in system is unknown to the network and prediction accuracy will likely decrease with time. Let B(t)  be a function which describes the price P of bitcoin at time t where {t ∈ R∶0&#64t}. Discretizing change in price as a function of t: ∆P_t=B'(t) and implicitly B(t+n)= B(t)+ ∆P_t for an arbitrary timestep n where {n>0}. 
-				</p>
-				<eqn></eqn>				
 				<p>
-					If the change in price at time t as a function of some parameters Θ, a windowed sample X_t, and a previous prediction X ̂_(t-1), trades may be entered from this information. Because the systems which produced the information the network trained on are independent of the network, it can not be said the change in price resulting from the network is the same as the change in price it predicted. Resultingly, the prediction on whose information a trade was entered becomes null as soon as the transaction occurs. Let function g(f(Θ,X_t,X ̂_(t-1) ))=∆P_(t,g )denote the change in price resulting from the prediction made at time t and the actual change in asset price at time t is a combination of the change in price resulting from natural (those which do not include the network) processes and the change in price resulting from the network’s influence. Exactly how much the system would change is unknown and is approximated by an influence variable H. What is certainly evident however, is that actual change in price at time t only equals the change resulting from natural processes when change in price resulting from function g is zero.
+					The fundamental nature of cryptocurrency, or for that matter any tradeable asset, makes it impossible to accurately predict a future price while profiting from those predictions. In quantum mechanics Heisenberg’s uncertainty principle states that there is a trade-off between uncertainty in a particle’s position and uncertainty of its momentum. Similarly, there is a trade-off between predicting the price of an asset and being able to profit from these predictions; at least when predictions are made without factoring in the new position to be entered based on the prediction’s information. Suppose the network herein developed learns to have one hundred percent accuracy when prediction future price trends and trades are then entered based on this predicted information. As soon as the trade is executed from this information, the system which the network models change to one that includes this network. The resulting change in system is unknown to the network and prediction accuracy will likely decrease with time. Let B(t)  be a function which describes the price P of bitcoin at time t where \({t ∈ R∶0 &lt t}\). Discretizing change in price as a function of \(t: ∆P_t=B'(t)\) and implicitly \(B(t+n)= B(t)+ ∆P_t)\) for an arbitrary timestep n where \({n>0}\). 
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn"></div>				
+					$$ \Theta = \text{argmin } \mathcal{L}(f(\Theta,\mathcal{D}_x,\mathcal{D}_x),\mathcal{D}_y)	$$
+					$$ \Delta P_t = f(\Theta,X_t,\hat{X}_{t-1})	$$
+				<p>
+					If the change in price at time t as a function of some parameters \(Θ\), a windowed sample \(X_t)\), and a previous prediction \(X ̂_(t-1)\), trades may be entered from this information. Because the systems which produced the information the network trained on are independent of the network, it can not be said the change in price resulting from the network is the same as the change in price it predicted. Resultingly, the prediction on whose information a trade was entered becomes null as soon as the transaction occurs. Let function \(g(f(Θ,X_t,X ̂_(t-1) ))=∆P_(t,g )\) denote the change in price resulting from the prediction made at time t and the actual change in asset price at time t is a combination of the change in price resulting from natural (those which do not include the network) processes and the change in price resulting from the network’s influence. Exactly how much the system would change is unknown and is approximated by an influence variable \(H\). What is certainly evident however, is that actual change in price at time t only equals the change resulting from natural processes when change in price resulting from function \(g\) is zero.
+				</p>
+				
+				<div class="eqn"></div>
+					$$ \Delta P_t = \Delta P_{t,\mathcal{B}} + H \Delta P_{t,g}	$$
 				<p>
 					Furthermore, because the system which produced the data on which ideal function f trained is independent of functions g and f, it cannot be assumed that the predictions will continue to be accurate. Once again, the exact change in the system resulting from changes made by the network is unknown and could be zero; this is likely not the case, however. Effects of the network on the system might be mitigated by enacting only small trades but even then, the exact results would be unknown. Primarily for this reason the network in question will not attempt to make accurate predictions. Rather it will create possible scenarios based on what it knows about the system’s stochasticity. 
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn"></div>
+					$$ G^* = \text{argmin}_G \text{ argmax}_D \mathcal{L}_{cGAN}(G,D) + \lambda \mathcal{L}_{L1}(G)	$$
+				<p style="text-align: right;">(Isola, 3)</p>
 				<p>
 					To this end, a generative adversarial training scheme will be employed. Generative Adversarial Networks are proven to be invaluable in scenarios where the goal is to mimic a known stochasticity and as such are appropriate for the task at hand. Generative adversarial networks simultaneously minimize and maximize loss on a generator and discriminator network respectively. That is, the generator learns to produce data which the generator considers to be real, while the discriminator learns to discern between fake samples produced by the generator and real samples. The complexity of such a combination is inherently larger than a standard feed forward backpropagation network setup but the results can be preferable, especially in cases such as this one where it is more important to have a possible approximate solution based on the data’s stochastic properties than having an accurate prediction. Furthermore, it is possible that once having a trained discriminator, subsequent generators trained on similar datasets might be trained more quickly and efficiently with the same level of results. 
 				</p>
@@ -293,9 +511,14 @@
 				<p>
 					The vastness of available data imposes certain constraints on the training routine. The main limitation is dedicated memory as dictated by the number of samples used to train. Training samples are taken from Bitcoin’s 2021 one-minute candle dataset which contains approximately six hundred thousand samples. Each n minute windowed sample used in training is raised to contain floor(〖log〗_2 n)*floor(0.25*n) points of data by the complex wavelet transform and interpolation. Then their size in memory is effectively tripled by the use two input samples and one reference sample when calculating loss. Ultimately the memory occupied by training samples depends on sample window size and the network architecture, but it is apparent the size of the subsample containing data for training is limited. This might be a problem because of how the price of bitcoin and the underlying system changes with time. For example, a network trained on September’s data would likely be inaccurate when predicting November’s data.
 				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mLUCllWZxDKFHmjCw7Jpo8gwCcKT2ls-dRS41IGI0IQW1Rw-q638tVKANkFi15KtjVNIwHam87OaG1e76PFK51LPAIyb9UJjDd5Ofd0qTwVaacm15rhmvM8N8_GR1CK1BC1OXJyVQtfoM9I4Ftqmw_cfbHeJLnkDBqCK6Ugeo9oTcfmM3j5krDWCe6yY62WDo?width=409&height=357&cropmode=none">
+				<h5 class="fig">Training Routine Flowchart</h5>
+				
 				<p>
 					For the best possible accuracy samples should be from throughout the available dataset. To overcome memory constraints, new samples are generated at each epoch and introduced into the training set. After training concludes on a n sample set, m new samples are generated and randomly introduced to the training set such that they replace m randomly selected samples; m is a fraction of n dictated by some coefficient specified during training. Samples are generated from pseudorandom locations in the dataset in the same way samples are generated before training. 
 				</p>
+				
 				<p>
 					To save time during training, new samples can be generated in parallel to training. The task of generating new samples is assigned to a worker while training occurs on another gpu-enabled worker. When samples are generated on the second worker, they are sent to the first worker who can only receive them once it has completed an epoch. This way samples are constantly refreshed between epochs and the network has a chance to train on the complete dataset. 
 				</p>
@@ -306,15 +529,22 @@
 				<p>
 					The network architecture in question seeks to predict changes in price from a sample of current and previous price data and its own previous prediction. Considering the system in question has a definite model the network can be described as a transfer function which translates states from one time into another. The price of crypto currencies is always changing and is a highly dynamic system. The network should therefore be sufficiently deep to have the capacity to learn the many subtleties of this system.
 				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mPqXVVGlcd4UEJm3nLWbHzE9CCWzVePpxSkwKRX8YEymq0rmnDmb_5m_S-3a5GoVKVUREahY313-ys1Uomak0I3ramtNi2ei2uLZkomJzoR1Lw9XOnCp8T1J2G8Z_wqFnQV12OzXR0GVn4wVXuy6kWqWhMlHGyzvXqIB9SlPPMOK1KtZiO9eoGmARqTaRnQ-3?width=481&height=509&cropmode=none">
+				<h5 class="fig">Generator and Discriminator Architectures</h5>
+				
 				<p>
 					The proposed network draws from the Transformer model presented by Vaswani and associates in their publication Attention Is All You Need. Their architecture shows excellent performance in sequence-to-sequence translation in part because of its multiple pathways for information and excellent use of attention. The model features n repeating blocks of layers which feed into one another as shown in Figure 19. These multiple pathways are in part why this architecture is selected.  However, at times a Transformer reduces data to one dimensional time series with multiple channels which is not ideal for the type of data resulting from the wavelet transform. Samples resulting from the Complex Wavelet Transform (henceforth referred to as Cwt) are of three dimensions where a sequence input for a Transformer is of at most two dimensions. 
 				</p>
+				
 				<p>
 					The complexity of a fully connected layer which translates three-dimensional data to three-dimensional data is much greater than the that of one which translates two-dimensional data to one dimensional data. Accordingly, fully connected layers are substituted by convolution layers which in a sense approximate the effects of a fully connected layer through their use of filters. Because the network is expected to learn dependencies in three dimensions (real-complex, time, and frequency), grouped convolutions are used. Samples are padded at the time of convolution such that the first two dimensions of the sample as it passes through the network remain the same. This in turn facilitates the summation of data from either pathway in the network. To prevent outputs from accumulating to unusable values through the many additions in this network tanh activation layers are introduced after each batch normalization layer. This greatly reduces the time this network takes to train.
 				</p>
+				
 				<p>
 					Attention layers recommended in Vaswani’s model are omitted in the hopes that scanning filters from convolution layers may be sufficient. So, the main aspect of Vaswani and associate’s transformer model that this architecture borrows is its multiple pathways for information. There are two columns of information comprising this model. One whose input is the previous prediction and another whose input is the latest observation. At the end of each block, information in the previous prediction column is added to the latest observation columns. Blocks in the previous observation column contain one batch normalization layer which takes effect before data is passed to the other column and the next block, and latest observation column blocks have two batch normalization layers; one for before the other column’s data is added and one for after. Batch normalization layers are used to maintain uniform stochasticity between blocks. 
 				</p>
+				
 				<p>
 					A generative adversarial training scheme also requires a discriminator network which is used to evaluate the generator’s output and make suggestions as to how weights should change. To evaluate this prediction network’s output during training a condenser network was designed which also makes use of grouped convolution layers. 
 				</p>
@@ -323,13 +553,31 @@
 				<p>
 					A prediction network was trained with five thousand samples per epoch, replacing ten percent of training samples with new randomly generated samples after each epoch. Loss was computed with a combination of L1 and L2 errors, as recommended in Isola and Associates’ paper Image-to-Image Translation with Conditional Adversarial Networks; the settings used to train the Pixels-to-Pixels network. These loss functions promote the learning of high and low frequency content equally and were therefore selected.
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ \mathcal{L}_{GAN} = \mathbb{E}_y \left [ \text{log} D(y)\right ] + \mathbb{E}_{x,z} \left[ \text{log}(1-D(G(x,z))) \right]	$$
+					$$ \mathcal{L}_{L1}(G) = \mathbb{E} \left[ \left \| y - G(x,z) \right \| _1 \right]	$$
+					<p style="text-align: right;">(Isola, 3)</p>
+				</div>
+				
 				<p>
-					Where D(y) and G(y) represent the discriminator and generator network functions respectively. The specific implementation of these functions used in training was pulled from Leung, Yui Chun’s MATLAB GAN. Weights were optimized with Adaptive Moment Estimation (ADAM) using a learning rate of 9e-3 for both the generator and discriminator. ADAM parameters decay and squared decay were set to 0.99 and 0.9999 respectively. The generator and discriminator had twelve and six layers respectively, with weights dimensions shown in tables one and two. Except for the last two layers of the discriminator which are fully connected layers, the columns in the table are in order: filter size x, filter size y, channels per group, filters per group and number of groups. Samples had windowSize 80 which resulted in training sample size [5 80 2] after Cwt, interpolation and lowpass filtering. It can be seen in the discriminator weights that the first few blocks increase the number of channels in data and are followed by three consecutive equally sized blocks. The idea was that this would be a channel where the network could pass information freely between different areas of the data without constriction or expansion. This way information from one area of the sample which may be pertinent to the development of another area could be relayed by any of the filters or convolutions. After this channel the network compresses data until the output is the same size as the input. 
+					Where D(y) and G(y) represent the discriminator and generator network functions respectively. The specific implementation of these functions used in training was pulled from Leung, Yui Chun’s MATLAB GAN. Weights were optimized with Adaptive Moment Estimation (ADAM) using a learning rate of 9e-3 for both the generator and discriminator. ADAM parameters decay and squared decay were set to 0.99 and 0.9999 respectively. The generator and discriminator had twelve and six layers respectively, with weights dimensions shown in tables one and two. Except for the last two layers of the discriminator which are fully connected layers, the columns in the table are in order: filter size x, filter size y, channels per group, filters per group and number of groups. Samples had windowSize 80 which resulted in training sample size [5 80 2] after \( \mathbb{C}wt \), interpolation and lowpass filtering. It can be seen in the discriminator weights that the first few blocks increase the number of channels in data and are followed by three consecutive equally sized blocks. The idea was that this would be a channel where the network could pass information freely between different areas of the data without constriction or expansion. This way information from one area of the sample which may be pertinent to the development of another area could be relayed by any of the filters or convolutions. After this channel the network compresses data until the output is the same size as the input. 
 				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4meoY_BK54khc2VIprA8dvQuRWDFC7_QQTjPFISIRcw7JiA0X59TnHoeSx0fFq044rbVaPlWyvpokki7PK0mKlJCvlsArDhv9mdEcBDY2sIHVrr6bSDLZ7wn-7KBodftVGEFUegqJpHZ8T4kketVHCKt-iyMfZYvI2nOIUB0hj-oADuVuwVVTpn3KSuX9I6w91?width=1246&height=520&cropmode=none">
+				<h5 class="fig">Comparison of Expected Output and Generator Output</h5>
+				<h5 class="fig">Extrapolation Lenth, WindowSize are 1 minute and 80 minutes Respectively</h5>
+				
+				
 				<p>
 					Filter dimensions 3x5 were selected because of the data being larger in the horizontal dimension than in the vertical. With longer filters temporal dependencies were more easily learned by the network.  Training with two hundred samples per batch over two hundred epochs and prediction length one had promising results. While this was not the metric used for training average root mean squared error per batch after training was approximately 2e-3. A visual comparison of predicted and actual data revealed that after two hundred epochs of training predicted values were a bit sharper in parts than actual values and occasionally omitted or simplified higher frequency content.
 				</p>
+				
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mwdP1fd4r976MdzF1ea70OMU6dWHuFHNsxNcSOSb62Cv4l2G2TOF9OaPnBthWLifhYXNWVwueAtQReHsxWHtL7DEg_G8kTltg0b2NhKxVF9GJLj-adcW8yXJaCIlIhh_YfAVD__BBfWjskJKSZ5eg_DQGA4awffZDOuElD22Li3o8-7t6NCcEmhIFWGN4yogC?width=1584&height=632&cropmode=none">
+				<h5 class="fig">Comparison of Expected Output and Generator Output</h5>
+				<h5 class="fig">Extrapolation Lenth, WindowSize are 10 minutes and 80 minutes Respectively</h5>
+				
 				<p>
 					Figures twenty-one and twenty-two show the generator’s output after two hundred epochs of training for prediction length one minute and window size eighty minutes. The generator’s output is visibly more jagged than the expected output and scaled differently. This sample output has a good representation of high frequency content (that found in decomposition level one) when compared to other generator outputs. The trend is to have smoother lines which are uncharacteristic of this decomposition level. The sample in these figures had statistical correlation (Pearson’s) of approximately 0.96 and RMSE 0.0099. It is important to note that the sample used to produce the prediction in figure 22, has statistical correlation 0.74 and RMSE 0.0138 - so there is considerable accuracy in the predicted value – and that RMSE was not the metric this network trained on. Accuracy in this metric is coincidental resulting from a good replication of the sample’s expected stochasticity. Training the same model for 450 epochs with prediction length ten minutes and window size eighty minutes yielded rmse 6e-3.
 				</p>
@@ -338,23 +586,41 @@
 				<p>
 					Because samples of price data must undergo some transformations before they are fed to the prediction network, output samples must have the inverse of these transformations applied if the represented signal is to be recovered. To this end wavelet transform layers were developed. A wavelet transform sample X_ψis obtained from a Wavelet Transform Layer (WTL) and a price data sample is recovered from a wavelet sample, and some information regarding the wavelet transform I_wt, by the Inverse Wavelet Transform Layer (IWTL). 
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ X_{\Psi,t} =I_{wt} = \text{WTL}(X_t)	$$ 
+					$$ X_t = \text{IWTL}(X_{\Psi,t})	$$ 
+				</div>
+				
 				<p>
 					The Wavelet Transform Layer takes a windowed sample of price data and upscales it for the prediction layer. To achieve a rectangular shape for the sample, wavelet decompositions are upscaled using spline interpolation (this interpolation also makes the least assumptions of the data’s behaviour which is desirable in a highly entropic system). Wavelet decompositions are complex valued data so makima spline interpolation which has good support for complex values is used. The resulting wavelet decomposition is lowpass filtered by removing the levels corresponding to high frequencies. The specific number of levels to remove is specified by a coefficient when the layer is initialized. Finally, data is split into its real and complex parts and stacked along a third dimension so ADAM optimizer can be used in training, and maxmin scaled. Stochastic Gradient Descent has been extended to accommodate complex valued data and gradients, but ADAM converges faster and is more suitable for very deep networks. Algorithms for this layer and its inverse are available in the appendix. This layer also outputs some information relevant to the wavelet transform which is then used by its inverse layer. This information is primarily the number of points which correspond to each decomposition level and is used to downsample wavelet transformed samples. Information like the type of wavelet used or any other information pertinent to the applied wavelet transform can also be returned by this layer.  In this implementation however, the near-symmetric biorthogonal filter pair which is standard for the Dualtree algorithm was used so only information about the number of points corresponding to each level is returned. This information can also be analytically obtained but for ease of implementation is captured from the wavelet transform’s output and returned by this layer. Scaling coefficients returned by the Dualtree algorithm, and the maxmin scaling operation
 				</p>
+				
 				<p>
 					The inverse wavelet transform layer is vital to the decision layer and is the exact inverse of the wavelet transform layer. Wavelet transformed samples are resampled and rearranged such that their structure matches that of the output of the Dualtree algorithm. This is obtained by sampling each level at the start, end, and at regular intervals corresponding to the number of points required by the Dualtree algorithm. Complex valued data is also reobtained by adding the real valued data to the product of its complex valued counterpart and i. Resampled data and scaling coefficients are then passed through the inverse Dualtree transform. Data could be rescaled with the inverse of the maxmin scaling operation applied by the original layer, but this is unnecessary as the shape of the output data remains the same regardless of scaling at this stage. Dualtree scaling coefficients are necessary however because they contain key information about the signal’s underlying trend. Details about this layer are also found in the appendix. Once signal data is recovered by the inverse wavelet transform layer it is ready to be passed to the decision layer. 
 				</p>
+				
+				<img src="https://chi01pap001files.storage.live.com/y4mNpiF9M8waAx7uFTQ92qi8oL1j4iFLzH_gDFJIw1_SoDrrTlgpzgFao_OOwRrghk9dJnFyvCYY7waAQWCV4Ew9GH9czDMtQ8UcEKCHCFyzT15ojL6KrGnLHtZqlE-IRd2urvYzobBvgnw8Xx2zBImls0k1s7zkEtAIGULEVU41MN-IQZlQYGh_K4kMC7w32jP?width=2129&height=964&cropmode=none">
+				<h5 class="fig">Demonstration of Wavelet Transform and Inverse Wavelet Transform Layers</h5>
+				
+				
 				<p>
 					Figures twenty-five and twenty-six compare a reference signal to that recovered by the inverse wavelet transform layer. In figure twenty-five an eighty-minute sample of change in price data was transformed by the wavelet transform layer and then recovered by the inverse transform layer. It is evident that some information was lost, likely due to the downsampling operation in the inverse transform layer, but the signal is mostly the same. The recovered signal in the image has a statistical correlation of 0.85. Figure twenty-six shows the recovered prediction made with a trained prediction network and the wavelet transformed sample from figure twenty-five, and the corresponding time shifted reference signal. 
 				</p>
+				
 				<p>
 					The network used to make the predictions for figure twenty-six was trained to extrapolate ten minutes forward using a wavelet transformed eighty-minute sample. In both cases, the one where only information about current sample states is known, and the one where information about previous sample states (by way of the previous prediction) is known, prediction accuracy falls suffers where the extrapolated portion begins; around minute seventy in the figure. 
 				</p>
+				
 				<p>
 					The suitability of these predictions for use in live trading is unknown at this stage, but because of the indeterminate nature of future states when they are changed via trading action, it is believed a precise estimate of future states is unnecessary. A possible future state like the one determined is more useful for the purposes of trading. Consequently, while it can be seen the accuracy of the prediction which contains information about previous predictions is less than the alternative, because the network imposes its perceived future on the system when it places an order, it is likely beneficial for it to have knowledge of previous system states and its previous prediction.
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ X_t = f(\Theta,X_{\Psi,t})	$$
+					$$ \Theta = \text{argmin } | X_t - f(\Theta,X_{\Psi,t}) |	$$
+				</div>
+				
 				<p>
 					If the accuracy of the inverse wavelet transform layer needed to be increased, a more robust downsampling method could be implemented. Perhaps another neural network trained to downsample wavelet transformed data such that accuracy of the resulting signal is maximized. Or, depending on the decision layer’s architecture, an inverse wavelet transform layer might not be at all necessary. Or its functions could be incorporated into the decision layer. The various sources of error introduced by the inverse transform layer are part of the basis for the later proposed decision network. 
 				</p>
@@ -380,20 +646,28 @@
 				<p>
 					This network should be able to look at a sample of price information and discern which trades would result in maximum profits. Since the network has the capacity to always be involved in either a long or a short position, its objective is to develop a transfer function which translates price data to the long-short binary signal which results in maximum possible profit. 
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ Y_{k,w_s} = HX_{k,w_s}	$$
+					$$ Y_{k,w_S} = \text{argmax} \Phi_k Y_{w_s}	$$
+				</div>
+				
 				<p>
-					Where Y_(k,ws) is the windowed binary signal at time k developed from the corresponding windowed sample of price data, which results in the largest possible profit of all possible combinations of a ws element windowed sample, when passed trough a state transfer function Φ which determines profit. 
+					Where \(Y_{k,w_s}\) is the windowed binary signal at time \(k\) developed from the corresponding windowed sample of price data, which results in the largest possible profit of all possible combinations of a ws element windowed sample, when passed trough a state transfer function \(Φ\) which determines profit. 
 				</p>
+				
 				<p>
 					There are some constraints here imposed by the method trades are executed. Because trades are made via API there is some inherent request response lag, and all placed orders are unlikely to be filled to specification the instant they appear on the trading network. Furthermore, it takes some time for a prediction and a decision to be made upon receiving information. Steps are taken to ensure that the time between requesting information from the trading network and execution of a trade order be as little as possible but due to unforeseen circumstances it is possible that by the time a trade is executed the information it was based on is no longer completely accurate. This network will therefore not attempt high frequency trading, and steps are taken to prevent it from changing positions too frequently. There are also some concerns about how changing the flow of events by placing trade orders might affect prediction accuracy, but these will be discussed later. 
 				</p>
+				
 				<p>
 					In order to maximize profits form trades, this network trains on the binary signal which represents the optimal long-short configuration for bitcoin in 2021, which also meets the proposed constraints. At this stage it is assumed that the market is not affected by this AI’s actions, and that trades are executed instantly and at the exact instantaneous market price. Any possible errors which might result from request-response lag, or insufficient demand in market, or any other scenarios, are for now said to be completely mitigated by ensuring a certain amount of time between trades. For all intents and purposes this might be true, given enough time an order placed if made with correct information will have time to complete albeit not at the ideal price. Actual profits might differ from predicted profits, but this is expected. 
 				</p>
+				
 				<p>
 					Intuitively, if profit is to be maximized, new trades should only be entered at local maximum and minimum price points. The ideal long-short combination therefore corresponds to the longest line between local and minimum points which meets the relevant constraints. To obtain this line, a recursion was performed on lowpass filtered price data which inserted a new point at the local maximum/minimum which represented the most profit, until a stopping condition was met. The stopping condition was that the closest next trade could be no closer than n minutes away. This is to ensure the network has enough time between trades for necessary operations to take place. Data was lowpass filtered to reveal only longer-term trends in the data. The relevant point was determined as the point which resulted in the maximum absolute difference between the data and the secant formed by the trade at time t and the subsequent trade. Once all trade points were determined, a binary signal was constructed by taking the slopes of the lowpass filtered data between the trade points. Negative slopes resulted in zero and positive slopes one. 
 				</p>
-				<alg></alg>
+								
 				<p>
 					Without extensive trial and error, best results were obtained with m = 30 and low pass filter coefficient 0.15. This meant that theoretical profits were maximized by the above algorithm for bitcoin’s 2021 one-minute candles when trades should not have been closer than thirty minutes apart, and a lowpass filter removing the upper 15% of frequency content was applied. Despite setting the stopping condition as thirty minutes, some trades ended up occurring more frequently. Average trade duration for this configuration was approximately nineteen minutes and minimum duration one minute. Approximately 98% of theoretical trades in this optimization were successful. 
 				</p>
@@ -402,14 +676,24 @@
 				<p>
 					The architecture developed at this stage seeks to approximate a transfer function which meets the criteria outlined in the previous section. A set of data which yields the maximum profit when passed through the profit state transfer function and meets the criteria for a reasonable trade imposed by the unideal nature of the trading system, is developed via algorithm one such that maximum profits need not be calculated at each training iteration. This network’s task therefore becomes to minimize loss on the determined ideal trading signal, and a function which aims to produce this signal given price data as an input. 
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ Y_{k,w_s} = H(\Theta, X_{k,w_s}) $$
+					$$ \Theta = \text{argmin } \mathcal{L}(\mathbb{D}_{Y,w_s}, H(\Theta,\mathbb{D}_{X,w_s})	$$
+				</div>
+				
 				<p>
 					Early versions of this architecture sought to directly translate a sequence of price data into its corresponding trading signal. However, because this implementation is to be used in conjunction with a prediction network which makes use of the wavelet transform, it is preferable to have the inputs to this network also be wavelet transform data such as that which is returned by a wavelet transform layer. For the data returned by the prediction layer to be used in the original price data sequence to trade sequence translation function, it must be first transformed to a signal by the inverse wavelet transform. However, this data is upscaled in most parts to contain the number of samples present in the highest decomposition and is maximin scaled based on the input data. For the data to be recovered, all but one of the present samples must be downsampled, which produces error by means of the downsampling operation as there is no guarantee that data is downsampled at the correct point for a perfect reconstruction. Furthermore, data must be rescaled with the coefficients resulting from maxmin scaling of its corresponding input data which might not be correct.
 				</p>
+				
 				<p>
 					Similarly, the approximation coefficients returned by the Dualtree transform of the input data would be used in the reconstruction of the output data. It was noted that the approximation coefficients at two adjacent timesteps are similar though nevertheless a source of error. Extrapolation of these scaling coefficients might improve accuracy but would introduce error just the same. By the time the price data is reconstructed from the prediction network’s output, sufficient error has been introduced that the results might not be recognizable to a decision network which trained on the original price data signal. Accordingly, the input data to this network is the wavelet data which would have been the output data the prediction network trained were it not a GAN. That is to say, the input dataset for this network is the input dataset for the prediction network time shifted forward by the desired prediction length. 
 				</p>
-				<eqn></eqn>
+				
+				<div class="eqn">
+					$$ \mathbb{D}_{X_t,\text{decision network}} = \mathbb{D}_{X_{t+\Delta t}, \text{prediction network}}	$$
+				</div>
+				
 				<p>
 					This network’s output data is the binary trading signal which corresponds to the input data’s time window, that also results in the maximum profit while meeting constraints imposed by request response lag and other unideal properties of the system. It is hoped that this network learns operations like those which would recover the price data signal from the wavelet transformed output. By omitting the recovery of the price data signal, inverse wavelet transform layers will not be necessary in the architecture nor will pipelines for scaling coefficients and other wavelet decomposition data which the inverse transforms would require.
 				</p>
@@ -450,7 +734,7 @@
 			<div id="appendix">
 				<h2>Appendix</h2>
 				<p>
-					The original report is available from the provided link. It contains all images, tables, and appendicies referenced in the text. 
+					The original report is available from the provided link. It contains all images, tables, and appendicies referenced in the text. Furthermore, this report is in essence a continuation of the study WaveGAN. A link to that is also available. 
 				</p>		
 			</div>
 		</div>

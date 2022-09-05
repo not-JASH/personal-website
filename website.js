@@ -73,10 +73,10 @@ app.get("/Computer-Generated-Training-Data", function(req,res){
     res.render("CGTD/CGTD.html");
 })
 
-// notes on wavelets and fourier transform ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/*// notes on wavelets and fourier transform ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/Wavelets-and-Extended-Fourier", function(req,res){
     res.render("WaveletsAndFourier/Wavelets-and-Fourier.html");
-})
+})*/
 
 // parametric space ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get("/Parametric-Space", function(req,res){
