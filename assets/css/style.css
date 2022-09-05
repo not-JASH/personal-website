@@ -22,10 +22,15 @@ a {
 	color: #000;
 }	
 		
-p {
+li, p {
 	font-size:14px;
 	padding:0px 0px 30px 0px;
 	text-align: justify;
+}
+
+li {
+	margin:5px 0px 15px 0px;
+	padding: 0px 0px 0px 0px;
 }
 		
 nav {
