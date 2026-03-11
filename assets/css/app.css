@@ -1,0 +1,186 @@
+.app-body--main {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
+.app-body--main a {
+    display: block;
+    font-size: 14px;
+}
+
+.app-body--main a:active {
+    font-weight: normal;
+}
+
+.app-body--main td,
+.app-body--main th,
+.app-body--main ol,
+.app-body--main li {
+    font-size: 14px;
+}
+
+.app-body--main li {
+    margin-bottom: 4px;
+}
+
+.app-body--simple {
+    width: 100%;
+}
+
+.app-index {
+    position: fixed;
+    width: 200px;
+    top: 90px;
+    left: 50%;
+    margin-left: -550px;
+}
+
+.app-index nav {
+    padding: 0;
+}
+
+.app-index a {
+    display: block;
+    font-size: 16px;
+}
+
+.app-index a:hover {
+    color: white;
+    background-color: black;
+}
+
+.app-main-text {
+    align-content: center;
+    margin: auto;
+    width: 550px;
+}
+
+.app-main-text img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-meta-grid {
+    grid-template-columns: 300px auto;
+}
+
+.app-meta-left {
+    text-align: left;
+    font-size: 12px;
+}
+
+.app-meta-right {
+    text-align: right;
+    font-size: 12px;
+}
+
+.app-portfolio-item h2 {
+    min-height: 50px;
+}
+
+.app-portfolio-item p {
+    min-height: 250px;
+}
+
+.app-simple-nav a {
+    display: block;
+}
+
+.skyrim-nav {
+    padding: 100px 0 50px;
+}
+
+.skyrim-nav-compact {
+    padding: 10px 0 20px;
+}
+
+.app-compare-container {
+    display: flex;
+    width: 100%;
+    max-width: 2000px;
+    margin: auto;
+    padding: 0 0 50px;
+    box-sizing: border-box;
+    height: 100vh;
+    max-height: 1000px;
+}
+
+.app-compare-box {
+    flex: 1;
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    line-height: 0;
+}
+
+.app-compare-box > img {
+    margin-left: -55%;
+    margin-top: 10%;
+    width: 250%;
+    height: calc(100% - 8vh);
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.app-compare-box > span {
+    display: block;
+    height: 10vh;
+    line-height: 2.6;
+    font-size: 24px;
+    text-align: center;
+}
+
+.app-compare-box:hover {
+    flex: 1 1 50%;
+}
+
+.app-compare-box:hover > img {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.carousel .item {
+    height: 45vw;
+    max-height: 765px;
+    overflow: hidden;
+}
+
+.carousel .item img {
+    width: 100%;
+    max-width: 2000px;
+    padding: 0;
+    object-fit: cover;
+}
+
+.app-video-box {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+.app-video-box iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 1100px) {
+    .app-index {
+        position: static;
+        width: auto;
+        margin: 0 0 24px;
+        padding: 0 16px;
+    }
+
+    .app-main-text {
+        width: auto;
+        max-width: 550px;
+        padding: 0 16px 32px;
+    }
+}

@@ -1,0 +1,50 @@
+<%- include("../partials/main-index", { page: page }) %>
+
+<div class="main-text app-main-text">
+    <h1>Portfolio</h1>
+
+    <div class="portfolio-item app-portfolio-item" id="landing-placeholder">
+        <h2>Welcome to my portfolio.</h2>
+    </div>
+
+    <% page.items.forEach(function (item) { %>
+        <div class="portfolio-item app-portfolio-item" id="<%= item.id %>" style="display:none;">
+            <h2><%= item.title %></h2>
+            <p><%= item.description %></p>
+            <div class="grid-container app-meta-grid">
+                <div class="grid-item app-meta-left">
+                    <span><%= item.season %></span>
+                </div>
+                <div class="grid-item app-meta-right">
+                    <a href="<%= item.href %>">More Info</a>
+                </div>
+            </div>
+        </div>
+    <% }); %>
+</div>
+
+<script>
+    const portfolioNavItems = document.querySelectorAll(".app-index nav:last-of-type a");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    function showPortfolioItem(targetId) {
+        portfolioItems.forEach((item) => {
+            item.style.display = item.id === targetId ? "" : "none";
+        });
+    }
+
+    portfolioNavItems.forEach((link) => {
+        const targetId = link.getAttribute("href").replace("#", "");
+
+        link.addEventListener("mouseover", () => {
+            showPortfolioItem(targetId);
+        });
+
+        link.addEventListener("click", (event) => {
+            event.preventDefault();
+            const card = document.getElementById(targetId);
+            const destination = card.querySelector(".app-meta-right a");
+            window.location.assign(destination.href);
+        });
+    });
+</script>

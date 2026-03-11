@@ -1,0 +1,16 @@
+<%- include("../partials/main-index", { page: page }) %>
+
+<div class="main-text app-main-text">
+    <h1>Education</h1>
+    <% page.items.forEach(function (entry) { %>
+        <h2><%= entry.title %></h2>
+        <div class="grid-container app-meta-grid">
+            <div class="grid-item app-meta-left">
+                <span><%= entry.organization %></span>
+            </div>
+            <div class="grid-item app-meta-right">
+                <span><%= entry.dates %></span>
+            </div>
+        </div>
+    <% }); %>
+</div>

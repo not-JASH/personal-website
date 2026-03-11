@@ -1,0 +1,15 @@
+<div class="index app-index">
+    <nav>
+        <% page.primaryNav.forEach(function (link) { %>
+            <a href="<%= link.href %>"><%= link.label %></a>
+        <% }); %>
+    </nav>
+    <% if (page.sectionNav && page.sectionNav.length) { %>
+        <hr>
+        <nav>
+            <% page.sectionNav.forEach(function (link) { %>
+                <a href="<%= link.href %>"><%= link.label %></a>
+            <% }); %>
+        </nav>
+    <% } %>
+</div>

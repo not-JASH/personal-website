@@ -1,0 +1,43 @@
+<%- include("../partials/main-index", { page: page }) %>
+
+<div class="main-text app-main-text">
+    <h1>Work Experience</h1>
+
+    <% page.items.forEach(function (entry) { %>
+        <button class="collapsible app-collapsible" style="font-size:24px"><%= entry.role %></button>
+        <div class="content">
+            <h3><%= entry.organization %></h3>
+            <h4><%= entry.dates %></h4>
+            <p><%= entry.summary %></p>
+        </div>
+    <% }); %>
+</div>
+
+<script>
+    const collapsibles = document.querySelectorAll(".app-collapsible");
+
+    function toggleContent(element) {
+        const content = element.nextElementSibling;
+        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+    }
+
+    collapsibles.forEach((element) => {
+        element.addEventListener("click", function () {
+            this.classList.toggle("clicked");
+        });
+
+        element.addEventListener("mouseover", function () {
+            if (!this.classList.contains("clicked")) {
+                this.classList.add("active");
+                toggleContent(this);
+            }
+        });
+
+        element.addEventListener("mouseout", function () {
+            if (!this.classList.contains("clicked")) {
+                this.classList.remove("active");
+                toggleContent(this);
+            }
+        });
+    });
+</script>

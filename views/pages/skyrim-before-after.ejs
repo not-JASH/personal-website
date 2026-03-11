@@ -1,0 +1,19 @@
+<%- include("../partials/skyrim-nav", { links: page.subnav, compact: false }) %>
+
+<div class="app-compare-container">
+    <div class="app-compare-box">
+        <img src="<%= page.beforeImage %>" alt="Skyrim before image">
+        <span>Before</span>
+    </div>
+
+    <div class="app-compare-box">
+        <img src="<%= page.afterImage %>" alt="Skyrim after image">
+        <span>After</span>
+    </div>
+</div>
+
+<h2 class="description" style="padding-top: 0px;">Skyrim is truly beautiful, cold, dark, and dangerous.</h2>
+<p><%= page.description %></p>
+
+<hr>
+<%- include("../partials/skyrim-nav", { links: page.footerNav, compact: true }) %>

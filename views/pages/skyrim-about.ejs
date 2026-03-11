@@ -1,0 +1,14 @@
+<%- include("../partials/skyrim-nav", { links: page.subnav, compact: false }) %>
+
+<% page.sections.forEach(function (section, index) { %>
+    <img src="<%= section.image %>" alt="Skyrim section image <%= index + 1 %>">
+    <% if (section.heading) { %>
+        <h2 class="description"><%= section.heading %></h2>
+    <% } %>
+    <% if (section.body) { %>
+        <p><%= section.body %></p>
+    <% } %>
+<% }); %>
+
+<hr>
+<%- include("../partials/skyrim-nav", { links: page.footerNav, compact: true }) %>
