@@ -15,15 +15,26 @@ function onHttpStart() {
     console.log("Server started, listening on " + HTTP_PORT);
 }
 
+function withSharedStyles(page) {
+    const stylesheets = [...(page.stylesheets || []), "/css/app.css"].filter(
+        (href, index, entries) => entries.indexOf(href) === index
+    );
+
+    return {
+        ...page,
+        stylesheets
+    };
+}
+
 function buildPage(routeConfig) {
     if (routeConfig.kind === "legacy") {
-        return {
+        return withSharedStyles({
             ...routeConfig,
             ...getLegacyPage(path.join(__dirname, routeConfig.source))
-        };
+        });
     }
 
-    return routeConfig;
+    return withSharedStyles(routeConfig);
 }
 
 routes.forEach((routeConfig) => {
