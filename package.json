@@ -1,22 +1,17 @@
 {
-  "name": "atelier-civic-theme",
+  "name": "jashua-luna-website",
   "private": true,
   "version": "0.1.0",
-  "description": "Original editorial and academic architecture website theme built with React and Vite.",
+  "description": "Personal website for Jashua Luna, served with Express and EJS.",
   "engines": {
     "node": ">=18.0.0"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "node website.js",
+    "dev": "node website.js"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^5.4.10"
+    "ejs": "^3.1.10",
+    "express": "^4.21.2"
   }
 }
