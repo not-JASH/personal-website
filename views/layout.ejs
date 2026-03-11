@@ -1,8 +1,9 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#f8f8f6">
         <title><%= page.title %></title>
         <% if (page.inlineStyle) { %>
             <style><%- page.inlineStyle %></style>
@@ -14,8 +15,10 @@
             <script src="<%= src %>"></script>
         <% }); %>
     </head>
-    <body<%- page.bodyAttrs ? " " + page.bodyAttrs : "" %>>
-        <%- include(bodyTemplate, { page: page }) %>
+    <body data-app-theme="minimal"<%- page.bodyAttrs ? " " + page.bodyAttrs : "" %>>
+        <div class="app-page-shell">
+            <%- include(bodyTemplate, { page: page }) %>
+        </div>
         <% if (page.inlineScript) { %>
             <script><%- page.inlineScript %></script>
         <% } %>

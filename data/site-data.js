@@ -131,8 +131,8 @@ const skyrimSubnav = [
     { href: "/Skyrim-TNE/Videos", label: "Videos" }
 ];
 
-const sharedModernStyles = ["/css/main_stylesheet.css", "/css/app.css"];
-const skyrimStyles = ["/css/main_stylesheet.css", "/css/skyrim_stylesheet.css", "/css/app.css"];
+const sharedModernStyles = [];
+const skyrimStyles = [];
 const bootstrapStyles = ["https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"];
 const bootstrapScripts = [
     "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js",
@@ -298,7 +298,7 @@ const routes = [
         kind: "modern",
         template: "pages/ai-art",
         title: "AI Art",
-        stylesheets: ["/css/style.css", "/css/app.css"],
+        stylesheets: [],
         bodyAttrs: 'class="app-body app-body--simple"',
         primaryNav: [
             { href: "/", label: "Home" },

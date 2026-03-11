@@ -1,10 +1,11 @@
-<header><h1>Selected Images Created With AI</h1></header>
+<main class="app-main-text app-main-text--simple">
+    <section class="app-hero app-hero--compact">
+        <h1>Selected Images Created With AI</h1>
+    </section>
 
-<hr>
-<nav class="app-simple-nav">
-    <% page.primaryNav.forEach(function (link) { %>
-        <a href="<%= link.href %>"><%= link.label %></a>
-    <% }); %>
-</nav>
-
-<p></p>
+    <nav class="app-simple-nav" aria-label="Primary">
+        <% page.primaryNav.forEach(function (link) { %>
+            <a href="<%= link.href %>" <%- link.href === page.path ? 'aria-current="page"' : "" %>><%= link.label %></a>
+        <% }); %>
+    </nav>
+</main>

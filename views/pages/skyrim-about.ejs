@@ -1,13 +1,21 @@
 <%- include("../partials/skyrim-nav", { links: page.subnav, compact: false }) %>
 
 <% page.sections.forEach(function (section, index) { %>
-    <img src="<%= section.image %>" alt="Skyrim section image <%= index + 1 %>">
-    <% if (section.heading) { %>
-        <h2 class="description"><%= section.heading %></h2>
-    <% } %>
-    <% if (section.body) { %>
-        <p><%= section.body %></p>
-    <% } %>
+    <article class="app-media-section">
+        <figure class="app-media-frame">
+            <img src="<%= section.image %>" alt="Skyrim section image <%= index + 1 %>">
+        </figure>
+        <% if (section.heading || section.body) { %>
+            <div class="app-media-copy">
+                <% if (section.heading) { %>
+                    <h2><%= section.heading %></h2>
+                <% } %>
+                <% if (section.body) { %>
+                    <p><%= section.body %></p>
+                <% } %>
+            </div>
+        <% } %>
+    </article>
 <% }); %>
 
 <hr>

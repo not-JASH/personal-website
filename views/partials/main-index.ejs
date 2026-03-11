@@ -1,15 +1,28 @@
-<div class="index app-index">
-    <nav>
-        <% page.primaryNav.forEach(function (link) { %>
-            <a href="<%= link.href %>"><%= link.label %></a>
-        <% }); %>
-    </nav>
-    <% if (page.sectionNav && page.sectionNav.length) { %>
-        <hr>
-        <nav>
-            <% page.sectionNav.forEach(function (link) { %>
-                <a href="<%= link.href %>"><%= link.label %></a>
-            <% }); %>
-        </nav>
-    <% } %>
-</div>
+<aside class="app-index">
+    <div class="app-index__inner">
+        <a class="app-index__brand" href="/">Jashua Luna</a>
+        <% if (page.title && page.title !== "Jashua Luna") { %>
+            <p class="app-index__page"><%= page.title %></p>
+        <% } %>
+
+        <div class="app-index__section">
+            <span class="app-index__label">Navigate</span>
+            <nav class="app-index__nav" aria-label="Primary">
+                <% page.primaryNav.forEach(function (link) { %>
+                    <a href="<%= link.href %>" <%- link.href === page.path ? 'aria-current="page"' : "" %>><%= link.label %></a>
+                <% }); %>
+            </nav>
+        </div>
+
+        <% if (page.sectionNav && page.sectionNav.length) { %>
+            <div class="app-index__section">
+                <span class="app-index__label">On This Page</span>
+                <nav class="app-index__nav" aria-label="Sections">
+                    <% page.sectionNav.forEach(function (link) { %>
+                        <a href="<%= link.href %>"><%= link.label %></a>
+                    <% }); %>
+                </nav>
+            </div>
+        <% } %>
+    </div>
+</aside>

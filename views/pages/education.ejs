@@ -1,16 +1,19 @@
 <%- include("../partials/main-index", { page: page }) %>
 
-<div class="main-text app-main-text">
-    <h1>Education</h1>
-    <% page.items.forEach(function (entry) { %>
-        <h2><%= entry.title %></h2>
-        <div class="grid-container app-meta-grid">
-            <div class="grid-item app-meta-left">
-                <span><%= entry.organization %></span>
-            </div>
-            <div class="grid-item app-meta-right">
-                <span><%= entry.dates %></span>
-            </div>
-        </div>
-    <% }); %>
-</div>
+<main class="app-main-text">
+    <section class="app-hero app-hero--compact">
+        <h1>Education</h1>
+    </section>
+
+    <section class="app-entry-list">
+        <% page.items.forEach(function (entry) { %>
+            <article class="app-entry-card">
+                <div class="app-card-meta">
+                    <span><%= entry.organization %></span>
+                    <span><%= entry.dates %></span>
+                </div>
+                <h2><%= entry.title %></h2>
+            </article>
+        <% }); %>
+    </section>
+</main>

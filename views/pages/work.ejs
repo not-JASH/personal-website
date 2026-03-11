@@ -1,43 +1,20 @@
 <%- include("../partials/main-index", { page: page }) %>
 
-<div class="main-text app-main-text">
-    <h1>Work Experience</h1>
+<main class="app-main-text">
+    <section class="app-hero app-hero--compact">
+        <h1>Work Experience</h1>
+    </section>
 
-    <% page.items.forEach(function (entry) { %>
-        <button class="collapsible app-collapsible"><%= entry.role %></button>
-        <div class="content">
-            <h3><%= entry.organization %></h3>
-            <h4><%= entry.dates %></h4>
-            <p><%= entry.summary %></p>
-        </div>
-    <% }); %>
-</div>
-
-<script>
-    const collapsibles = document.querySelectorAll(".app-collapsible");
-
-    function toggleContent(element) {
-        const content = element.nextElementSibling;
-        content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
-    }
-
-    collapsibles.forEach((element) => {
-        element.addEventListener("click", function () {
-            this.classList.toggle("clicked");
-        });
-
-        element.addEventListener("mouseover", function () {
-            if (!this.classList.contains("clicked")) {
-                this.classList.add("active");
-                toggleContent(this);
-            }
-        });
-
-        element.addEventListener("mouseout", function () {
-            if (!this.classList.contains("clicked")) {
-                this.classList.remove("active");
-                toggleContent(this);
-            }
-        });
-    });
-</script>
+    <section class="app-entry-list">
+        <% page.items.forEach(function (entry) { %>
+            <article class="app-entry-card">
+                <div class="app-card-meta">
+                    <span><%= entry.organization %></span>
+                    <span><%= entry.dates %></span>
+                </div>
+                <h2><%= entry.role %></h2>
+                <p><%= entry.summary %></p>
+            </article>
+        <% }); %>
+    </section>
+</main>

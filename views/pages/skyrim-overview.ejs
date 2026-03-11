@@ -1,8 +1,14 @@
 <%- include("../partials/skyrim-nav", { links: page.subnav, compact: false }) %>
 
-<img src="<%= page.heroImage %>" alt="Skyrim True Nord Edition hero image">
-<h1 style="padding:40px 0px 25px 0px;">Elder Scrolls V Skyrim <br>True Nord Edition</h1>
-<h2 style="padding:0px 0px 50px 0px;"><%= page.subtitle %></h2>
+<section class="app-skyrim-hero">
+    <figure class="app-media-frame">
+        <img src="<%= page.heroImage %>" alt="Skyrim True Nord Edition hero image">
+    </figure>
+    <div class="app-skyrim-copy">
+        <h1>Elder Scrolls V Skyrim<br>True Nord Edition</h1>
+        <p class="app-skyrim-subtitle"><%= page.subtitle %></p>
+    </div>
+</section>
 
 <hr>
 <%- include("../partials/skyrim-nav", { links: page.footerNav, compact: true }) %>

@@ -1,7 +1,5 @@
-<div class="grid-container skyrim-nav <%= compact ? 'skyrim-nav-compact' : '' %>">
+<nav class="app-band-nav skyrim-nav <%= compact ? 'skyrim-nav-compact' : '' %>">
     <% links.forEach(function (link) { %>
-        <div class="grid-item">
-            <a href="<%= link.href %>"><%= link.label %></a>
-        </div>
+        <a href="<%= link.href %>" <%- link.href === page.path ? 'aria-current="page"' : "" %>><%= link.label %></a>
     <% }); %>
-</div>
+</nav>
