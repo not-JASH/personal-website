@@ -1,142 +1,61 @@
 const express = require("express");
 const path = require("path");
-//const a = require('./assets/js/Controllers');
-
-
 
 const app = express();
-const HTTP_PORT = process.env.PORT || 8080
-app.use(express.static(__dirname+'/assets'));
-app.set("views",path.join(__dirname,"views"));
-app.engine('html',require('ejs').renderFile);
-app.set("view engine","ejs");
+const HTTP_PORT = process.env.PORT || 8080;
 
-function onHttpStart(){
-    console.log("Server started, listening on " + HTTP_PORT); 
+app.use(express.static(path.join(__dirname, "assets")));
+app.set("views", path.join(__dirname, "views"));
+app.engine("html", require("ejs").renderFile);
+app.set("view engine", "ejs");
+
+function onHttpStart() {
+    console.log("Server started, listening on " + HTTP_PORT);
 }
 
+function renderView(view) {
+    return function renderPage(req, res, next) {
+        res.render(view, function handleRender(err, html) {
+            if (err) {
+                next(err);
+                return;
+            }
 
-// Main Pages
+            res.send(html);
+        });
+    };
+}
 
-app.get("/",function(req,res) {
-    res.render("Main/Home.html");
-})
+[
+    ["/", "Main/Home.html"],
+    ["/Portfolio", "Main/Portfolio.html"],
+    ["/Work-Experience", "Main/WorkExperience.html"],
+    ["/Education", "Main/Education.html"],
+    ["/CHARS-Feasibility", "CHARS-Feas/CHARS-Feasibility.html"],
+    ["/Shallow-Foundation-231-Cobourg", "231Cobourg/231Cobourg.html"],
+    ["/CHARS-Design-Report", "CHARS-Des/CHARS-Design.html"],
+    ["/Foundation-for-Tenth-Line", "TenthLine/TenthLine.html"],
+    ["/Computer-Generated-Training-Data", "CGTD/CGTD.html"],
+    ["/Parametric-Space", "ParametricSpace/ParametricSpace.html"],
+    ["/WaveGAN", "WaveGAN/WaveGAN.html"],
+    ["/Cryptocurrency-AI", "CryptoAI/CryptoAI.html"],
+    ["/Skyrim-TNE", "Skyrim/SkyrimTNE.html"],
+    ["/Skyrim-TNE/About", "Skyrim/About.html"],
+    ["/Skyrim-TNE/Images", "Skyrim/Images.html"],
+    ["/Skyrim-TNE/BeforeAndAfter", "Skyrim/BeforeAndAfter.html"],
+    ["/Skyrim-TNE/Videos", "Skyrim/Videos.html"],
+    ["/AI-Art", "AIArt/AIArt.html"]
+].forEach(([route, view]) => {
+    app.get(route, renderView(view));
+});
 
-app.get("/Portfolio", function(req,res){
-    res.render("Main/Portfolio.html");
-})
+app.use(function notFound(req, res) {
+    res.status(404).send("Page not found.");
+});
 
-/*
-app.get("/Work-Experience", function(req,res){
-    res.render("Main/WorkExperience.html");
-})
+app.use(function errorHandler(err, req, res, next) {
+    console.error(err);
+    res.status(500).send("Unable to render this page right now.");
+});
 
-app.get("/Education", function(req,res) {
-    res.render("Main/Education.html");
-})
-*/
-
-// Portfolio Pages
-
-//misc sketches ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/*(app.get("/Misc-Sketches", function(req,res){
-    res.render("Sketches/MiscSketches.html");
-})*/
-
-// tdsb arch ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-/*app.get("/TDSB-Architecture", function(req,res){
-    res.render("TDSB/TDSB-Architecture.html");
-})*/
-
-// chars feasibility ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/CHARS-Feasibility", function(req,res){
-    res.render("CHARS-Feas/CHARS-Feasibility.html");
-})
-
-// 231 cobourg foundation ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/Shallow-Foundation-231-Cobourg", function(req,res){
-    res.render("231Cobourg/231Cobourg.html");
-})
-
-// chars design report ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/CHARS-Design-Report", function(req,res){
-    res.render("CHARS-Des/CHARS-Design.html");
-})
-
-// foundation for tenth line ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/Foundation-for-Tenth-Line", function(req,res){
-    res.render("TenthLine/TenthLine.html");
-})
-
-// computer generated training data ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/Computer-Generated-Training-Data", function(req,res){
-    res.render("CGTD/CGTD.html");
-})
-
-/*// notes on wavelets and fourier transform ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/Wavelets-and-Extended-Fourier", function(req,res){
-    res.render("WaveletsAndFourier/Wavelets-and-Fourier.html");
-})*/
-
-// parametric space ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/Parametric-Space", function(req,res){
-    res.render("ParametricSpace/ParametricSpace.html");
-})
-
-// wave gan ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/WaveGAN", function(req,res){
-    res.render("WaveGAN/WaveGAN.html");
-})
-
-// cryptocurrency ai ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/Cryptocurrency-AI", function(req,res){
-    res.render("CryptoAI/CryptoAI.html");
-})
-
-// skyrim true nord ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/Skyrim-TNE", function(req,res){
-    res.render("Skyrim/SkyrimTNE.html");
-})
-
-app.get("/Skyrim-TNE/About", function(req,res){
-    res.render("Skyrim/About.html");
-})
-
-app.get("/Skyrim-TNE/Images", function(req,res){
-    res.render("Skyrim/Images.html");
-})
-
-app.get("/Skyrim-TNE/BeforeAndAfter", function(req,res){
-    res.render("Skyrim/BeforeAndAfter.html");
-})
-
-app.get("/Skyrim-TNE/Videos", function(req,res){
-    res.render("Skyrim/Videos.html");
-})
-
-// ai art ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-app.get("/AI-Art", function(req,res){
-    res.render("AIArt/AIArt.html");
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-app.listen(HTTP_PORT,onHttpStart);
+app.listen(HTTP_PORT, onHttpStart);
