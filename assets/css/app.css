@@ -1,158 +1,379 @@
-.app-body--main {
-    width: 100%;
-    max-width: none;
-    padding: 0;
+:root {
+    --paper: #f4f0e8;
+    --paper-border: #d8d0c2;
+    --ink: #161514;
+    --ink-soft: #4d4840;
+    --accent: #8b4a2b;
+    --accent-soft: rgba(139, 74, 43, 0.12);
+    --measure: 42rem;
+    --sidebar-width: 15rem;
+    --gutter: 2rem;
 }
 
-.app-body--main a {
-    display: block;
-    font-size: 14px;
+html {
+    background: var(--paper);
 }
 
-.app-body--main a:active {
-    font-weight: normal;
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    margin: 0;
+    min-height: 100vh;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+    text-rendering: optimizeLegibility;
 }
 
-.app-body--main td,
-.app-body--main th,
-.app-body--main ol,
-.app-body--main li {
-    font-size: 14px;
-}
-
-.app-body--main li {
-    margin-bottom: 4px;
-}
-
-.app-body--simple {
-    width: 100%;
-}
-
-.app-index {
+body::before {
+    content: "";
     position: fixed;
-    width: 200px;
-    top: 90px;
-    left: 50%;
-    margin-left: -550px;
+    inset: 1rem;
+    border: 1px solid var(--paper-border);
+    pointer-events: none;
+    opacity: 0.9;
 }
 
-.app-index nav {
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--ink);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0 1rem;
 }
 
-.app-index a {
-    display: block;
-    font-size: 16px;
+h1 {
+    font-size: clamp(2.4rem, 4vw, 4rem);
+    margin-bottom: 1.5rem;
 }
 
-.app-index a:hover {
-    color: white;
-    background-color: black;
+h2 {
+    font-size: clamp(1.15rem, 2vw, 1.4rem);
+    margin-top: 3rem;
 }
 
-.app-main-text {
-    align-content: center;
-    margin: auto;
-    width: 550px;
+h3 {
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
 }
 
-.app-main-text img {
+h4,
+h5,
+h6 {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+}
+
+p,
+li,
+td,
+th,
+ol,
+ul,
+blockquote,
+figcaption,
+span {
+    font-size: 0.94rem;
+}
+
+p,
+li,
+blockquote {
+    color: var(--ink-soft);
+}
+
+p,
+ul,
+ol,
+table,
+blockquote,
+figure {
+    margin: 0 0 1.4rem;
+}
+
+p {
+    text-align: left;
+}
+
+a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 120ms ease, border-color 120ms ease, background-color 120ms ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--accent);
+    border-bottom-color: currentColor;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--paper-border);
+    margin: 1.5rem 0;
+}
+
+img {
     display: block;
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    height: auto;
 }
 
-.app-meta-grid {
-    grid-template-columns: 300px auto;
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.app-meta-left {
+th,
+td {
+    padding: 0.55rem 0.25rem;
+    border-bottom: 1px solid var(--paper-border);
     text-align: left;
-    font-size: 12px;
+    vertical-align: top;
+}
+
+.app-body,
+.app-body--main,
+.app-body--simple,
+.app-body--skyrim {
+    width: 100%;
+    max-width: none;
+    padding: 4rem 0 5rem;
+    box-sizing: border-box;
+}
+
+.app-index,
+.index {
+    position: fixed;
+    top: 4.5rem;
+    left: max(2rem, calc(50% - 35rem));
+    width: var(--sidebar-width);
+    padding: 0 1rem 0 0;
+    box-sizing: border-box;
+}
+
+.app-index nav,
+.index nav,
+nav.app-simple-nav {
+    display: grid;
+    gap: 0.4rem;
+    padding: 0;
+}
+
+.app-index a,
+.index a,
+.app-simple-nav a {
+    display: block;
+    width: fit-content;
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    padding: 0.05rem 0;
+}
+
+.app-index a:hover,
+.app-index a:focus-visible,
+.index a:hover,
+.index a:focus-visible,
+.app-simple-nav a:hover,
+.app-simple-nav a:focus-visible {
+    color: var(--ink);
+    background: transparent;
+}
+
+.app-main-text,
+.main-text,
+header,
+.app-body--simple > nav,
+.app-body--simple > p,
+.app-body--simple > hr {
+    width: min(calc(100% - 4rem), var(--measure));
+    margin-left: max(20rem, calc(50% - 14rem));
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.app-main-text,
+.main-text {
+    align-content: start;
+}
+
+.app-main-text > :first-child,
+.main-text > :first-child,
+header > :first-child {
+    margin-top: 0;
+}
+
+.app-site-note {
+    color: var(--accent);
+    padding-bottom: 1rem;
+}
+
+.app-main-text img,
+.main-text img {
+    margin: 1.5rem auto;
+}
+
+.app-main-text p,
+.main-text p,
+.app-body--simple p,
+.app-body--skyrim p,
+.app-body--skyrim h1,
+.app-body--skyrim h2 {
+    width: auto;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.app-meta-grid,
+.grid-container.app-meta-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.5rem 1rem;
+    padding: 0.8rem 0 1rem;
+    border-top: 1px solid var(--paper-border);
+    border-bottom: 1px solid var(--paper-border);
+    margin: 0 0 2rem;
+}
+
+.app-meta-left,
+.app-meta-right {
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
 }
 
 .app-meta-right {
     text-align: right;
-    font-size: 12px;
+}
+
+.app-portfolio-item {
+    padding: 1.4rem 0 0;
 }
 
 .app-portfolio-item h2 {
-    min-height: 50px;
+    min-height: 0;
+    max-width: 28rem;
 }
 
 .app-portfolio-item p {
-    min-height: 250px;
+    min-height: 0;
+    max-width: 36rem;
 }
 
-.app-simple-nav a {
+.collapsible,
+.app-collapsible {
     display: block;
+    width: 100%;
+    border: 0;
+    border-top: 1px solid var(--paper-border);
+    border-bottom: 1px solid var(--paper-border);
+    background: transparent;
+    color: var(--ink);
+    cursor: pointer;
+    text-align: left;
+    padding: 1rem 0;
+    margin: 0 0 0.6rem;
+    outline: none;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-.skyrim-nav {
-    padding: 100px 0 50px;
+.collapsible:hover,
+.collapsible.active,
+.collapsible.clicked,
+.app-collapsible:hover,
+.app-collapsible.active,
+.app-collapsible.clicked {
+    background: transparent;
+    color: var(--accent);
+    font-weight: 500;
 }
 
+.content {
+    padding: 0 0 0.2rem;
+    background: transparent;
+    color: var(--ink);
+}
+
+.content p:last-child {
+    margin-bottom: 1rem;
+}
+
+.skyrim-nav,
 .skyrim-nav-compact {
-    padding: 10px 0 20px;
+    width: min(calc(100% - 4rem), var(--measure));
+    margin: 0 auto 2rem;
+    padding: 0;
 }
 
 .app-compare-container {
     display: flex;
-    width: 100%;
-    max-width: 2000px;
-    margin: auto;
-    padding: 0 0 50px;
+    width: min(calc(100% - 4rem), 90rem);
+    margin: 2rem auto;
+    padding: 0;
     box-sizing: border-box;
-    height: 100vh;
-    max-height: 1000px;
+    height: min(75vh, 52rem);
 }
 
 .app-compare-box {
     flex: 1;
     overflow: hidden;
-    transition: 0.5s;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    transition: flex 220ms ease;
+    box-shadow: none;
+    border: 1px solid var(--paper-border);
     line-height: 0;
+    background: #ddd6c8;
 }
 
 .app-compare-box > img {
-    margin-left: -55%;
-    margin-top: 10%;
-    width: 250%;
-    height: calc(100% - 8vh);
+    margin: 0;
+    width: 100%;
+    height: calc(100% - 4.25rem);
     object-fit: cover;
-    transition: 0.5s;
+    transition: transform 220ms ease;
 }
 
 .app-compare-box > span {
     display: block;
-    height: 10vh;
-    line-height: 2.6;
-    font-size: 24px;
+    height: 4.25rem;
+    line-height: 4.25rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     text-align: center;
 }
 
 .app-compare-box:hover {
-    flex: 1 1 50%;
+    flex: 1 1 58%;
 }
 
 .app-compare-box:hover > img {
-    width: 100%;
-    height: 100%;
-    margin-top: 0;
-    margin-left: 0;
+    transform: scale(1.02);
 }
 
 .carousel .item {
-    height: 45vw;
-    max-height: 765px;
+    height: min(45vw, 48rem);
     overflow: hidden;
+    border: 1px solid var(--paper-border);
 }
 
 .carousel .item img {
     width: 100%;
-    max-width: 2000px;
+    max-width: none;
     padding: 0;
     object-fit: cover;
 }
@@ -160,27 +381,81 @@
 .app-video-box {
     position: relative;
     padding-bottom: 56.25%;
+    margin-bottom: 2rem;
+    border: 1px solid var(--paper-border);
 }
 
 .app-video-box iframe {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
 }
 
+#landing-placeholder {
+    display: block;
+}
+
 @media (max-width: 1100px) {
-    .app-index {
-        position: static;
-        width: auto;
-        margin: 0 0 24px;
-        padding: 0 16px;
+    body::before {
+        inset: 0.5rem;
     }
 
-    .app-main-text {
-        width: auto;
-        max-width: 550px;
-        padding: 0 16px 32px;
+    .app-body,
+    .app-body--main,
+    .app-body--simple,
+    .app-body--skyrim {
+        padding-top: 2rem;
+    }
+
+    .app-index,
+    .index {
+        position: static;
+        width: min(calc(100% - 2rem), var(--measure));
+        margin: 0 auto 2rem;
+        padding: 0;
+    }
+
+    .app-main-text,
+    .main-text,
+    header,
+    .app-body--simple > nav,
+    .app-body--simple > p,
+    .app-body--simple > hr,
+    .skyrim-nav,
+    .skyrim-nav-compact {
+        width: min(calc(100% - 2rem), var(--measure));
+        margin-left: auto;
+    }
+
+    .app-compare-container {
+        width: min(calc(100% - 2rem), 90rem);
+        height: auto;
+        min-height: 28rem;
+    }
+}
+
+@media (max-width: 720px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .app-meta-grid,
+    .grid-container.app-meta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .app-meta-right {
+        text-align: left;
+    }
+
+    .app-compare-container {
+        flex-direction: column;
+        min-height: 0;
+        height: auto;
+    }
+
+    .app-compare-box > img {
+        height: 18rem;
     }
 }

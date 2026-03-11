@@ -4,15 +4,15 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><%= page.title %></title>
+        <% if (page.inlineStyle) { %>
+            <style><%- page.inlineStyle %></style>
+        <% } %>
         <% (page.stylesheets || []).forEach(function (href) { %>
             <link href="<%= href %>" rel="stylesheet" type="text/css">
         <% }); %>
         <% (page.headScripts || []).forEach(function (src) { %>
             <script src="<%= src %>"></script>
         <% }); %>
-        <% if (page.inlineStyle) { %>
-            <style><%- page.inlineStyle %></style>
-        <% } %>
     </head>
     <body<%- page.bodyAttrs ? " " + page.bodyAttrs : "" %>>
         <%- include(bodyTemplate, { page: page }) %>
