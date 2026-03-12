@@ -148,17 +148,11 @@ const routes = [
         stylesheets: sharedModernStyles,
         bodyAttrs: 'class="app-body app-body--main"',
         primaryNav: compactMainNav,
-        sectionNav: [
-            { href: "#Introduction", label: "About Me" },
-            { href: "#Education", label: "Education" },
-            { href: "#Work-Experience", label: "Work Experience" }
-        ],
+        sectionNav: [],
         intro: [
             "I am a Civil Engineering Graduate, with a wealth of knowledge stemming from multiple disciplines, who enjoys solving complex problems. I have a strong background in mathematics and programming and can work independently with minimum supervision.",
             "With my undergraduate studies completed and graduate studies on the horizon, I hope to find employment I can be passionate about to make a strong start to a successful career."
-        ],
-        education: resumeEntries.education,
-        work: resumeEntries.work
+        ]
     },
     {
         path: "/Portfolio",

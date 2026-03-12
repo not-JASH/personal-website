@@ -3,8 +3,26 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#f8f8f6">
+        <meta name="theme-color" content="#fbfbf9">
         <title><%= page.title %></title>
+        <script>
+            (function () {
+                var savedMode = "light";
+                var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+                try {
+                    savedMode = localStorage.getItem("app-color-mode") || "light";
+                } catch (err) {
+                    savedMode = "light";
+                }
+
+                document.documentElement.setAttribute("data-color-mode", savedMode);
+
+                if (themeColorMeta) {
+                    themeColorMeta.setAttribute("content", savedMode === "dark" ? "#111111" : "#fbfbf9");
+                }
+            })();
+        </script>
         <% if (page.inlineStyle) { %>
             <style><%- page.inlineStyle %></style>
         <% } %>
@@ -15,10 +33,56 @@
             <script src="<%= src %>"></script>
         <% }); %>
     </head>
-    <body data-app-theme="minimal"<%- page.bodyAttrs ? " " + page.bodyAttrs : "" %>>
+    <body
+        data-app-theme="minimal"
+        data-page-kind="<%= page.kind || 'modern' %>"
+        data-legacy-layout="<%= page.legacyLayout || '' %>"<%- page.bodyAttrs ? " " + page.bodyAttrs : "" %>>
+        <button class="app-theme-toggle" type="button" data-theme-toggle aria-label="Switch color mode">
+            Dark mode
+        </button>
         <div class="app-page-shell">
             <%- include(bodyTemplate, { page: page }) %>
         </div>
+        <script>
+            (function () {
+                var root = document.documentElement;
+                var button = document.querySelector("[data-theme-toggle]");
+                var themeColorMeta = document.querySelector('meta[name="theme-color"]');
+                var themeColors = {
+                    light: "#fbfbf9",
+                    dark: "#111111"
+                };
+
+                if (!button) {
+                    return;
+                }
+
+                function applyMode(mode) {
+                    var nextMode = mode === "dark" ? "dark" : "light";
+                    var nextLabel = nextMode === "dark" ? "Light mode" : "Dark mode";
+
+                    root.setAttribute("data-color-mode", nextMode);
+                    button.textContent = nextLabel;
+                    button.setAttribute("aria-label", "Switch to " + nextLabel.toLowerCase());
+
+                    if (themeColorMeta) {
+                        themeColorMeta.setAttribute("content", themeColors[nextMode]);
+                    }
+
+                    try {
+                        localStorage.setItem("app-color-mode", nextMode);
+                    } catch (err) {
+                    }
+                }
+
+                applyMode(root.getAttribute("data-color-mode"));
+
+                button.addEventListener("click", function () {
+                    var currentMode = root.getAttribute("data-color-mode") === "dark" ? "dark" : "light";
+                    applyMode(currentMode === "dark" ? "light" : "dark");
+                });
+            })();
+        </script>
         <% if (page.inlineScript) { %>
             <script><%- page.inlineScript %></script>
         <% } %>

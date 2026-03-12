@@ -2,15 +2,20 @@
 
 <main class="app-main-text">
     <section class="app-hero app-hero--compact">
+        <p class="app-site-note">Experience</p>
         <h1>Work Experience</h1>
+        <p class="app-hero__status">Roles spanning architecture, heritage research, construction inspection, and tutoring.</p>
     </section>
 
     <section class="app-entry-list">
-        <% page.items.forEach(function (entry) { %>
+        <% page.items.forEach(function (entry, index) { %>
             <article class="app-entry-card">
-                <div class="app-card-meta">
-                    <span><%= entry.organization %></span>
-                    <span><%= entry.dates %></span>
+                <div class="app-portfolio-head">
+                    <span class="app-item-number"><%= String(index + 1).padStart(2, "0") %></span>
+                    <div class="app-card-meta">
+                        <span><%= entry.organization %></span>
+                        <span><%= entry.dates %></span>
+                    </div>
                 </div>
                 <h2><%= entry.role %></h2>
                 <p><%= entry.summary %></p>

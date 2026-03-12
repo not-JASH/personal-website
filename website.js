@@ -28,9 +28,14 @@ function withSharedStyles(page) {
 
 function buildPage(routeConfig) {
     if (routeConfig.kind === "legacy") {
+        const legacyPage = getLegacyPage(path.join(__dirname, routeConfig.source));
+        const usesArchiveSidebar = /class=["']index["']/i.test(legacyPage.bodyHtml)
+            && /class=["']main-text["']/i.test(legacyPage.bodyHtml);
+
         return withSharedStyles({
             ...routeConfig,
-            ...getLegacyPage(path.join(__dirname, routeConfig.source))
+            ...legacyPage,
+            legacyLayout: usesArchiveSidebar ? "indexed" : "standalone"
         });
     }
 

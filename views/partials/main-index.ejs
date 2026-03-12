@@ -6,7 +6,6 @@
         <% } %>
 
         <div class="app-index__section">
-            <span class="app-index__label">Navigate</span>
             <nav class="app-index__nav" aria-label="Primary">
                 <% page.primaryNav.forEach(function (link) { %>
                     <a href="<%= link.href %>" <%- link.href === page.path ? 'aria-current="page"' : "" %>><%= link.label %></a>

@@ -1,50 +1,17 @@
 <%- include("../partials/main-index", { page: page }) %>
 
 <main class="app-main-text">
-    <section class="app-hero" id="Introduction">
-        <p class="app-site-note">Under Construction</p>
+    <section class="app-hero app-hero--landing" id="Introduction">
+        <p class="app-site-note">Portfolio / Engineering / Programming</p>
+        <p class="app-hero__status">Building practical systems across civil engineering, software, AI, and technical research.</p>
         <h1>Jashua Luna</h1>
         <% page.intro.forEach(function (paragraph) { %>
             <p><%= paragraph %></p>
         <% }); %>
-    </section>
-
-    <section class="app-section" id="Education">
-        <h2>Education</h2>
-        <div class="app-entry-list">
-            <% page.education.forEach(function (entry) { %>
-                <article class="app-entry-card">
-                    <h3><%= entry.title %></h3>
-                    <div class="grid-container app-meta-grid">
-                        <div class="grid-item app-meta-left">
-                            <span><%= entry.organization %></span>
-                        </div>
-                        <div class="grid-item app-meta-right">
-                            <span><%= entry.dates %></span>
-                        </div>
-                    </div>
-                </article>
-            <% }); %>
-        </div>
-    </section>
-
-    <section class="app-section" id="Work-Experience">
-        <h2>Work Experience</h2>
-        <div class="app-entry-list">
-            <% page.work.forEach(function (entry) { %>
-                <article class="app-entry-card">
-                    <h3><%= entry.role %></h3>
-                    <div class="grid-container app-meta-grid">
-                        <div class="grid-item app-meta-left">
-                            <span><%= entry.organization %></span>
-                        </div>
-                        <div class="grid-item app-meta-right">
-                            <span><%= entry.dates %></span>
-                        </div>
-                    </div>
-                    <p><%= entry.summary %></p>
-                </article>
-            <% }); %>
+        <div class="app-button-row">
+            <a class="app-link-button" href="/Portfolio">View Portfolio</a>
+            <a class="app-link-button app-link-button--ghost" href="/Work-Experience">Work Experience</a>
+            <a class="app-link-button app-link-button--ghost" href="/Education">Education</a>
         </div>
     </section>
 </main>

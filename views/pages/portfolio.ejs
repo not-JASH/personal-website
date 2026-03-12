@@ -3,17 +3,18 @@
 <main class="app-main-text">
     <section class="app-hero app-hero--compact">
         <h1>Portfolio</h1>
+        <p class="app-hero__status">Selected Work</p>
     </section>
 
     <section class="app-entry-list">
         <% page.items.forEach(function (item) { %>
             <article class="app-portfolio-item" id="<%= item.id %>">
-                <div class="app-card-meta">
-                    <span><%= item.season %></span>
+                <div class="app-card-meta app-card-meta--portfolio">
                     <a href="<%= item.href %>">More Info</a>
                 </div>
                 <h2><%= item.title %></h2>
                 <p><%= item.description %></p>
+                <span class="app-card-date"><%= item.season %></span>
             </article>
         <% }); %>
     </section>
