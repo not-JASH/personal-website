@@ -389,15 +389,24 @@ body.app-body--skyrim[data-app-theme="minimal"] .app-page-shell {
 }
 
 .app-index__brand {
-    display: inline-block;
+    display: inline-flex;
     width: fit-content;
     margin-bottom: 0;
     border: 0;
+    padding: 0.3rem 0.65rem;
+    margin-left: -0.65rem;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: clamp(1.9rem, 2.8vw, 2.6rem);
     font-weight: 500;
     letter-spacing: -0.04em;
     line-height: 0.98;
+}
+
+body[data-app-theme="minimal"] .app-index__brand:hover,
+body[data-app-theme="minimal"] .app-index__brand:focus-visible {
+    background: var(--ink);
+    color: var(--page-bg-soft);
+    border-bottom-color: transparent !important;
 }
 
 .app-index__label,
